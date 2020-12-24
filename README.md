@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-# TalkStock
+<h1>TalkStock</h1>
 </div>
 
 親しいあの人、この人と楽しい会話を。  
