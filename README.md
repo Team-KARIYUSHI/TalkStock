@@ -1,6 +1,4 @@
-<div style="text-align: center;">
-<h1>TalkStock</h1>
-</div>
+<center><h1>TalkStock</h1></center>
 
 親しいあの人、この人と楽しい会話を。  
 話題を忘れない、できる大人になるために。
