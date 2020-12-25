@@ -14,6 +14,8 @@
 		D42B63D52594B009009A4107 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42B63D42594B009009A4107 /* Preview Assets.xcassets */; };
 		D42B63D82594B009009A4107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42B63D62594B009009A4107 /* LaunchScreen.storyboard */; };
 		D42B63E22594B318009A4107 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E12594B318009A4107 /* TabBarView.swift */; };
+		D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E72595B3E8009A4107 /* StockListView.swift */; };
+		D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D42B63D72594B009009A4107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D42B63D92594B009009A4107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D42B63E12594B318009A4107 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D42B63E72595B3E8009A4107 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
+		D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCreateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				D42B63CD2594B006009A4107 /* SceneDelegate.swift */,
 				D42B63CF2594B006009A4107 /* ContentView.swift */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
+				D42B63E72595B3E8009A4107 /* StockListView.swift */,
+				D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */,
 				D42B63D12594B009009A4107 /* Assets.xcassets */,
 				D42B63D62594B009009A4107 /* LaunchScreen.storyboard */,
 				D42B63D92594B009009A4107 /* Info.plist */,
@@ -152,6 +158,8 @@
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				D42B63D02594B006009A4107 /* ContentView.swift in Sources */,
+				D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */,
+				D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
