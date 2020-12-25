@@ -12,12 +12,11 @@ struct StockListView: View {
     let screenWidth = UIScreen.main.bounds.width
     
     @State var searchItem = ""
-    @State var flug = false
+    @State var modalOpened = false
     
     init() {
         setupNavigationBar()
     }
-    
     
     var body: some View {
         NavigationView {
@@ -28,16 +27,9 @@ struct StockListView: View {
                 
                 VStack {
                     HStack {
-                        VStack {
-                            TextField("タグ検索", text: $searchItem)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(width: screenWidth / 1.3, height: screenWidth / 5)
-                            
-                            Divider()
-                                .background(Color.black)
-                                .padding(-15)
-                        }.fixedSize()
-                        
+                        TextField("タグ検索", text: $searchItem)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .frame(width: screenWidth / 1.3, height: screenWidth / 5)
                         Button(action: {
                             //検索
                         }) {
@@ -45,32 +37,35 @@ struct StockListView: View {
                                 .resizable()
                                 .frame(width: screenWidth / 13, height: screenWidth / 13)
                         }
-                        .navigationBarTitle("ストック", displayMode: .inline)
-                        .navigationBarItems(leading: NavigationLink(destination: MemoCreateView(), isActive: $flug) {
-                            EmptyView()
-                        }, trailing: Button(action: {
-                            self.flug = true
-                        }) {
-                            Image(systemName: "plus")
-                                .resizable()
-                                .frame(width: screenWidth / 20, height: screenWidth / 20)
-                        })
                     }
+                    
+                    Divider()
+                        .background(Color.black)
+                        .edgesIgnoringSafeArea(.horizontal)
+                    
                     Spacer()
+                }
+                .navigationBarTitle("ストック", displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: {
+                    self.modalOpened.toggle()
+                }) {
+                    Image(systemName: "plus")
+                        .resizable()
+                        .frame(width: screenWidth / 20, height: screenWidth / 20)
+                }).sheet(isPresented: $modalOpened) {
+                    MemoCreateView()
                 }
             }
         }
     }
-    
-    //ナビゲーションバー色指定
-    func setupNavigationBar() {
-        UINavigationBar.appearance().tintColor = .systemGray6
-        UINavigationBar.appearance().barTintColor = .systemTeal
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-    }
-    
 }
-
+//ナビゲーションバー色指定
+//※後でヘルパークラスへ移動させる
+func setupNavigationBar() {
+    UINavigationBar.appearance().tintColor = .systemGray6
+    UINavigationBar.appearance().barTintColor = .systemTeal
+    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+}
 
 struct StockListView_Previews: PreviewProvider {
     static var previews: some View {
