@@ -15,7 +15,8 @@ struct StockListView: View {
     @State var modalOpened = false
     
     init() {
-        setupNavigationBar()
+        // UIComponents構造体（ヘルパークラス）から利用する
+        UIComponents.setupNavigationBar()
     }
     
     var body: some View {
@@ -29,13 +30,15 @@ struct StockListView: View {
                     HStack {
                         TextField("タグ検索", text: $searchItem)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: screenWidth / 1.3, height: screenWidth / 5)
+                            .frame(width: UIComponents.screenWidth / 1.3,
+                                   height:  UIComponents.screenWidth / 5)
                         Button(action: {
                             //検索
                         }) {
                             Image("検索アイコン")
                                 .resizable()
-                                .frame(width: screenWidth / 13, height: screenWidth / 13)
+                                .frame(width:  UIComponents.screenWidth / 13,
+                                       height:  UIComponents.screenWidth / 13)
                         }
                     }
                     
@@ -51,20 +54,14 @@ struct StockListView: View {
                 }) {
                     Image(systemName: "plus")
                         .resizable()
-                        .frame(width: screenWidth / 20, height: screenWidth / 20)
+                        .frame(width:  UIComponents.screenWidth / 20,
+                               height:  UIComponents.screenWidth / 20)
                 }).sheet(isPresented: $modalOpened) {
                     MemoCreateView()
                 }
             }
         }
     }
-}
-//ナビゲーションバー色指定
-//※後でヘルパークラスへ移動させる
-func setupNavigationBar() {
-    UINavigationBar.appearance().tintColor = .systemGray6
-    UINavigationBar.appearance().barTintColor = .systemTeal
-    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
 }
 
 struct StockListView_Previews: PreviewProvider {
