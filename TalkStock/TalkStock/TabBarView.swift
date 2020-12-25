@@ -15,7 +15,7 @@ struct TabBarView: View {
                     Image(systemName: "person.fill")
                     Text("パーソナル")
                 }
-            Text("ストック一覧")
+            StockListView()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("ストック")
