@@ -1,13 +1,16 @@
 //
 //  StockListView.swift
-//  TalkStock
+//  TalkStockTest
 //
-//  Created by 久富稜也 on 2020/12/25.
+//  Created by 久富稜也 on 2020/12/26.
 //
 
 import SwiftUI
 
+
 struct StockListView: View {
+    
+    
     
     let screenWidth = UIScreen.main.bounds.width
     
@@ -50,9 +53,9 @@ struct StockListView: View {
                     
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack {
-                            ForEach(0...4, id: \.self) { _ in
+                            ForEach(memoTitles) { memoTitle in
                                 NavigationLink(destination: MemoCreateView()) {
-                                    StockCell()
+                                    StockCell(memoTitle: memoTitle.title)
                                 }
                             }
                         }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StockCell: View {
     
+    var memoTitle: String
+    
     var body: some View {
         
         ZStack {
@@ -18,7 +20,7 @@ struct StockCell: View {
                 .foregroundColor(.white)
             
             VStack {
-                Text("スタバ「大学芋フラペチーノ」を発売!")
+                Text(memoTitle)
                     .font(.system(size: UIComponents.screenWidth / 20))
                     .foregroundColor(Color.black)
                     .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
@@ -34,6 +36,6 @@ struct StockCell: View {
 
 struct StockCell_Previews: PreviewProvider {
     static var previews: some View {
-        StockCell()
+        StockCell(memoTitle: "")
     }
 }
