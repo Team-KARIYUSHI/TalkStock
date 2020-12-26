@@ -47,6 +47,16 @@ struct StockListView: View {
                         .edgesIgnoringSafeArea(.horizontal)
                     
                     Spacer()
+                    
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            ForEach(0...4, id: \.self) { _ in
+                                NavigationLink(destination: MemoCreateView()) {
+                                    StockCell()
+                                }
+                            }
+                        }
+                    }
                 }
                 .navigationBarTitle("ストック", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {

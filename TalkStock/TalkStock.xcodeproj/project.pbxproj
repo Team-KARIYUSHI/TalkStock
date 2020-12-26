@@ -16,6 +16,7 @@
 		D42B63E22594B318009A4107 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E12594B318009A4107 /* TabBarView.swift */; };
 		D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E72595B3E8009A4107 /* StockListView.swift */; };
 		D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */; };
+		D42B63F82597113B009A4107 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63F72597113B009A4107 /* StockCell.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D42B63E12594B318009A4107 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D42B63E72595B3E8009A4107 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCreateView.swift; sourceTree = "<group>"; };
+		D42B63F72597113B009A4107 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				E5A46C6F2595F13000C73264 /* Helper */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
 				D42B63E72595B3E8009A4107 /* StockListView.swift */,
+				D42B63F72597113B009A4107 /* StockCell.swift */,
 				D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */,
 				D42B63D12594B009009A4107 /* Assets.xcassets */,
 				D42B63D62594B009009A4107 /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 				D42B63D02594B006009A4107 /* ContentView.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
+				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
