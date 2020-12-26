@@ -13,24 +13,19 @@ struct StockCell: View {
     
     var body: some View {
         
-        ZStack {
-            RoundedRectangle(cornerRadius: 16)
-                .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 3)
-                .cornerRadius(10)
-                .foregroundColor(.white)
+        VStack {
+            Text(memoTitle)
+                .font(.system(size: UIComponents.screenWidth / 20))
+                .foregroundColor(Color.black)
+                .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
+                .padding()
             
-            VStack {
-                Text(memoTitle)
-                    .font(.system(size: UIComponents.screenWidth / 20))
-                    .foregroundColor(Color.black)
-                    .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
-                    .padding()
-                
-                //ここにタグを表示
-                Text("タグ表示")
-                    .frame(width: UIComponents.screenWidth / 1.2, alignment: .leading)
-            }
+            //ここにタグを表示
+            Text("タグ表示")
+                .frame(width: UIComponents.screenWidth / 1.2, alignment: .leading)
         }
+        .background(Color.white)
+        .cornerRadius(10)
     }
 }
 
