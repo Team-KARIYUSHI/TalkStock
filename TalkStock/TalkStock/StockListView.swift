@@ -11,9 +11,6 @@ import SwiftUI
 struct StockListView: View {
     
     
-    
-    let screenWidth = UIScreen.main.bounds.width
-    
     @State var searchItem = ""
     @State var modalOpened = false
     
