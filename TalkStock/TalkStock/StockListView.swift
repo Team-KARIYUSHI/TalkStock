@@ -1,15 +1,15 @@
 //
 //  StockListView.swift
-//  TalkStock
+//  TalkStockTest
 //
-//  Created by 久富稜也 on 2020/12/25.
+//  Created by 久富稜也 on 2020/12/26.
 //
 
 import SwiftUI
 
+
 struct StockListView: View {
     
-    let screenWidth = UIScreen.main.bounds.width
     
     @State var searchItem = ""
     @State var modalOpened = false
@@ -47,6 +47,16 @@ struct StockListView: View {
                         .edgesIgnoringSafeArea(.horizontal)
                     
                     Spacer()
+                    
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            ForEach(memoTitles) { memoTitle in
+                                NavigationLink(destination: MemoCreateView()) {
+                                    StockCell(memoTitle: memoTitle.title)
+                                }
+                            }
+                        }
+                    }
                 }
                 .navigationBarTitle("ストック", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
