@@ -13,16 +13,16 @@ struct StockCell: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: -10) {
             Text(memoTitle)
                 .font(.system(size: UIComponents.screenWidth / 20))
                 .foregroundColor(Color.black)
                 .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
                 .padding()
-            
             //ここにタグを表示
-            Text("タグ表示")
+            CategoryTag()
                 .frame(width: UIComponents.screenWidth / 1.2, alignment: .leading)
+                .padding()
         }
         .background(Color.white)
         .cornerRadius(10)
