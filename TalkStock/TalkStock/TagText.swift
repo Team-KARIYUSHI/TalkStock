@@ -13,6 +13,12 @@ struct TagText: View {
     var body: some View {
         
         Text(tagName)
+            .padding()
+            .foregroundColor(.black)
+            .background(Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)))
+            .frame(height: UIComponents.screenWidth / 15)
+            .cornerRadius(30)
+            .lineLimit(1)
         
     }
 }
