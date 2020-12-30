@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="アプリロゴ" translatesAutoresizingMaskIntoConstraints="NO" id="UDu-eh-yLk">
-                                <rect key="frame" x="97" y="342" width="221" height="235"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="アプリロゴ" translatesAutoresizingMaskIntoConstraints="NO" id="UDu-eh-yLk">
+                                <rect key="frame" x="97" y="226" width="221" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -30,6 +30,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="アプリロゴ" width="1536" height="1536"/>
+        <image name="アプリロゴ" width="1536" height="1536"/>
     </resources>
 </document>
