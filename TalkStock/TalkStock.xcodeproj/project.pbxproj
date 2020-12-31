@@ -78,7 +78,7 @@
 			children = (
 				D42B63CB2594B006009A4107 /* AppDelegate.swift */,
 				D42B63CD2594B006009A4107 /* SceneDelegate.swift */,
-				D42B63CF2594B006009A4107 /* ContentView.swift */,
+				D42B643A2597562D009A4107 /* MemoTitleModel.swift */,
 				D4FD7481259D947C00E1CB4C /* View */,
 				E5A46C6F2595F13000C73264 /* Helper */,
 				D42B63D12594B009009A4107 /* Assets.xcassets */,
@@ -100,6 +100,7 @@
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D42B63CF2594B006009A4107 /* ContentView.swift */,
 				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
 				D42B63E72595B3E8009A4107 /* StockListView.swift */,
@@ -116,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				E5A46C702595F14D00C73264 /* UIComponents.swift */,
-				D42B643A2597562D009A4107 /* MemoTitleModel.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
