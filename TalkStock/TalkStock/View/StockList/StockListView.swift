@@ -27,36 +27,11 @@ struct StockListView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    HStack {
-                        TextField("タグ検索", text: $searchItem)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: UIComponents.screenWidth / 1.3,
-                                   height:  UIComponents.screenWidth / 5)
-                        Button(action: {
-                            //検索
-                        }) {
-                            Image("検索アイコン")
-                                .resizable()
-                                .frame(width:  UIComponents.screenWidth / 13,
-                                       height:  UIComponents.screenWidth / 13)
-                        }
-                    }
-                    
-                    Divider()
-                        .background(Color.black)
-                        .edgesIgnoringSafeArea(.horizontal)
+                    SearchHeader(searchItem: $searchItem)
                     
                     Spacer()
                     
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack {
-                            ForEach(memoTitles) { memoTitle in
-                                NavigationLink(destination: MemoCreateView()) {
-                                    StockCell(memoTitle: memoTitle.title)
-                                }
-                            }
-                        }
-                    }
+                    StockListScroll()
                 }
                 .navigationBarTitle("ストック", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {

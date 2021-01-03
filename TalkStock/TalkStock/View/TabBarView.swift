@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            Text("パーソナル画面")
+            PersonalView()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("パーソナル")
@@ -19,11 +19,6 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("ストック")
-                }
-            Text("ニュース一覧")
-                .tabItem {
-                    Image(systemName: "newspaper")
-                    Text("ニュース")
                 }
         }
         
