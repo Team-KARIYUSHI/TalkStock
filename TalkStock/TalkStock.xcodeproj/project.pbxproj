@@ -18,6 +18,7 @@
 		D42B63F82597113B009A4107 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63F72597113B009A4107 /* StockCell.swift */; };
 		D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B643A2597562D009A4107 /* MemoTitleModel.swift */; };
 		D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B6444259851BD009A4107 /* CategoryTag.swift */; };
+		D43B50F525A4B093007C00FA /* PersonRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonRegisterView.swift */; };
 		D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD74662598E3D900E1CB4C /* TagButton.swift */; };
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
@@ -44,6 +45,7 @@
 		D42B63F72597113B009A4107 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		D42B643A2597562D009A4107 /* MemoTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleModel.swift; sourceTree = "<group>"; };
 		D42B6444259851BD009A4107 /* CategoryTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTag.swift; sourceTree = "<group>"; };
+		D43B50F425A4B093007C00FA /* PersonRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterView.swift; sourceTree = "<group>"; };
 		D4FD74662598E3D900E1CB4C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -108,9 +110,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D43B50F325A4B06C007C00FA /* PersonRegister */ = {
+			isa = PBXGroup;
+			children = (
+				D43B50F425A4B093007C00FA /* PersonRegisterView.swift */,
+			);
+			path = PersonRegister;
+			sourceTree = "<group>";
+		};
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D43B50F325A4B06C007C00FA /* PersonRegister */,
 				D4FFC14025A347540095DC7A /* MemoCreate */,
 				E53CD4FC25A1E6A400FD0F83 /* Personal */,
 				E53CD4FD25A1E6B100FD0F83 /* StockList */,
@@ -263,6 +274,7 @@
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
+				D43B50F525A4B093007C00FA /* PersonRegisterView.swift in Sources */,
 				E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */,
 				D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
