@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "検索アイコン1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "検索アイコン1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "検索アイコン1-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

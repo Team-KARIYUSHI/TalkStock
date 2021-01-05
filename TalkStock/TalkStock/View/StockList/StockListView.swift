@@ -22,9 +22,7 @@ struct StockListView: View {
     var body: some View {
         NavigationView {
             
-            ZStack {
-                Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1))
-                    .edgesIgnoringSafeArea(.all)
+            
                 
                 VStack {
                     SearchHeader(searchItem: $searchItem)
@@ -33,6 +31,14 @@ struct StockListView: View {
                     
                     StockListScroll()
                 }
+                .frame(minWidth: 0,
+                       maxWidth: .infinity,
+                       minHeight: 0,
+                       maxHeight: .infinity,
+                       alignment: .center)
+                .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
+                .edgesIgnoringSafeArea(.all)
+                
                 .navigationBarTitle("ストック", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                     self.modalOpened.toggle()
@@ -47,7 +53,7 @@ struct StockListView: View {
             }
         }
     }
-}
+
 
 struct StockListView_Previews: PreviewProvider {
     static var previews: some View {
