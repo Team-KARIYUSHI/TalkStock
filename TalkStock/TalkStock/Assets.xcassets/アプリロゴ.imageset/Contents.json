@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "Talk Stock (10).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Talk Stock (10).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Talk Stock (10)-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
