@@ -22,8 +22,6 @@ struct StockListView: View {
     var body: some View {
         NavigationView {
             
-            
-                
                 VStack {
                     SearchHeader(searchItem: $searchItem)
                     
