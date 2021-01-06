@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct PersonRegisterVIew: View {
+struct PersonRegisterView: View {
     
     @State var personName = ""
     @State var relationship = ""
+    @State var modalOpened = false
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -25,7 +26,8 @@ struct PersonRegisterVIew: View {
                 VStack {
                     Image(systemName: "person.crop.circle")
                         .resizable()
-                        .frame(width: UIComponents.screenWidth / 1.7, height: UIComponents.screenWidth / 1.7)
+                        .frame(width: UIComponents.screenWidth / 2,
+                               height: UIComponents.screenWidth / 2)
                     TextField("名前", text: $personName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: UIComponents.screenWidth / 1.1)
@@ -40,20 +42,15 @@ struct PersonRegisterVIew: View {
                     Text("会話ネタ")
                         .padding(.vertical)
                     
-                    Button(action: {}) {
-                        Image(systemName: "plus.circle")
-                            .resizable()
-                            .frame(width: UIComponents.screenWidth / 10, height: UIComponents.screenWidth / 10)
-                            .foregroundColor(.black)
-                    }
+                    PlusCircleButton(isPresented: self.$modalOpened,
+                                     view: EmptyView()) // 後で会話ネタ選択画面に差し替える
+                    
                 }
                 
-                Button(action: {}) {
-                    Text("登録する")
-                        .frame(width: UIComponents.screenWidth / 1.5, height: UIComponents.screenWidth / 10)
-                        .foregroundColor(.white)
-                        .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                }.cornerRadius(20)
+                SaveButton(title: "登録",
+                           action: {
+                            // ここに登録処理
+                           })
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
@@ -80,6 +77,6 @@ struct PersonRegisterVIew: View {
 
 struct PersonRegisterVIew_Previews: PreviewProvider {
     static var previews: some View {
-        PersonRegisterVIew()
+        PersonRegisterView()
     }
 }

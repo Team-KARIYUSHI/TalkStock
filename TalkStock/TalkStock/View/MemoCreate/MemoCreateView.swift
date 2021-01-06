@@ -54,28 +54,17 @@ struct MemoCreateView: View {
                         Text("話したい人")
                             .font(.caption)
                         
-                    Button(action: {
-                        self.modalOpened.toggle()
-                    }) {
-                            Image(systemName: "plus.circle")
-                                .resizable()
-                                .frame(width: UIComponents.screenWidth / 10, height: UIComponents.screenWidth / 10)
-                                .foregroundColor(.black)
-                        }
-                    }
-                    .padding(.vertical, 20)
-                    .sheet(isPresented: $modalOpened) {
-                        PersonRegisterVIew()
+                        PlusCircleButton(isPresented: self.$modalOpened,
+                                     view: EmptyView()) // 後で話したい人選択画面に差し替える
+                        
                     }
 
                 }
                 
-                Button(action: {}) {
-                    Text("保存する")
-                        .frame(width: UIComponents.screenWidth - 50, height: UIComponents.screenWidth / 9)
-                        .foregroundColor(.white)
-                        .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                }.cornerRadius(20)
+                SaveButton(title: "登録",
+                           action: {
+                            // ここに登録処理
+                           })
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,

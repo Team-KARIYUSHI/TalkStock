@@ -17,7 +17,7 @@ struct SearchHeader: View {
                 TextField("タグ検索", text: $searchItem)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: UIComponents.screenWidth / 1.3,
-                           height:  UIComponents.screenWidth / 5)
+                           height:  60)
                 Button(action: {
                     //検索
                 }) {
@@ -30,7 +30,7 @@ struct SearchHeader: View {
             Divider()
                 .background(Color.black)
                 .edgesIgnoringSafeArea(.horizontal)
-        }
+        }.frame(height: 60)
     }
 }
 
