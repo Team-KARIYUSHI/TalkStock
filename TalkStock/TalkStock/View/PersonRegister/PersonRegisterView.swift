@@ -12,6 +12,8 @@ struct PersonRegisterVIew: View {
     @State var personName = ""
     @State var relationship = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
     init() {
         UIComponents.setupNavigationBar()
     }
@@ -26,8 +28,8 @@ struct PersonRegisterVIew: View {
                         .frame(width: UIComponents.screenWidth / 1.7, height: UIComponents.screenWidth / 1.7)
                     TextField("名前", text: $personName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: UIComponents.screenWidth / 2)
-                }
+                        .frame(width: UIComponents.screenWidth / 1.1)
+                }.padding(.bottom)
                 
                 VStack(alignment: .leading) {
                     Text("関係")
@@ -51,7 +53,7 @@ struct PersonRegisterVIew: View {
                         .frame(width: UIComponents.screenWidth / 1.5, height: UIComponents.screenWidth / 10)
                         .foregroundColor(.white)
                         .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                }
+                }.cornerRadius(20)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
@@ -61,8 +63,10 @@ struct PersonRegisterVIew: View {
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
             
-            .navigationBarTitle("新規作成", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {}) {
+            .navigationBarTitle("新規登録", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
                 
                 Image(systemName: "xmark")
                     .resizable()

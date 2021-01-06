@@ -13,6 +13,9 @@ struct MemoCreateView: View {
     @State var memoTag = ""
     @State var memoText = ""
     @State var memoUrl = ""
+    @State var modalOpened = false
+    
+    @Environment(\.presentationMode) var presentationMode
     
     init() {
         UIComponents.setupNavigationBar()
@@ -47,11 +50,15 @@ struct MemoCreateView: View {
                     Text("話したい人")
                         .padding(.vertical)
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        self.modalOpened.toggle()
+                    }) {
                         Image(systemName: "plus.circle")
                             .resizable()
                             .frame(width: UIComponents.screenWidth / 10, height: UIComponents.screenWidth / 10)
                             .foregroundColor(.black)
+                    }.sheet(isPresented: $modalOpened) {
+                        PersonRegisterVIew()
                     }
                 }
                 
@@ -60,7 +67,7 @@ struct MemoCreateView: View {
                         .frame(width: UIComponents.screenWidth / 1.5, height: UIComponents.screenWidth / 10)
                         .foregroundColor(.white)
                         .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                }
+                }.cornerRadius(20)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
@@ -70,7 +77,9 @@ struct MemoCreateView: View {
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("新規作成", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {}) {
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
                 
                 Image(systemName: "xmark")
                     .resizable()
