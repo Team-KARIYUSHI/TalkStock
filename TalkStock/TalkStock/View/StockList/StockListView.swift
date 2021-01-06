@@ -24,9 +24,7 @@ struct StockListView: View {
             
                 VStack {
                     SearchHeader(searchItem: $searchItem)
-                    
-                    Spacer()
-                    
+                        .padding(.top, 40)
                     StockListScroll()
                 }
                 .frame(minWidth: 0,
@@ -36,18 +34,9 @@ struct StockListView: View {
                        alignment: .center)
                 .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
                 .edgesIgnoringSafeArea(.all)
-                
                 .navigationBarTitle("ストック", displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.modalOpened.toggle()
-                }) {
-                    Image(systemName: "plus")
-                        .resizable()
-                        .frame(width:  UIComponents.screenWidth / 20,
-                               height:  UIComponents.screenWidth / 20)
-                }).sheet(isPresented: $modalOpened) {
-                    MemoCreateView()
-                }
+                .navigationBarItems(trailing:
+                                        PlusButton(isPresented: self.$modalOpened, view: MemoCreateView()))
             }
         }
     }

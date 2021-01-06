@@ -11,6 +11,7 @@ struct PersonalView: View {
     
     @State var title: String = ""
     @State var isLoading: Bool = true
+    @State var modalOpened: Bool = false
     
     /// LoadingViewをPersonalViewの前に出した時に発動するメソッド
     func loading() {
@@ -36,6 +37,9 @@ struct PersonalView: View {
                     Text("パーソナル画面")
                 }
                 .navigationBarTitle("パーソナル", displayMode: .inline)
+                .navigationBarItems(trailing:
+                    PlusButton(isPresented: self.$modalOpened,view: PersonRegisterView())
+                )
             }.onAppear() {
                 self.loading()
             }

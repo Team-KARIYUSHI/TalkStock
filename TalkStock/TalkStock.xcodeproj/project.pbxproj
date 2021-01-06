@@ -23,6 +23,9 @@
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
 		D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */; };
+		E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFE625A65D7300584929 /* PlusCircleButton.swift */; };
+		E517DFEE25A6633000584929 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFED25A6633000584929 /* PlusButton.swift */; };
+		E517DFF125A6663600584929 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFF025A6663600584929 /* SaveButton.swift */; };
 		E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */; };
 		E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */; };
 		E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */; };
@@ -50,6 +53,9 @@
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		E517DFE625A65D7300584929 /* PlusCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCircleButton.swift; sourceTree = "<group>"; };
+		E517DFED25A6633000584929 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		E517DFF025A6663600584929 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListScroll.swift; sourceTree = "<group>"; };
 		E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E517DFE525A65D3F00584929 /* Button */,
 				D43B50F325A4B06C007C00FA /* PersonRegister */,
 				D4FFC14025A347540095DC7A /* MemoCreate */,
 				E53CD4FC25A1E6A400FD0F83 /* Personal */,
@@ -141,6 +148,16 @@
 				D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */,
 			);
 			path = MemoCreate;
+			sourceTree = "<group>";
+		};
+		E517DFE525A65D3F00584929 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E517DFE625A65D7300584929 /* PlusCircleButton.swift */,
+				E517DFED25A6633000584929 /* PlusButton.swift */,
+				E517DFF025A6663600584929 /* SaveButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		E53CD4F325A1E44200FD0F83 /* ViewModel */ = {
@@ -272,15 +289,18 @@
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
+				E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
 				D43B50F525A4B093007C00FA /* PersonRegisterView.swift in Sources */,
+				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
 				E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */,
 				D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
+				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */,

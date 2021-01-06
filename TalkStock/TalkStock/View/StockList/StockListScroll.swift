@@ -12,12 +12,12 @@ struct StockListScroll: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(memoTitles) { memoTitle in
-                    NavigationLink(destination: MemoCreateView()) {
+                    NavigationLink(destination: EmptyView()) { // 後で会話ネタ詳細画面に差し替える
                         StockCell(memoTitle: memoTitle.title)
                     }
                 }
             }
-        }
+        }.frame(height: UIComponents.screenHeight - 170)
     }
 }
 
