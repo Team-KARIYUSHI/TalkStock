@@ -19,6 +19,7 @@
 		D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B643A2597562D009A4107 /* MemoTitleModel.swift */; };
 		D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B6444259851BD009A4107 /* CategoryTag.swift */; };
 		D43B50F525A4B093007C00FA /* PersonRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonRegisterView.swift */; };
+		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
 		D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD74662598E3D900E1CB4C /* TagButton.swift */; };
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
@@ -49,6 +50,7 @@
 		D42B643A2597562D009A4107 /* MemoTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleModel.swift; sourceTree = "<group>"; };
 		D42B6444259851BD009A4107 /* CategoryTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTag.swift; sourceTree = "<group>"; };
 		D43B50F425A4B093007C00FA /* PersonRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterView.swift; sourceTree = "<group>"; };
+		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D4FD74662598E3D900E1CB4C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -124,9 +126,18 @@
 			path = PersonRegister;
 			sourceTree = "<group>";
 		};
+		D477CBF025A71C39002F0919 /* PersonList */ = {
+			isa = PBXGroup;
+			children = (
+				D477CBF125A71C71002F0919 /* PersonCell.swift */,
+			);
+			path = PersonList;
+			sourceTree = "<group>";
+		};
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D477CBF025A71C39002F0919 /* PersonList */,
 				E517DFE525A65D3F00584929 /* Button */,
 				D43B50F325A4B06C007C00FA /* PersonRegister */,
 				D4FFC14025A347540095DC7A /* MemoCreate */,
@@ -289,6 +300,7 @@
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
+				D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */,
 				E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* StockListView.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
