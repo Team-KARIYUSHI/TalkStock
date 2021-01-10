@@ -2,7 +2,7 @@
 //  PersonSummary.swift
 //  TalkStock
 //
-//  Created by 久富稜也 on 2021/01/09.
+//  Created by 久富稜也 on 2021/01/10.
 //
 
 import Foundation

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PersonListScroll: View {
     var body: some View {
-
+        
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 
@@ -17,7 +17,7 @@ struct PersonListScroll: View {
                     personSummary in NavigationLink(destination: EmptyView()) {
                         PersonCell(personName: personSummary.personName, relationship: personSummary.relationship, stockNum: personSummary.stockNum)
                     }
-                }
+                }.padding(.all, 1)
             }
         }.frame(height: UIComponents.screenHeight - 170)
     }

@@ -39,7 +39,7 @@ struct PersonCell: View {
             }
         }
         .frame(width: UIComponents.screenWidth / 1.2, height: UIComponents.screenWidth / 3, alignment: .leading)
-        
+        .foregroundColor(.black)
         .background(Color.white)
         .cornerRadius(10)
     }
