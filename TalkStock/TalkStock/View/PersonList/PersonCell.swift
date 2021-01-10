@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct PersonCell: View {
+    
+    var personName = ""
+    var relationship = ""
+    var stockNum = ""
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -18,23 +23,23 @@ struct PersonCell: View {
                     .padding()
                 
                 VStack(alignment: .leading ,spacing: 30) {
-                    Text("愛知 太郎")
+                    Text(personName)
                         .font(.title)
                         .fontWeight(.bold)
                     
                     HStack {
-                        Text("友達")
+                        Text(relationship)
                         
                         Image(systemName: "text.bubble")
                             .padding(.leading)
                         
-                        Text("4")
+                        Text(stockNum)
                     }
                 }
             }
         }
         .frame(width: UIComponents.screenWidth / 1.2, height: UIComponents.screenWidth / 3, alignment: .leading)
-        
+        .foregroundColor(.black)
         .background(Color.white)
         .cornerRadius(10)
     }
