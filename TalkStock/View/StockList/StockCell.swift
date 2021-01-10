@@ -20,10 +20,13 @@ struct StockCell: View {
                 .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
                 .padding()
             //ここにタグを表示
-            TagButton()
-                .frame(width: UIComponents.screenWidth / 1.2, alignment: .leading)
-                .padding()
+            HStack {
+                TagText()
+                    .padding(.leading, 30)
+                Spacer()
+            }
         }
+        .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 3)
         .background(Color.white)
         .cornerRadius(10)
     }

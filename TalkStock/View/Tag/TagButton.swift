@@ -9,12 +9,13 @@ import SwiftUI
 
 struct TagButton: View {
     
+   var tagName: String
+    
+    var action: ()->Void
+    
     var body: some View {
-        
-        Button(action: {
-            
-        }) {
-            Text("タグ")
+        Button(action: {}) {
+            Text(tagName)
                 .padding()
                 .foregroundColor(.black)
                 .background(Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)))
@@ -27,6 +28,6 @@ struct TagButton: View {
 
 struct TagButton_Previews: PreviewProvider {
     static var previews: some View {
-        TagButton()
+        TagButton(tagName: "タグ", action: {})
     }
 }
