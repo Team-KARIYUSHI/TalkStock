@@ -12,6 +12,7 @@ struct TabBarView: View {
     
     @State var isUnlocked = false
     
+    /// TouchID/FaceID認証をするメソッド
     func authenticate() {
         let context = LAContext()
         var error: NSError?
