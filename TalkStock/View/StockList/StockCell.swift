@@ -20,7 +20,7 @@ struct StockCell: View {
                 .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
                 .padding()
             //ここにタグを表示
-            TagButton()
+            TagText()
                 .frame(width: UIComponents.screenWidth / 1.2, alignment: .leading)
                 .padding()
         }
