@@ -24,7 +24,7 @@ struct StockListView: View {
             
                 VStack {
                     SearchHeader(searchItem: $searchItem)
-                        .padding(.top, 40)
+                        .padding(.top, UIComponents.screenHeight / 10)
                     StockListScroll()
                 }
                 .frame(minWidth: 0,
