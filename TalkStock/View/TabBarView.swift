@@ -6,23 +6,54 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct TabBarView: View {
-    var body: some View {
-        TabView {
-            PersonalView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("パーソナル")
+    
+    @State var isUnlocked = false
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: &error) {
+            let reason = "Please authenticate yourself to unlock your places."
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                         // 認証成功時
+                        self.isUnlocked = true
+                    } else {
+                        // 認証失敗時、パスコードロック解除に移行
+                    }
                 }
-            StockListView()
-                .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("ストック")
-                }
+            }
+        } else {
+            // TouchID/FaceIDをキャンセル
         }
+    }
+    
+    var body: some View {
         
-        
+        if isUnlocked {
+            TabView {
+                PersonalView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("パーソナル")
+                    }
+                StockListView()
+                    .tabItem {
+                        Image(systemName: "list.bullet")
+                        Text("ストック")
+                    }
+            }
+        } else {
+            Text("")
+            .onAppear() {
+                self.authenticate()
+            }
+        }
         
     }
 }
