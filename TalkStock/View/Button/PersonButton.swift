@@ -23,7 +23,10 @@ struct PersonButton: View {
                     .frame(width: UIComponents.screenWidth / 6, height: UIComponents.screenWidth / 6)
                 
                 Text(personName)
-            }.foregroundColor(.black)
+            }
+            .frame(width: UIComponents.screenWidth / 5,
+                   height: UIComponents.screenWidth / 4.5)
+            .foregroundColor(.black)
         }
     }
 }
