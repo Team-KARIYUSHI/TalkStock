@@ -31,40 +31,53 @@ struct MemoCreateView: View {
                         Text("タイトル").font(.caption)
                         TextField("", text: $memoTitle)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 12)
+                            .frame(width: UIComponents.screenWidth / 1.1,
+                                   height: UIComponents.screenWidth / 12)
                         
                         Text("タグ").font(.caption)
                         TextField("", text: $memoTag)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 12)
+                            .frame(width: UIComponents.screenWidth / 1.1,
+                                   height: UIComponents.screenWidth / 12)
                         Text("メモ").font(.caption)
                         MultilineTextField(text: $memoText)
-                            .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 2.5)
+                            .frame(width: UIComponents.screenWidth / 1.1,
+                                   height: UIComponents.screenWidth / 2.5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                         
                         Text("URL :").font(.caption)
                         MultilineTextField(text: $memoUrl)
-                            .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 5)
+                            .frame(width: UIComponents.screenWidth / 1.1,
+                                   height: UIComponents.screenWidth / 5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                     }
-                  
+                    
                     VStack(alignment: .leading) {
                         Text("話したい人")
                             .font(.caption)
                         
-                        PlusCircleButton(isPresented: self.$modalOpened,
-                                     view: EmptyView()) // 後で話したい人選択画面に差し替える
-                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                PlusCircleButton(isPresented: self.$modalOpened,
+                                                 view: EmptyView())
+                                // 後で話したい人選択画面に差し替える
+                                ForEach(personSummary) { personSummary in NavigationLink(destination: EmptyView()) {
+                                    PersonButton(personName: personSummary.personName,
+                                                 action: {})
+                                }
+                                }
+                            }
+                        }.frame(width: UIComponents.screenWidth / 1.1)
                     }
-
                 }
                 
                 SaveButton(title: "登録",
                            action: {
                             // ここに登録処理
                            })
+                    .padding(.bottom, 6)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
