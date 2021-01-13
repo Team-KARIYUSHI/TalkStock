@@ -27,6 +27,8 @@
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
 		D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */; };
+		E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515FA3725AF3AA300418282 /* XmarkButton.swift */; };
+		E515FA3B25AF3DA500418282 /* PersonVerticalScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */; };
 		E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFE625A65D7300584929 /* PlusCircleButton.swift */; };
 		E517DFEE25A6633000584929 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFED25A6633000584929 /* PlusButton.swift */; };
 		E517DFF125A6663600584929 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFF025A6663600584929 /* SaveButton.swift */; };
@@ -61,6 +63,8 @@
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		E515FA3725AF3AA300418282 /* XmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkButton.swift; sourceTree = "<group>"; };
+		E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVerticalScroll.swift; sourceTree = "<group>"; };
 		E517DFE625A65D7300584929 /* PlusCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCircleButton.swift; sourceTree = "<group>"; };
 		E517DFED25A6633000584929 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		E517DFF025A6663600584929 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				D477CBF125A71C71002F0919 /* PersonCell.swift */,
 				D48A301725A9BA5800D283AE /* PersonListScroll.swift */,
+				E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */,
 			);
 			path = PersonList;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E517DFE625A65D7300584929 /* PlusCircleButton.swift */,
+				E515FA3725AF3AA300418282 /* XmarkButton.swift */,
 				E517DFED25A6633000584929 /* PlusButton.swift */,
 				E517DFF025A6663600584929 /* SaveButton.swift */,
 				D44E05CC25AAF40200711EE0 /* PersonButton.swift */,
@@ -315,6 +321,7 @@
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
+				E515FA3B25AF3DA500418282 /* PersonVerticalScroll.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
 				D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */,
@@ -331,6 +338,7 @@
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
+				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,
