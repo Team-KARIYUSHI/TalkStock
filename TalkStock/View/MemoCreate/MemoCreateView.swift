@@ -24,32 +24,32 @@ struct MemoCreateView: View {
     var body: some View {
         NavigationView {
             
-            VStack {
-                Spacer().frame(height: 60)
+            ScrollView(.vertical, showsIndicators: false) {
+                Spacer().frame(height: 80)
                 VStack(alignment: .leading) {
                     Group {
                         Text("タイトル").font(.caption)
                         TextField("", text: $memoTitle)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                   height: UIComponents.screenWidth / 12)
+                                    height: UIComponents.screenWidth / 12)
                         
                         Text("タグ").font(.caption)
                         TextField("", text: $memoTag)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                   height: UIComponents.screenWidth / 12)
+                                    height: UIComponents.screenWidth / 12)
                         Text("メモ").font(.caption)
                         MultilineTextField(text: $memoText)
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                   height: UIComponents.screenWidth / 2.5)
+                                    height: UIComponents.screenWidth / 2.5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                         
                         Text("URL :").font(.caption)
                         MultilineTextField(text: $memoUrl)
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                   height: UIComponents.screenWidth / 5)
+                                    height: UIComponents.screenWidth / 5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                     }
@@ -58,27 +58,19 @@ struct MemoCreateView: View {
                         Text("話したい人")
                             .font(.caption)
                         
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                PlusCircleButton(isPresented: self.$modalOpened,
-                                                 view: EmptyView())
-                                // 後で話したい人選択画面に差し替える
-                                ForEach(personSummary) { personSummary in NavigationLink(destination: EmptyView()) {
-                                    PersonButton(personName: personSummary.personName,
-                                                 action: {})
-                                }
-                                }
-                            }
-                        }.frame(width: UIComponents.screenWidth / 1.1)
+                        // TODO: personSummaryは後で変更予定
+                        PersonVerticalScroll(isPresented: self.$modalOpened,
+                                             personSummary: personSummary)
                     }
                 }
                 
                 SaveButton(title: "登録",
-                           action: {
+                            action: {
                             // ここに登録処理
-                           })
-                    .padding(.bottom, 6)
+                            })
+                    .padding(.bottom, 30)
             }
+            .padding()
             .frame(minWidth: 0,
                    maxWidth: .infinity,
                    minHeight: 0,
@@ -87,16 +79,11 @@ struct MemoCreateView: View {
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("新規作成", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                
-                Image(systemName: "xmark")
-                    .resizable()
-                    .frame(width:  UIComponents.screenWidth / 20,
-                           height:  UIComponents.screenWidth / 20)
-                    .foregroundColor(.black)
-            })
+            .navigationBarItems(leading:
+                XmarkButton(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                })
+            )
         }
     }
 }

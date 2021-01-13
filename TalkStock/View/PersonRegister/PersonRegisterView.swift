@@ -61,16 +61,11 @@ struct PersonRegisterView: View {
             .edgesIgnoringSafeArea(.all)
             
             .navigationBarTitle("新規登録", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                
-                Image(systemName: "xmark")
-                    .resizable()
-                    .frame(width:  UIComponents.screenWidth / 20,
-                           height:  UIComponents.screenWidth / 20)
-                    .foregroundColor(.black)
-            })
+            .navigationBarItems(leading:
+                XmarkButton(action:{
+                    self.presentationMode.wrappedValue.dismiss()
+                })
+            )
         }
     }
 }
