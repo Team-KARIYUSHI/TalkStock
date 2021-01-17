@@ -32,24 +32,24 @@ struct MemoCreateView: View {
                         TextField("", text: $memoTitle)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                    height: UIComponents.screenWidth / 12)
+                                   height: UIComponents.screenWidth / 12)
                         
                         Text("タグ").font(.caption)
                         TextField("", text: $memoTag)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                    height: UIComponents.screenWidth / 12)
+                                   height: UIComponents.screenWidth / 12)
                         Text("メモ").font(.caption)
                         MultilineTextField(text: $memoText)
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                    height: UIComponents.screenWidth / 2.5)
+                                   height: UIComponents.screenWidth / 2.5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                         
                         Text("URL :").font(.caption)
                         MultilineTextField(text: $memoUrl)
                             .frame(width: UIComponents.screenWidth / 1.1,
-                                    height: UIComponents.screenWidth / 5)
+                                   height: UIComponents.screenWidth / 5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                     }
@@ -65,9 +65,9 @@ struct MemoCreateView: View {
                 }
                 
                 SaveButton(title: "登録",
-                            action: {
+                           action: {
                             // ここに登録処理
-                            })
+                           })
                     .padding(.bottom, 30)
             }
             .padding()
@@ -80,9 +80,9 @@ struct MemoCreateView: View {
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("新規作成", displayMode: .inline)
             .navigationBarItems(leading:
-                XmarkButton(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                })
+                                    XmarkButton(action: {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    })
             )
         }
     }

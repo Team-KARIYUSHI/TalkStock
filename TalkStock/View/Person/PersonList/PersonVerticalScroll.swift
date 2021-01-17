@@ -16,7 +16,7 @@ struct PersonVerticalScroll: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 PlusCircleButton(isPresented: self.$isPresented,
-                                    view: EmptyView())
+                                    view: SelectPersonModalView())
                 // 後で話したい人選択画面に差し替える
                 ForEach(personSummary) { personSummary in NavigationLink(destination: EmptyView()) {
                     PersonButton(personName: personSummary.personName,

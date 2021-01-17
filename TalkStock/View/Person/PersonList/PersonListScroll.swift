@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PersonListScroll: View {
+    
+    var height: CGFloat
+    
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
@@ -18,13 +21,13 @@ struct PersonListScroll: View {
                         PersonCell(personName: personSummary.personName, relationship: personSummary.relationship, stockNum: personSummary.stockNum)
                     }
                 }.padding(.all, 1)
-            }
-        }.frame(height: UIComponents.screenHeight - 170)
+            }.frame(height: height)
+        }
     }
 }
 
 struct PersonListScroll_Previews: PreviewProvider {
     static var previews: some View {
-        PersonListScroll()
+        PersonListScroll(height: UIComponents.screenHeight - 170)
     }
 }
