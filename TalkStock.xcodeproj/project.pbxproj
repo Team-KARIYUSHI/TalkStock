@@ -38,6 +38,7 @@
 		E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EF25A1D16200FD0F83 /* PersonalView.swift */; };
 		E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
+		E5EA539025B434DE008A5A5C /* TagButtonScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E53CD4EF25A1D16200FD0F83 /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonScrollBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				E517DFED25A6633000584929 /* PlusButton.swift */,
 				E517DFF025A6663600584929 /* SaveButton.swift */,
 				D44E05CC25AAF40200711EE0 /* PersonButton.swift */,
+				E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
+				E5EA539025B434DE008A5A5C /* TagButtonScrollBar.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,

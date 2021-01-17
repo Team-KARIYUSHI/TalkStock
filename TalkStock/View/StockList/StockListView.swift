@@ -13,6 +13,7 @@ struct StockListView: View {
     
     @State var searchItem = ""
     @State var modalOpened = false
+    @State var selected = 0
     
     init() {
         // UIComponents構造体（ヘルパークラス）から利用する
@@ -21,10 +22,10 @@ struct StockListView: View {
     
     var body: some View {
         NavigationView {
-            
                 VStack {
                     SearchHeader(searchItem: $searchItem)
-                        .padding(.top, UIComponents.screenHeight / 10)
+                        .padding(.top, UIComponents.screenHeight / 5.5)
+                    TagButtonScrollBar(selected: self.$selected)
                     StockListScroll()
                 }
                 .frame(minWidth: 0,
@@ -36,7 +37,8 @@ struct StockListView: View {
                 .edgesIgnoringSafeArea(.all)
                 .navigationBarTitle("ストック", displayMode: .inline)
                 .navigationBarItems(trailing:
-                                        PlusButton(isPresented: self.$modalOpened, view: MemoCreateView()))
+                                        PlusButton(isPresented: self.$modalOpened,
+                                                   view: MemoCreateView()))
             }
         }
     }
