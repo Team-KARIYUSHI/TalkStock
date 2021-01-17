@@ -23,6 +23,8 @@
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
 		D48A301825A9BA5800D283AE /* PersonListScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonListScroll.swift */; };
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
+		D4970D2D25B4505200F297B1 /* SelectPersonModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* SelectPersonModalView.swift */; };
+		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD74662598E3D900E1CB4C /* TagButton.swift */; };
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
@@ -60,6 +62,8 @@
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D48A301725A9BA5800D283AE /* PersonListScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListScroll.swift; sourceTree = "<group>"; };
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
+		D4970D2C25B4505200F297B1 /* SelectPersonModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonModalView.swift; sourceTree = "<group>"; };
+		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4FD74662598E3D900E1CB4C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D43B50F425A4B093007C00FA /* PersonRegisterView.swift */,
+				D4970D2C25B4505200F297B1 /* SelectPersonModalView.swift */,
 			);
 			path = PersonRegister;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				D477CBF125A71C71002F0919 /* PersonCell.swift */,
 				D48A301725A9BA5800D283AE /* PersonListScroll.swift */,
 				E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */,
+				D4970D3725B45C5400F297B1 /* PersonListSize.swift */,
 			);
 			path = PersonList;
 			sourceTree = "<group>";
@@ -157,15 +163,31 @@
 			path = DummyData;
 			sourceTree = "<group>";
 		};
+		D4970D4025B45FAB00F297B1 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				E53CD4FC25A1E6A400FD0F83 /* Personal */,
+				D477CBF025A71C39002F0919 /* PersonList */,
+				D43B50F325A4B06C007C00FA /* PersonRegister */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D4970D4125B4601400F297B1 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				E53CD4FD25A1E6B100FD0F83 /* StockList */,
+				D4FFC14025A347540095DC7A /* MemoCreate */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D477CBF025A71C39002F0919 /* PersonList */,
+				D4970D4125B4601400F297B1 /* Memo */,
+				D4970D4025B45FAB00F297B1 /* Person */,
 				E517DFE525A65D3F00584929 /* Button */,
-				D43B50F325A4B06C007C00FA /* PersonRegister */,
-				D4FFC14025A347540095DC7A /* MemoCreate */,
-				E53CD4FC25A1E6A400FD0F83 /* Personal */,
-				E53CD4FD25A1E6B100FD0F83 /* StockList */,
 				E53CD4FF25A1E70700FD0F83 /* Tag */,
 				E53CD50225A1E73B00FD0F83 /* Loading */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
@@ -322,6 +344,7 @@
 				D42B63CC2594B006009A4107 /* AppDelegate.swift in Sources */,
 				E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */,
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,
+				D4970D2D25B4505200F297B1 /* SelectPersonModalView.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E515FA3B25AF3DA500418282 /* PersonVerticalScroll.swift in Sources */,
@@ -343,6 +366,7 @@
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
 				E5EA539025B434DE008A5A5C /* TagButtonScrollBar.swift in Sources */,
+				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,
