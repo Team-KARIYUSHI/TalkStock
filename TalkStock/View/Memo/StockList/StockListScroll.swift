@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StockListScroll: View {
+    
+    var height: CGFloat
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
@@ -17,12 +20,15 @@ struct StockListScroll: View {
                     }
                 }
             }
-        }.frame(height: UIComponents.screenHeight - 170)
+            .frame(width: UIComponents.screenWidth)
+            .padding(.bottom, 100)
+        }.frame(height: height)
+        
     }
 }
 
 struct StockListScroll_Previews: PreviewProvider {
     static var previews: some View {
-        StockListScroll()
+        StockListScroll(height: UIComponents.screenHeight - 170)
     }
 }

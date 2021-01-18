@@ -26,7 +26,7 @@ struct StockListView: View {
                     SearchHeader(searchItem: $searchItem)
                         .padding(.top, UIComponents.screenHeight / 5.5)
                     TagButtonScrollBar(selected: self.$selected)
-                    StockListScroll()
+                    StockListScroll(height: StockListSize.tabBar.setHeight)
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
