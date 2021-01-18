@@ -36,7 +36,7 @@ struct SelectStockTalkModalView: View {
             .navigationBarTitle("会話ネタ選択", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action: {
                 self.presentationMode.wrappedValue.dismiss()
-            }), trailing: PlusButton(isPresented: self.$modalOpened, view: MemoCreateView()))
+            }))
         }
     }
 }
