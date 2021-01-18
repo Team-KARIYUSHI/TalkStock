@@ -17,7 +17,6 @@
 		D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */; };
 		D42B63F82597113B009A4107 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63F72597113B009A4107 /* StockCell.swift */; };
 		D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B643A2597562D009A4107 /* MemoTitleModel.swift */; };
-		D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B6444259851BD009A4107 /* CategoryTag.swift */; };
 		D43B50F525A4B093007C00FA /* PersonRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonRegisterView.swift */; };
 		D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E05CC25AAF40200711EE0 /* PersonButton.swift */; };
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
@@ -32,16 +31,19 @@
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
 		D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */; };
 		E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515FA3725AF3AA300418282 /* XmarkButton.swift */; };
-		E515FA3B25AF3DA500418282 /* PersonVerticalScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */; };
+		E515FA3B25AF3DA500418282 /* PersonHorizontalScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515FA3A25AF3DA500418282 /* PersonHorizontalScroll.swift */; };
 		E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFE625A65D7300584929 /* PlusCircleButton.swift */; };
 		E517DFEE25A6633000584929 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFED25A6633000584929 /* PlusButton.swift */; };
 		E517DFF125A6663600584929 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFF025A6663600584929 /* SaveButton.swift */; };
 		E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */; };
 		E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */; };
 		E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */; };
-		E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EF25A1D16200FD0F83 /* PersonalView.swift */; };
+		E53CD4F025A1D16200FD0F83 /* PersonalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EF25A1D16200FD0F83 /* PersonalListView.swift */; };
 		E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
+		E5D4352825B5D5A0006B3898 /* TagButtonScrollBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352725B5D5A0006B3898 /* TagButtonScrollBarViewModel.swift */; };
+		E5D4352B25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352A25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift */; };
+		E5D4352E25B5D7D5006B3898 /* PersonRelationshipButtonScrollBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352D25B5D7D5006B3898 /* PersonRelationshipButtonScrollBarViewModel.swift */; };
 		E5EA539025B434DE008A5A5C /* TagButtonScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +60,6 @@
 		D42B63EC2595C9AC009A4107 /* MemoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCreateView.swift; sourceTree = "<group>"; };
 		D42B63F72597113B009A4107 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		D42B643A2597562D009A4107 /* MemoTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleModel.swift; sourceTree = "<group>"; };
-		D42B6444259851BD009A4107 /* CategoryTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTag.swift; sourceTree = "<group>"; };
 		D43B50F425A4B093007C00FA /* PersonRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterView.swift; sourceTree = "<group>"; };
 		D44E05CC25AAF40200711EE0 /* PersonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonButton.swift; sourceTree = "<group>"; };
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
@@ -73,16 +74,19 @@
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
 		E515FA3725AF3AA300418282 /* XmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkButton.swift; sourceTree = "<group>"; };
-		E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVerticalScroll.swift; sourceTree = "<group>"; };
+		E515FA3A25AF3DA500418282 /* PersonHorizontalScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHorizontalScroll.swift; sourceTree = "<group>"; };
 		E517DFE625A65D7300584929 /* PlusCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCircleButton.swift; sourceTree = "<group>"; };
 		E517DFED25A6633000584929 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		E517DFF025A6663600584929 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListScroll.swift; sourceTree = "<group>"; };
 		E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		E53CD4EF25A1D16200FD0F83 /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		E53CD4EF25A1D16200FD0F83 /* PersonalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalListView.swift; sourceTree = "<group>"; };
 		E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		E5D4352725B5D5A0006B3898 /* TagButtonScrollBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonScrollBarViewModel.swift; sourceTree = "<group>"; };
+		E5D4352A25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRelationshipButtonScrollBar.swift; sourceTree = "<group>"; };
+		E5D4352D25B5D7D5006B3898 /* PersonRelationshipButtonScrollBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRelationshipButtonScrollBarViewModel.swift; sourceTree = "<group>"; };
 		E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonScrollBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,10 +122,10 @@
 			children = (
 				D42B63CB2594B006009A4107 /* AppDelegate.swift */,
 				D42B63CD2594B006009A4107 /* SceneDelegate.swift */,
+				E5A46C6F2595F13000C73264 /* Helper */,
 				D48A301E25AAC00D00D283AE /* DummyData */,
 				E53CD4F325A1E44200FD0F83 /* ViewModel */,
 				D4FD7481259D947C00E1CB4C /* View */,
-				E5A46C6F2595F13000C73264 /* Helper */,
 				D42B63D12594B009009A4107 /* Assets.xcassets */,
 				D42B63D62594B009009A4107 /* LaunchScreen.storyboard */,
 				D42B63D92594B009009A4107 /* Info.plist */,
@@ -152,8 +156,7 @@
 			children = (
 				D477CBF125A71C71002F0919 /* PersonCell.swift */,
 				D48A301725A9BA5800D283AE /* PersonListScroll.swift */,
-				E515FA3A25AF3DA500418282 /* PersonVerticalScroll.swift */,
-				D4970D3725B45C5400F297B1 /* PersonListSize.swift */,
+				E515FA3A25AF3DA500418282 /* PersonHorizontalScroll.swift */,
 			);
 			path = PersonList;
 			sourceTree = "<group>";
@@ -170,7 +173,7 @@
 		D4970D4025B45FAB00F297B1 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				E53CD4FC25A1E6A400FD0F83 /* Personal */,
+				E5F758BF25B5CE17001455F7 /* PersonalForTabHome */,
 				D477CBF025A71C39002F0919 /* PersonList */,
 				D43B50F325A4B06C007C00FA /* PersonRegister */,
 			);
@@ -180,6 +183,7 @@
 		D4970D4125B4601400F297B1 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				E5F758C025B5CE30001455F7 /* StockForTabHome */,
 				E53CD4FD25A1E6B100FD0F83 /* StockList */,
 				D4FFC14025A347540095DC7A /* MemoCreate */,
 			);
@@ -189,14 +193,14 @@
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
+				D42B63E12594B318009A4107 /* TabBarView.swift */,
+				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
 				D4970D4125B4601400F297B1 /* Memo */,
 				D4970D4025B45FAB00F297B1 /* Person */,
 				E517DFE525A65D3F00584929 /* Button */,
 				E53CD4FF25A1E70700FD0F83 /* Tag */,
 				E53CD50225A1E73B00FD0F83 /* Loading */,
-				D42B63E12594B318009A4107 /* TabBarView.swift */,
-				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
-				D42B6444259851BD009A4107 /* CategoryTag.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 				E517DFF025A6663600584929 /* SaveButton.swift */,
 				D44E05CC25AAF40200711EE0 /* PersonButton.swift */,
 				E5EA538F25B434DE008A5A5C /* TagButtonScrollBar.swift */,
+				E5D4352A25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -227,26 +232,17 @@
 		E53CD4F325A1E44200FD0F83 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E5D4352725B5D5A0006B3898 /* TagButtonScrollBarViewModel.swift */,
+				E5D4352D25B5D7D5006B3898 /* PersonRelationshipButtonScrollBarViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E53CD4FC25A1E6A400FD0F83 /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-				E53CD4EF25A1D16200FD0F83 /* PersonalView.swift */,
-			);
-			path = Personal;
 			sourceTree = "<group>";
 		};
 		E53CD4FD25A1E6B100FD0F83 /* StockList */ = {
 			isa = PBXGroup;
 			children = (
-				D42B63E72595B3E8009A4107 /* StockListView.swift */,
 				D42B63F72597113B009A4107 /* StockCell.swift */,
-				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
 				E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */,
-				D4E7226C25B58B2400332B73 /* StockListSize.swift */,
 			);
 			path = StockList;
 			sourceTree = "<group>";
@@ -272,9 +268,27 @@
 		E5A46C6F2595F13000C73264 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D4970D3725B45C5400F297B1 /* PersonListSize.swift */,
+				D4E7226C25B58B2400332B73 /* StockListSize.swift */,
 				E5A46C702595F14D00C73264 /* UIComponents.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E5F758BF25B5CE17001455F7 /* PersonalForTabHome */ = {
+			isa = PBXGroup;
+			children = (
+				E53CD4EF25A1D16200FD0F83 /* PersonalListView.swift */,
+			);
+			path = PersonalForTabHome;
+			sourceTree = "<group>";
+		};
+		E5F758C025B5CE30001455F7 /* StockForTabHome */ = {
+			isa = PBXGroup;
+			children = (
+				D42B63E72595B3E8009A4107 /* StockListView.swift */,
+			);
+			path = StockForTabHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +367,7 @@
 				D4970D2D25B4505200F297B1 /* SelectPersonModalView.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
-				E515FA3B25AF3DA500418282 /* PersonVerticalScroll.swift in Sources */,
+				E515FA3B25AF3DA500418282 /* PersonHorizontalScroll.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
 				D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */,
@@ -366,18 +380,20 @@
 				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
 				D4E7226A25B58A3A00332B73 /* SelectStockTalkModalView.swift in Sources */,
 				E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */,
-				D42B6445259851BD009A4107 /* CategoryTag.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
+				E5D4352B25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
-				E53CD4F025A1D16200FD0F83 /* PersonalView.swift in Sources */,
+				E53CD4F025A1D16200FD0F83 /* PersonalListView.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
 				E5EA539025B434DE008A5A5C /* TagButtonScrollBar.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
+				E5D4352825B5D5A0006B3898 /* TagButtonScrollBarViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* StockCell.swift in Sources */,
 				D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */,
+				E5D4352E25B5D7D5006B3898 /* PersonRelationshipButtonScrollBarViewModel.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* MemoCreateView.swift in Sources */,
 				D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */,
 			);
