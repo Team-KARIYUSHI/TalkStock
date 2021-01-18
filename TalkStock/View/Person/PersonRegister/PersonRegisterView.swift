@@ -43,8 +43,7 @@ struct PersonRegisterView: View {
                         .padding(.vertical)
                     
                     PlusCircleButton(isPresented: self.$modalOpened,
-                                     view: EmptyView()) // 後で会話ネタ選択画面に差し替える
-                    
+                                     view: SelectStockTalkModalView())
                 }
                 
                 SaveButton(title: "登録",
