@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-struct PersonalView: View {
+struct PersonalListView: View {
     
     @State var title: String = ""
     @State var isLoading: Bool = true
     @State var modalOpened: Bool = false
+    
+    @State var searchItem: String = ""
+    @State var selected: Int = 0
     
     /// LoadingViewをPersonalViewの前に出した時に発動するメソッド
     func loading() {
@@ -34,8 +37,19 @@ struct PersonalView: View {
                     isShowing: $isLoading) {
             NavigationView {
                 VStack {
-                    Text("パーソナル画面")
+                    SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
+                        .padding(.top, UIComponents.screenHeight / 5.5)
+                    PersonRelationshipButtonScrollBar(selected: self.$selected,
+                                                      color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
+                    PersonListScroll(height: PersonListSize.tabBar.setHeight)
                 }
+                .frame(minWidth: 0,
+                       maxWidth: .infinity,
+                       minHeight: 0,
+                       maxHeight: .infinity,
+                       alignment: .center)
+                .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
+                .edgesIgnoringSafeArea(.all)
                 .navigationBarTitle("パーソナル", displayMode: .inline)
                 .navigationBarItems(trailing:
                     PlusButton(isPresented: self.$modalOpened,view: PersonRegisterView())
@@ -47,8 +61,8 @@ struct PersonalView: View {
     }
 }
 
-struct PersonalView_Previews: PreviewProvider {
+struct PersonalListView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalView()
+        PersonalListView()
     }
 }

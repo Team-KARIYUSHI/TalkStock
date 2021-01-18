@@ -38,7 +38,7 @@ struct TabBarView: View {
         
         if isUnlocked {
             TabView {
-                PersonalView()
+                PersonalListView()
                     .tabItem {
                         Image(systemName: "person.fill")
                         Text("パーソナル")

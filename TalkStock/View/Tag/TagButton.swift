@@ -12,6 +12,7 @@ struct TagButton: View {
     @Binding var selected: Int
     var index: Int
     var tagName: String
+    var color: Color
     var action: ()->Void
     
     var body: some View {
@@ -22,7 +23,7 @@ struct TagButton: View {
             Text(tagName)
                 .padding()
                 .foregroundColor(.black)
-                .background(self.selected == index ? Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)) : Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                .background(self.selected == index ? color : Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                 .frame(height: UIComponents.screenWidth / 15)
                 .cornerRadius(30)
                 .lineLimit(1)
@@ -36,6 +37,7 @@ struct TagButton_Previews: PreviewProvider {
         TagButton(selected: .constant(0),
                   index: 0,
                   tagName: "タグ",
+                  color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)),
                   action: {})
     }
 }

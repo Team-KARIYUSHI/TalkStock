@@ -26,7 +26,10 @@ struct PersonVerticalScroll: View {
                     }
                 }
             }.frame(height:100)
-        }.frame(width: .infinity, height: 100)
+        }.frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,
+                maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
+                minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,
+                maxHeight: 100)
         .padding()
     }
 }

@@ -23,9 +23,11 @@ struct StockListView: View {
     var body: some View {
         NavigationView {
                 VStack {
-                    SearchHeader(searchItem: $searchItem)
+                    SearchHeader(searchItem: $searchItem,
+                                 placeholder: "タグ検索")
                         .padding(.top, UIComponents.screenHeight / 5.5)
-                    TagButtonScrollBar(selected: self.$selected)
+                    TagButtonScrollBar(selected: self.$selected,
+                                       color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
                     StockListScroll(height: StockListSize.tabBar.setHeight)
                 }
                 .frame(minWidth: 0,

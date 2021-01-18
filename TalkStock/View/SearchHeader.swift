@@ -10,16 +10,17 @@ import SwiftUI
 struct SearchHeader: View {
     
     @Binding var searchItem: String
+    var placeholder: String
     
     var body: some View {
         VStack {
             HStack {
-                TextField("タグ検索", text: $searchItem)
+                TextField(placeholder, text: $searchItem)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: UIComponents.screenWidth / 1.3,
                            height:  60)
                 Button(action: {
-                    //検索
+                    //検索処理
                 }) {
                     Image("検索アイコン")
                         .resizable()
@@ -36,6 +37,6 @@ struct SearchHeader: View {
 
 struct SearchHeader_Previews: PreviewProvider {
     static var previews: some View {
-        SearchHeader(searchItem: .constant(""))
+        SearchHeader(searchItem: .constant(""), placeholder: "タグ検索")
     }
 }

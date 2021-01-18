@@ -12,17 +12,19 @@ struct PersonListScroll: View {
     var height: CGFloat
     
     var body: some View {
-        
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
-                
                 ForEach(personSummary) {
                     personSummary in NavigationLink(destination: EmptyView()) {
-                        PersonCell(personName: personSummary.personName, relationship: personSummary.relationship, stockNum: personSummary.stockNum)
+                        PersonCell(personName: personSummary.personName,
+                                   relationship: personSummary.relationship,
+                                   stockNum: personSummary.stockNum)
                     }
                 }.padding(.all, 1)
-            }.frame(height: height)
-        }
+            }
+            .frame(width: UIComponents.screenWidth)
+            .padding(.bottom, 100)
+        }.frame(height: height)
     }
 }
 
