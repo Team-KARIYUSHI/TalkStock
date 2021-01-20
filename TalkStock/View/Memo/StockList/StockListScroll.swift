@@ -20,10 +20,9 @@ struct StockListScroll: View {
                     }
                 }
             }
-            .frame(width: UIComponents.screenWidth)
+            .frame(width: UIComponents.screenWidth / 1.1)
             .padding(.bottom, 100)
         }.frame(height: height)
-        
     }
 }
 
