@@ -37,17 +37,19 @@ struct TabBarView: View {
     var body: some View {
         
         if isUnlocked {
-            TabView {
-                PersonalListView()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("パーソナル")
-                    }
-                StockListView()
-                    .tabItem {
-                        Image(systemName: "list.bullet")
-                        Text("ストック")
-                    }
+            NavigationView {
+                TabView {
+                    PersonalListView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("パーソナル")
+                        }
+                    StockListView()
+                        .tabItem {
+                            Image(systemName: "list.bullet")
+                            Text("ストック")
+                        }
+                }
             }
         } else {
             Text("")
