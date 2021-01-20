@@ -35,7 +35,6 @@ struct PersonalListView: View {
     var body: some View {
         LoadingView(title: $title,
                     isShowing: $isLoading) {
-            NavigationView {
                 VStack {
                     SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
                         .padding(.top, UIComponents.screenHeight / 5.5)
@@ -54,9 +53,9 @@ struct PersonalListView: View {
                 .navigationBarItems(trailing:
                     PlusButton(isPresented: self.$modalOpened,view: PersonRegisterView())
                 )
-            }.onAppear() {
-                self.loading()
-            }
+                .onAppear() {
+                    self.loading()
+                }
         }
     }
 }

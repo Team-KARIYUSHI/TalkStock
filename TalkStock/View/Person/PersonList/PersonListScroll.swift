@@ -9,13 +9,15 @@ import SwiftUI
 
 struct PersonListScroll: View {
     
+    @State private var tabBar: UITabBar! = nil
     var height: CGFloat
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(personSummary) {
-                    personSummary in NavigationLink(destination: ProfileDetailView()) {
+                    personSummary in NavigationLink(destination: ProfileDetailView()
+                    ) {
                         PersonCell(personName: personSummary.personName,
                                    relationship: personSummary.relationship,
                                    stockNum: personSummary.stockNum)
@@ -27,6 +29,7 @@ struct PersonListScroll: View {
         }.frame(height: height)
     }
 }
+
 
 struct PersonListScroll_Previews: PreviewProvider {
     static var previews: some View {
