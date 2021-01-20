@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectStockTalkModalView: View {
+struct TopicListModalView: View {
     
     @State var modalOpened = false
     
@@ -21,7 +21,7 @@ struct SelectStockTalkModalView: View {
         NavigationView {
             
             VStack {
-                StockListScroll(height: StockListSize.modal.setHeight)
+                TopicListScroll(height: TopicListSize.modal.setHeight)
             }
             .padding(.top, 150)
             .frame(minWidth: 0,
@@ -42,8 +42,8 @@ struct SelectStockTalkModalView: View {
 }
 
 
-struct SelectStockTalkModalView_Previews: PreviewProvider {
+struct TopicListModalView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectStockTalkModalView()
+        TopicListModalView()
     }
 }

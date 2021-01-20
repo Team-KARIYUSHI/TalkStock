@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonVerticalScroll: View {
+struct PersonCollection: View {
     
     @Binding var isPresented: Bool
     var personSummary: [PersonSummary]
@@ -16,13 +16,14 @@ struct PersonVerticalScroll: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 PlusCircleButton(isPresented: self.$isPresented,
-                                    view: SelectPersonModalView())
+                                    view: PersonListModalView())
                 // 後で話したい人選択画面に差し替える
-                ForEach(personSummary) { personSummary in NavigationLink(destination: EmptyView()) {
-                    PersonButton(personName: personSummary.personName,
-                                    action: {
+                ForEach(personSummary) { personSummary in
+                    NavigationLink(destination: EmptyView()) {
+                        PersonButton(personName: personSummary.personName,
+                                     action: {
                                         
-                                    })
+                                     })
                     }
                 }
             }.frame(height:100)
@@ -34,8 +35,8 @@ struct PersonVerticalScroll: View {
     }
 }
 
-struct PersonVerticalScroll_Previews: PreviewProvider {
+struct PersonCollection_Previews: PreviewProvider {
     static var previews: some View {
-        PersonVerticalScroll(isPresented: .constant(false), personSummary: personSummary)
+        PersonCollection(isPresented: .constant(false), personSummary: personSummary)
     }
 }

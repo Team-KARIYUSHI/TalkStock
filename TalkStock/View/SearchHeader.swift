@@ -22,7 +22,7 @@ struct SearchHeader: View {
                 Button(action: {
                     //検索処理
                 }) {
-                    Image("検索アイコン")
+                    Image("search_icon")
                         .resizable()
                         .frame(width:  UIComponents.screenWidth / 13,
                                height:  UIComponents.screenWidth / 13)

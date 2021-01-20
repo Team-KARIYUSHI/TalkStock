@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SelectPersonModalView: View {
+struct PersonListModalView: View {
     
     @State var modalOpened = false
     
@@ -32,17 +32,16 @@ struct SelectPersonModalView: View {
             .padding(.top, 40)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
-            
-            .navigationBarTitle("話したい人選択", displayMode: .inline)
+            .navigationBarTitle("話したい人一覧", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action: {
                 self.presentationMode.wrappedValue.dismiss()
-            }), trailing: PlusButton(isPresented: self.$modalOpened, view: PersonRegisterView()))
+            }), trailing: PlusButton(isPresented: self.$modalOpened, view: PersonCreateView()))
         }
     }
 }
 
-struct SelectPersonModalView_Previews: PreviewProvider {
+struct PersonListModalView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectPersonModalView()
+        PersonListModalView()
     }
 }

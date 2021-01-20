@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonRegisterView: View {
+struct PersonCreateView: View {
     
     @State var personName = ""
     @State var relationship = ""
@@ -43,7 +43,7 @@ struct PersonRegisterView: View {
                         .padding(.vertical)
                     
                     PlusCircleButton(isPresented: self.$modalOpened,
-                                     view: SelectStockTalkModalView())
+                                     view: TopicListModalView())
                 }
                 
                 SaveButton(title: "登録",
@@ -69,8 +69,8 @@ struct PersonRegisterView: View {
     }
 }
 
-struct PersonRegisterVIew_Previews: PreviewProvider {
+struct PersonCreateView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonRegisterView()
+        PersonCreateView()
     }
 }

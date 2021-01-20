@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct StockCell: View {
+struct TopicCell: View {
     
-    var memoTitle: String
+    var title: String
     
     var body: some View {
         
         VStack(spacing: -10) {
-            Text(memoTitle)
+            Text(title)
                 .font(.system(size: UIComponents.screenWidth / 20))
                 .foregroundColor(Color.black)
                 .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
@@ -26,14 +26,15 @@ struct StockCell: View {
                 Spacer()
             }
         }
-        .frame(width: UIComponents.screenWidth / 1.1, height: UIComponents.screenWidth / 3)
+        .frame(width: UIComponents.screenWidth / 1.1,
+               height: UIComponents.screenWidth / 3)
         .background(Color.white)
         .cornerRadius(10)
     }
 }
 
-struct StockCell_Previews: PreviewProvider {
+struct TopicCell_Previews: PreviewProvider {
     static var previews: some View {
-        StockCell(memoTitle: "")
+        TopicCell(title: "")
     }
 }

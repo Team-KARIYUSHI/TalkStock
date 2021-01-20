@@ -15,17 +15,22 @@ struct PersonListScroll: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
-                ForEach(personSummary) {
-                    personSummary in NavigationLink(destination: ProfileDetailView()
+                ForEach(personSummary) { personSummary in
+                    NavigationLink(destination: ProfileView()
+                        .onAppear { self.tabBar.isHidden = true }
+                        .onDisappear { self.tabBar.isHidden = false }
                     ) {
-                        PersonCell(personName: personSummary.personName,
+                        PersonCell(name: personSummary.personName,
                                    relationship: personSummary.relationship,
-                                   stockNum: personSummary.stockNum)
+                                   topicNum: personSummary.stockNum)
                     }
                 }.padding(.all, 1)
             }
             .frame(width: UIComponents.screenWidth)
             .padding(.bottom, 100)
+            .background(TabBarAccessor { tabbar in
+                        self.tabBar = tabbar
+                    })
         }.frame(height: height)
     }
 }

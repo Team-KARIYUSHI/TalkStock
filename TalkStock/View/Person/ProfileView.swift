@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileDetailView: View {
+struct ProfileView: View {
     
     @State var modalOpened = false
     
@@ -37,7 +37,7 @@ struct ProfileDetailView: View {
                         Text("会話ネタ")
                             .padding(.vertical)
                         
-                        StockListOnly()
+                        TopicList()
                             .padding(.bottom, 70)
                     }
                 }
@@ -65,8 +65,8 @@ struct ProfileDetailView: View {
     }
 }
 
-struct ProfileDetailView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetailView()
+        ProfileView()
     }
 }

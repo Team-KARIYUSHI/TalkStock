@@ -11,7 +11,7 @@ struct SplashView: View {
     var body: some View {
             
         VStack {
-            Image("アプリロゴ")
+            Image("app_logo")
                 .resizable()
                 .frame(width: UIComponents.screenWidth / 2,
                        height: UIComponents.screenWidth / 2)
