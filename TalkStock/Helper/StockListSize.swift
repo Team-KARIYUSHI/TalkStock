@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum StockListSize {
+enum TopicListSize {
     case tabBar
     case modal
     

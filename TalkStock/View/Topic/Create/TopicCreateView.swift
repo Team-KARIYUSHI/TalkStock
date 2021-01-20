@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MemoCreateView: View {
+struct TopicCreateView: View {
     
-    @State var memoTitle = ""
-    @State var memoTag = ""
-    @State var memoText = ""
-    @State var memoUrl = ""
+    @State var title = ""
+    @State var tag = ""
+    @State var text = ""
+    @State var url = ""
     @State var modalOpened = false
     
     @Environment(\.presentationMode) var presentationMode
@@ -29,25 +29,25 @@ struct MemoCreateView: View {
                 VStack(alignment: .leading) {
                     Group {
                         Text("タイトル").font(.caption)
-                        TextField("", text: $memoTitle)
+                        TextField("", text: $title)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
                                    height: UIComponents.screenWidth / 12)
                         
                         Text("タグ").font(.caption)
-                        TextField("", text: $memoTag)
+                        TextField("", text: $tag)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
                                    height: UIComponents.screenWidth / 12)
                         Text("メモ").font(.caption)
-                        MultilineTextField(text: $memoText)
+                        MultilineTextField(text: $text)
                             .frame(width: UIComponents.screenWidth / 1.1,
                                    height: UIComponents.screenWidth / 2.5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
                             .cornerRadius(10)
                         
                         Text("URL :").font(.caption)
-                        MultilineTextField(text: $memoUrl)
+                        MultilineTextField(text: $url)
                             .frame(width: UIComponents.screenWidth / 1.1,
                                    height: UIComponents.screenWidth / 5)
                             .border(Color(#colorLiteral(red: 0.7999121547, green: 0.8000506759, blue: 0.7999034524, alpha: 1)), width: 0.5)
@@ -59,7 +59,7 @@ struct MemoCreateView: View {
                             .font(.caption)
                         
                         // TODO: personSummaryは後で変更予定
-                        PersonVerticalScroll(isPresented: self.$modalOpened,
+                        PersonCollection(isPresented: self.$modalOpened,
                                              personSummary: personSummary)
                     }
                 }
@@ -89,8 +89,8 @@ struct MemoCreateView: View {
 }
 
 
-struct MemoCreateView_Previews: PreviewProvider {
+struct TopicCreateView_Previews: PreviewProvider {
     static var previews: some View {
-        MemoCreateView()
+        TopicCreateView()
     }
 }

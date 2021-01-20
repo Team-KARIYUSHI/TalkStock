@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonalListView: View {
+struct PersonHomeView: View {
     
     @State var title: String = ""
     @State var isLoading: Bool = true
@@ -32,14 +32,19 @@ struct PersonalListView: View {
         }
     }
     
+    init() {
+        // UIComponents構造体（ヘルパークラス）から利用する
+        UIComponents.setupNavigationBar()
+    }
+    
     var body: some View {
-        LoadingView(title: $title,
-                    isShowing: $isLoading) {
+        NavigationView {
+            LoadingView(title: $title,
+                        isShowing: $isLoading) {
                 VStack {
                     SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
                         .padding(.top, UIComponents.screenHeight / 5.5)
-                    PersonRelationshipButtonScrollBar(selected: self.$selected,
-                                                      color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
+                    RelationshipFilter(selected: self.$selected,color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
                     PersonListScroll(height: PersonListSize.tabBar.setHeight)
                 }
                 .frame(minWidth: 0,
@@ -49,19 +54,23 @@ struct PersonalListView: View {
                        alignment: .center)
                 .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
                 .edgesIgnoringSafeArea(.all)
-                .navigationBarTitle("パーソナル", displayMode: .inline)
+                .navigationBarTitle("話したい人", displayMode: .inline)
                 .navigationBarItems(trailing:
-                    PlusButton(isPresented: self.$modalOpened,view: PersonRegisterView())
+                                        PlusButton(isPresented: self.$modalOpened,view: PersonCreateView())
                 )
                 .onAppear() {
                     self.loading()
                 }
+            }
         }
     }
 }
 
-struct PersonalListView_Previews: PreviewProvider {
+
+
+
+struct PersonHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalListView()
+        PersonHomeView()
     }
 }

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PersonCell: View {
     
-    var personName = ""
+    var name = ""
     var relationship = ""
-    var stockNum = ""
+    var topicNum = ""
     
     var body: some View {
         
@@ -23,7 +23,7 @@ struct PersonCell: View {
                     .padding()
                 
                 VStack(alignment: .leading ,spacing: 30) {
-                    Text(personName)
+                    Text(name)
                         .font(.title)
                         .fontWeight(.bold)
                     
@@ -33,7 +33,7 @@ struct PersonCell: View {
                         Image(systemName: "text.bubble")
                             .padding(.leading)
                         
-                        Text(stockNum)
+                        Text(topicNum)
                     }
                 }
             }

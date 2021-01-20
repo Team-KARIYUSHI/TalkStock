@@ -8,8 +8,7 @@
 import SwiftUI
 
 
-struct StockListView: View {
-    
+struct TopicHomeView: View {
     
     @State var searchItem = ""
     @State var modalOpened = false
@@ -21,13 +20,14 @@ struct StockListView: View {
     }
     
     var body: some View {
+        NavigationView {
             VStack {
                 SearchHeader(searchItem: $searchItem,
                              placeholder: "タグ検索")
                     .padding(.top, UIComponents.screenHeight / 5.5)
-                TagButtonScrollBar(selected: self.$selected,
-                                   color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
-                StockListScroll(height: StockListSize.tabBar.setHeight)
+                TagFilter(selected: self.$selected,
+                          color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
+                TopicListScroll(height: TopicListSize.tabBar.setHeight)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
@@ -36,16 +36,17 @@ struct StockListView: View {
                    alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle("ストック", displayMode: .inline)
+            .navigationBarTitle("会話ネタ", displayMode: .inline)
             .navigationBarItems(trailing:
                                     PlusButton(isPresented: self.$modalOpened,
-                                               view: MemoCreateView()))
+                                               view: TopicCreateView()))
+        }
     }
 }
 
 
-struct StockListView_Previews: PreviewProvider {
+struct TopicHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        StockListView()
+        TopicHomeView()
     }
 }
