@@ -15,7 +15,7 @@ struct PersonListScroll: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(personSummary) {
-                    personSummary in NavigationLink(destination: EmptyView()) {
+                    personSummary in NavigationLink(destination: ProfileDetailView()) {
                         PersonCell(personName: personSummary.personName,
                                    relationship: personSummary.relationship,
                                    stockNum: personSummary.stockNum)

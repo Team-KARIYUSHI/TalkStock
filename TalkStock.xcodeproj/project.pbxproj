@@ -26,6 +26,8 @@
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4E7226A25B58A3A00332B73 /* SelectStockTalkModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226925B58A3A00332B73 /* SelectStockTalkModalView.swift */; };
 		D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226C25B58B2400332B73 /* StockListSize.swift */; };
+		D4E7227225B6EEE700332B73 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */; };
+		D4E7228925B719E200332B73 /* StockListOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7228825B719E200332B73 /* StockListOnly.swift */; };
 		D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD74662598E3D900E1CB4C /* TagButton.swift */; };
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
 		D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD7482259D94D800E1CB4C /* SplashView.swift */; };
@@ -69,6 +71,8 @@
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4E7226925B58A3A00332B73 /* SelectStockTalkModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStockTalkModalView.swift; sourceTree = "<group>"; };
 		D4E7226C25B58B2400332B73 /* StockListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListSize.swift; sourceTree = "<group>"; };
+		D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
+		D4E7228825B719E200332B73 /* StockListOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListOnly.swift; sourceTree = "<group>"; };
 		D4FD74662598E3D900E1CB4C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		D4FD7482259D94D800E1CB4C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		D4970D4025B45FAB00F297B1 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */,
 				E5F758BF25B5CE17001455F7 /* PersonalForTabHome */,
 				D477CBF025A71C39002F0919 /* PersonList */,
 				D43B50F325A4B06C007C00FA /* PersonRegister */,
@@ -243,6 +248,7 @@
 			children = (
 				D42B63F72597113B009A4107 /* StockCell.swift */,
 				E51C1AD125A1E90A00721BE1 /* StockListScroll.swift */,
+				D4E7228825B719E200332B73 /* StockListOnly.swift */,
 			);
 			path = StockList;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,
 				D4970D2D25B4505200F297B1 /* SelectPersonModalView.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
+				D4E7227225B6EEE700332B73 /* ProfileDetailView.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E515FA3B25AF3DA500418282 /* PersonHorizontalScroll.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
@@ -382,6 +389,7 @@
 				E51C1AD225A1E90A00721BE1 /* StockListScroll.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
 				E5D4352B25B5D79A006B3898 /* PersonRelationshipButtonScrollBar.swift in Sources */,
+				D4E7228925B719E200332B73 /* StockListOnly.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonalListView.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
