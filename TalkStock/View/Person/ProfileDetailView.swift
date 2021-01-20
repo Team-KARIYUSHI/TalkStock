@@ -16,37 +16,42 @@ struct ProfileDetailView: View {
     }
     
     var body: some View {
-        
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
+        ZStack {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .frame(width: UIComponents.screenWidth / 2,
-                               height: UIComponents.screenWidth / 2)
-                }
-                VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        Text("関係")
-                        
-                        Text("友達")
-                            .font(.title2)
-                            .frame(width: UIComponents.screenWidth / 1.4,
-                                   alignment: .leading)
+                    VStack {
+                        Image(systemName: "person.crop.circle")
+                            .resizable()
+                            .frame(width: UIComponents.screenWidth / 2,
+                                   height: UIComponents.screenWidth / 2)
                     }
-                    Text("会話ネタ")
-                        .padding(.vertical)
-                    
-                    StockListOnly()
+                    VStack(alignment: .leading, spacing: 0) {
+                        HStack {
+                            Text("関係")
+                            
+                            Text("友達")
+                                .font(.title2)
+                                .frame(width: UIComponents.screenWidth / 1.4,
+                                       alignment: .leading)
+                        }
+                        Text("会話ネタ")
+                            .padding(.vertical)
+                        
+                        StockListOnly()
+                            .padding(.bottom, 70)
+                    }
                 }
-                
+                .frame(width: UIComponents.screenWidth)
+                .padding(.top, 100)
+            }
+            
+            VStack {
+                Spacer()
                 SaveButton(title: "編集",
                            action: {
                             // ここに登録処理
-                           }).padding(.vertical)
+                           }).padding(.bottom)
             }
-            .frame(width: UIComponents.screenWidth)
-            .padding(.top, 100)
         }
         .frame(minWidth: 0,
                maxWidth: .infinity,
