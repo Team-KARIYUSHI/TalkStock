@@ -50,7 +50,7 @@ struct TabBarView: View {
                     }
             }
         } else {
-            Text("")
+            EmptyStateView(imageName: EmptyState.splash.setImageName)
             .onAppear() {
                 self.authenticate()
             }

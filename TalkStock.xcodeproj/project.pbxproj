@@ -42,6 +42,8 @@
 		E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */; };
 		E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */; };
 		E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */; };
+		E54E128A25BB06D600EC92BA /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128925BB06D600EC92BA /* EmptyStateView.swift */; };
+		E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128D25BB0A0C00EC92BA /* EmptyState.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
 		E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */; };
 		E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */; };
@@ -88,6 +90,8 @@
 		E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHomeView.swift; sourceTree = "<group>"; };
 		E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
+		E54E128925BB06D600EC92BA /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		E54E128D25BB0A0C00EC92BA /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
 		E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
 				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
+				E54E129125BB0C7F00EC92BA /* Empty */,
 				D4970D4125B4601400F297B1 /* Topic */,
 				D4970D4025B45FAB00F297B1 /* Person */,
 				E517DFE525A65D3F00584929 /* Button */,
@@ -272,6 +277,15 @@
 				E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		E54E129125BB0C7F00EC92BA /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				E54E128D25BB0A0C00EC92BA /* EmptyState.swift */,
+				E54E128925BB06D600EC92BA /* EmptyStateView.swift */,
+			);
+			path = Empty;
 			sourceTree = "<group>";
 		};
 		E5A46C6F2595F13000C73264 /* Helper */ = {
@@ -388,6 +402,7 @@
 				D48A301825A9BA5800D283AE /* PersonList+Scroll.swift in Sources */,
 				D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */,
 				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
+				E54E128A25BB06D600EC92BA /* EmptyStateView.swift in Sources */,
 				D4E7226A25B58A3A00332B73 /* TopicListModalView.swift in Sources */,
 				E51C1AD225A1E90A00721BE1 /* TopicList+Scroll.swift in Sources */,
 				E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */,
@@ -396,6 +411,7 @@
 				D4E7228925B719E200332B73 /* TopicList.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */,
+				E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
 				E5EA539025B434DE008A5A5C /* TagFilter.swift in Sources */,
