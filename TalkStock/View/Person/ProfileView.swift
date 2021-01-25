@@ -49,8 +49,11 @@ struct ProfileView: View {
                 Spacer()
                 SaveButton(title: "編集",
                            action: {
-                            // ここに登録処理
-                           }).padding(.bottom)
+                            self.modalOpened.toggle()
+                           }).sheet(isPresented: $modalOpened) {
+                        ProfileEditView()
+                    }
+                    .padding(.bottom)
             }
         }
         .frame(minWidth: 0,
