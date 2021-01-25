@@ -12,10 +12,10 @@ struct TopicListScroll: View {
     var height: CGFloat
     
     var body: some View {
-            ScrollView(.vertical, showsIndicators: false) {
-                TopicList()
-                    .padding(.bottom, 100)
-            }.frame(height: height)
+        ScrollView(.vertical, showsIndicators: false) {
+            TopicList()
+                .padding(.bottom, 100)
+        }.frame(height: height)
     }
 }
 
