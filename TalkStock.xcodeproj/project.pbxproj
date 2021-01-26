@@ -24,6 +24,8 @@
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
 		D4970D2D25B4505200F297B1 /* PersonListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonListModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
+		D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */; };
+		D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242B25C01CBE0054B806 /* DeleteButton.swift */; };
 		D4E7226A25B58A3A00332B73 /* TopicListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226925B58A3A00332B73 /* TopicListModalView.swift */; };
 		D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226C25B58B2400332B73 /* StockListSize.swift */; };
 		D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7227125B6EEE700332B73 /* ProfileView.swift */; };
@@ -72,6 +74,8 @@
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
 		D4970D2C25B4505200F297B1 /* PersonListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
+		D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		D4CB242B25C01CBE0054B806 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		D4E7226925B58A3A00332B73 /* TopicListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListModalView.swift; sourceTree = "<group>"; };
 		D4E7226C25B58B2400332B73 /* StockListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListSize.swift; sourceTree = "<group>"; };
 		D4E7227125B6EEE700332B73 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E7227125B6EEE700332B73 /* ProfileView.swift */,
+				D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */,
 				E5F758BF25B5CE17001455F7 /* TabHome */,
 				D477CBF025A71C39002F0919 /* List */,
 				D43B50F325A4B06C007C00FA /* Create */,
@@ -232,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				E517DFE625A65D7300584929 /* PlusCircleButton.swift */,
+				D4CB242B25C01CBE0054B806 /* DeleteButton.swift */,
 				E515FA3725AF3AA300418282 /* XmarkButton.swift */,
 				E517DFED25A6633000584929 /* PlusButton.swift */,
 				E517DFF025A6663600584929 /* SaveButton.swift */,
@@ -396,6 +402,7 @@
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
 				D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */,
 				E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */,
+				D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* TopicHomeView.swift in Sources */,
 				D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
@@ -415,6 +422,7 @@
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
 				E5EA539025B434DE008A5A5C /* TagFilter.swift in Sources */,
+				D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
 				E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
