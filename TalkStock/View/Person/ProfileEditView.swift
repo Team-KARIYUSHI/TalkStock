@@ -78,14 +78,16 @@ struct ProfileEditView: View {
             }
             .navigationBarTitle("プロフィール編集", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action:{
-                                        self.presentationMode.wrappedValue.dismiss()
-                                    })
-            )
-            .frame(minWidth: 0,
-                   maxWidth: .infinity,
-                   minHeight: 0,
-                   maxHeight: .infinity,
-                   alignment: .center)
+                self.presentationMode.wrappedValue.dismiss()
+            }),trailing: DeleteButton(action: {
+                //ここに削除処理
+                
+            }).padding(.bottom, 1)
+            ).frame(minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
         }
