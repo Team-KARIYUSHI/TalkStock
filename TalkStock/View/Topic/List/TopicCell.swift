@@ -19,11 +19,16 @@ struct TopicCell: View {
                 .foregroundColor(Color.black)
                 .frame(width: UIComponents.screenWidth / 1.2,height: UIComponents.screenWidth / 7, alignment: .topLeading)
                 .padding()
-            //ここにタグを表示
+            
             HStack {
                 TagText()
                     .padding(.leading, 30)
                 Spacer()
+                Text("作成日：\(GetDate.getToday())")
+                    .foregroundColor(.black)
+                    .opacity(0.5)
+                    .padding(.trailing, 30)
+                
             }
         }
         .frame(width: UIComponents.screenWidth / 1.1,

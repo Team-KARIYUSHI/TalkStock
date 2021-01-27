@@ -26,6 +26,7 @@
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */; };
 		D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242B25C01CBE0054B806 /* DeleteButton.swift */; };
+		D4CB243825C16B510054B806 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB243725C16B510054B806 /* GetDate.swift */; };
 		D4E7226A25B58A3A00332B73 /* TopicListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226925B58A3A00332B73 /* TopicListModalView.swift */; };
 		D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226C25B58B2400332B73 /* StockListSize.swift */; };
 		D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7227125B6EEE700332B73 /* ProfileView.swift */; };
@@ -76,6 +77,7 @@
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		D4CB242B25C01CBE0054B806 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		D4CB243725C16B510054B806 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
 		D4E7226925B58A3A00332B73 /* TopicListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListModalView.swift; sourceTree = "<group>"; };
 		D4E7226C25B58B2400332B73 /* StockListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListSize.swift; sourceTree = "<group>"; };
 		D4E7227125B6EEE700332B73 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				D4970D3725B45C5400F297B1 /* PersonListSize.swift */,
 				D4E7226C25B58B2400332B73 /* StockListSize.swift */,
 				E5A46C702595F14D00C73264 /* UIComponents.swift */,
+				D4CB243725C16B510054B806 /* GetDate.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				E5EA539025B434DE008A5A5C /* TagFilter.swift in Sources */,
 				D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
+				D4CB243825C16B510054B806 /* GetDate.swift in Sources */,
 				E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
