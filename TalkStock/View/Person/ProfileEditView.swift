@@ -72,7 +72,7 @@ struct ProfileEditView: View {
                     Spacer()
                     SaveButton(title: "更新",
                                action: {
-                                // ここに登録処理
+                                // ここに更新処理
                                }).padding(.bottom)
                 }
             }
