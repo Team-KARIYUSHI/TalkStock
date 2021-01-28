@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PersonCreateView: View {
     
-    @State var personName = ""
+    @State var name = ""
     @State var relationship = ""
     @State var modalOpened = false
     
@@ -22,35 +22,64 @@ struct PersonCreateView: View {
     var body: some View {
         
         NavigationView {
-            VStack {
-                VStack {
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .frame(width: UIComponents.screenWidth / 2,
-                               height: UIComponents.screenWidth / 2)
-                    TextField("名前", text: $personName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: UIComponents.screenWidth / 1.1)
-                }.padding(.bottom)
-                
-                VStack(alignment: .leading) {
-                    Text("関係")
-                    TextField("例：友達", text: $relationship)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: UIComponents.screenWidth / 1.1)
-                    
-                    Text("会話ネタ")
-                        .padding(.vertical)
-                    
-                    PlusCircleButton(isPresented: self.$modalOpened,
-                                     view: TopicListModalView())
+            ZStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        VStack {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width: UIComponents.screenWidth / 2,
+                                       height: UIComponents.screenWidth / 2)
+                            
+                            HStack(spacing: 20) {
+                                Text("名前")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.black.opacity(0.5))
+                                
+                                TextField("例：山田太郎", text: $name)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .frame(width: UIComponents.screenWidth / 2)
+                                    .padding(.trailing, 50)
+                            }
+                            
+                            VStack(alignment: .leading) {
+                                HStack(spacing: 20) {
+                                    Text("関係")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.black.opacity(0.5))
+                                    
+                                    TextField("例：友達", text: $name)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        .frame(width: UIComponents.screenWidth / 2)
+                                        .padding(.trailing, 50)
+                                }.padding(.bottom)
+                                
+                                VStack {
+                                    Text("会話ネタ")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.black.opacity(0.5))
+                                    PlusCircleButton(isPresented: self.$modalOpened,
+                                                     view: TopicListModalView())
+                                }
+                            }
+                        }
+                    }
+                    .frame(width: UIComponents.screenWidth)
+                    .padding(.top, 100)
                 }
                 
-                SaveButton(title: "登録",
-                           action: {
-                            // ここに登録処理
-                           })
+                VStack {
+                    Spacer()
+                    SaveButton(title: "登録",
+                               action: {
+                                // ここに登録処理
+                               }).padding(.bottom)
+                }
             }
+            .navigationBarTitle("新規登録", displayMode: .inline)
+            .navigationBarItems(leading: XmarkButton(action:{
+                self.presentationMode.wrappedValue.dismiss()
+            }))
             .frame(minWidth: 0,
                    maxWidth: .infinity,
                    minHeight: 0,
@@ -58,13 +87,6 @@ struct PersonCreateView: View {
                    alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
-            
-            .navigationBarTitle("新規登録", displayMode: .inline)
-            .navigationBarItems(leading:
-                XmarkButton(action:{
-                    self.presentationMode.wrappedValue.dismiss()
-                })
-            )
         }
     }
 }
