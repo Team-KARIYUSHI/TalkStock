@@ -20,7 +20,7 @@
 		D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonCreateView.swift */; };
 		D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E05CC25AAF40200711EE0 /* PersonButton.swift */; };
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
-		D48A301825A9BA5800D283AE /* PersonList+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonList+Scroll.swift */; };
+		D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonList+Move.swift */; };
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
 		D4970D2D25B4505200F297B1 /* PersonListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonListModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
@@ -47,6 +47,7 @@
 		E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */; };
 		E54E128A25BB06D600EC92BA /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128925BB06D600EC92BA /* EmptyStateView.swift */; };
 		E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128D25BB0A0C00EC92BA /* EmptyState.swift */; };
+		E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
 		E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */; };
 		E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */; };
@@ -71,7 +72,7 @@
 		D43B50F425A4B093007C00FA /* PersonCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateView.swift; sourceTree = "<group>"; };
 		D44E05CC25AAF40200711EE0 /* PersonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonButton.swift; sourceTree = "<group>"; };
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
-		D48A301725A9BA5800D283AE /* PersonList+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Scroll.swift"; sourceTree = "<group>"; };
+		D48A301725A9BA5800D283AE /* PersonList+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Move.swift"; sourceTree = "<group>"; };
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
 		D4970D2C25B4505200F297B1 /* PersonListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
 		E54E128925BB06D600EC92BA /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		E54E128D25BB0A0C00EC92BA /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Action.swift"; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
 		E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
@@ -170,8 +172,9 @@
 		D477CBF025A71C39002F0919 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */,
 				D477CBF125A71C71002F0919 /* PersonCell.swift */,
-				D48A301725A9BA5800D283AE /* PersonList+Scroll.swift */,
+				D48A301725A9BA5800D283AE /* PersonList+Move.swift */,
 				E515FA3A25AF3DA500418282 /* PersonCollection.swift */,
 				E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */,
 			);
@@ -400,6 +403,7 @@
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
+				E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */,
 				E515FA3B25AF3DA500418282 /* PersonCollection.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
@@ -409,7 +413,7 @@
 				D42B63E82595B3E8009A4107 /* TopicHomeView.swift in Sources */,
 				D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
-				D48A301825A9BA5800D283AE /* PersonList+Scroll.swift in Sources */,
+				D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */,
 				D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */,
 				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
 				E54E128A25BB06D600EC92BA /* EmptyStateView.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PersonListScroll.swift
+//  PersonList+Move.swift
 //  TalkStock
 //
 //  Created by 久富稜也 on 2021/01/09.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct PersonListScroll: View {
+struct PersonListMove: View {
     
     @State private var tabBar: UITabBar! = nil
     var height: CGFloat
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack {
+            LazyVStack {
                 ForEach(personSummary) { personSummary in
                     NavigationLink(destination: ProfileView()
                         .onAppear { self.tabBar.isHidden = true }
@@ -36,8 +36,8 @@ struct PersonListScroll: View {
 }
 
 
-struct PersonListScroll_Previews: PreviewProvider {
+struct PersonListMove_Previews: PreviewProvider {
     static var previews: some View {
-        PersonListScroll(height: UIComponents.screenHeight - 170)
+        PersonListMove(height: UIComponents.screenHeight - 170)
     }
 }

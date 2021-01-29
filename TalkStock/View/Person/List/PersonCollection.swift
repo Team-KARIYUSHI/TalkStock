@@ -1,5 +1,5 @@
 //
-//  PersonVerticalScroll.swift
+//  PersonCollection.swift
 //  TalkStock
 //
 //  Created by kazuya on 2021/01/13.

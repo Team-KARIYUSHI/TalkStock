@@ -20,9 +20,10 @@ struct PersonListModalView: View {
     
     var body: some View {
         NavigationView {
-            
             VStack {
-                PersonListScroll(height: PersonListSize.modal.setHeight)
+                PersonListAction(height: PersonListSize.modal.setHeight) {
+                    self.presentationMode.wrappedValue.dismiss()
+                }.padding(.top, 120)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,

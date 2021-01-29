@@ -20,7 +20,7 @@ struct ProfileEditView: View {
         NavigationView {
             ZStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
+                    LazyVStack {
                         VStack {
                             Image(systemName: "person.crop.circle")
                                 .resizable()
