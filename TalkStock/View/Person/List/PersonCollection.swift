@@ -14,9 +14,9 @@ struct PersonCollection: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
+            LazyHStack {
                 PlusCircleButton(isPresented: self.$isPresented,
-                                    view: PersonListModalView())
+                                 view: PersonListModalView())
                 // 後で話したい人選択画面に差し替える
                 ForEach(personSummary) { personSummary in
                     NavigationLink(destination: EmptyView()) {
@@ -27,9 +27,9 @@ struct PersonCollection: View {
                     }
                 }
             }.frame(height:100)
-        }.frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,
-                maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
-                minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,
+        }.frame(minWidth: 0,
+                maxWidth: .infinity,
+                minHeight: 0,
                 maxHeight: 100)
         .padding()
     }
