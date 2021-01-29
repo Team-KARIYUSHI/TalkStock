@@ -1,5 +1,5 @@
 //
-//  PersonalView.swift
+//  PersonHomeView.swift
 //  TalkStock
 //
 //  Created by kazuya on 2021/01/03.
@@ -45,7 +45,7 @@ struct PersonHomeView: View {
                     SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
                         .padding(.top, UIComponents.screenHeight / 5.5)
                     RelationshipFilter(selected: self.$selected,color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
-                    PersonListScroll(height: PersonListSize.tabBar.setHeight)
+                    PersonListMove(height: PersonListSize.tabBar.setHeight)
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
