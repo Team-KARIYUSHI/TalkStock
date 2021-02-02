@@ -17,7 +17,6 @@ class Relationship: Object {
     
     static func create(relationshipName: String, talkPartnersName: String) {
         do {
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
             let relationship = Relationship()
             let talkPartners = TalkPertners()
             relationship.name = relationshipName
