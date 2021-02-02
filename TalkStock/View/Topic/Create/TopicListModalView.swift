@@ -21,15 +21,17 @@ struct TopicListModalView: View {
         NavigationView {
             
             VStack {
-                TopicListScroll(height: TopicListSize.modal.setHeight)
+                TopicListAction {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 100)
+                .padding(.bottom)
             }
-            .padding(.top, 150)
             .frame(minWidth: 0,
                    maxWidth: .infinity,
                    minHeight: 0,
                    maxHeight: .infinity,
                    alignment: .center)
-            
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
             

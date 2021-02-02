@@ -24,6 +24,7 @@
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
 		D4970D2D25B4505200F297B1 /* PersonListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonListModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
+		D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */; };
 		D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */; };
 		D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242B25C01CBE0054B806 /* DeleteButton.swift */; };
 		D4CB243825C16B510054B806 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB243725C16B510054B806 /* GetDate.swift */; };
@@ -76,6 +77,7 @@
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
 		D4970D2C25B4505200F297B1 /* PersonListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
+		D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicList+Action.swift"; sourceTree = "<group>"; };
 		D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		D4CB242B25C01CBE0054B806 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		D4CB243725C16B510054B806 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		E53CD4FD25A1E6B100FD0F83 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */,
 				D42B63F72597113B009A4107 /* TopicCell.swift */,
 				D4E7228825B719E200332B73 /* TopicList.swift */,
 				E51C1AD125A1E90A00721BE1 /* TopicList+Scroll.swift */,
@@ -425,6 +428,7 @@
 				D4E7228925B719E200332B73 /* TopicList.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */,
+				D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */,
 				E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
 				E515FA3825AF3AA300418282 /* XmarkButton.swift in Sources */,
