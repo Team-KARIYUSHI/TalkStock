@@ -17,6 +17,8 @@ struct TopicCreateView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @ObservedObject var topicCreateVM = TopicCreateViewModel()
+    
     init() {
         UIComponents.setupNavigationBar()
     }
@@ -54,13 +56,16 @@ struct TopicCreateView: View {
                             .cornerRadius(10)
                     }
                     
-                    VStack(alignment: .leading) {
-                        Text("話したい人")
-                            .font(.caption)
-                        
-                        // TODO: personSummaryは後で変更予定
-                        PersonCollection(isPresented: self.$modalOpened,
-                                             personSummary: personSummary)
+                    if topicCreateVM.relationship.count == 0 {
+                        Text("")
+                            .padding(.bottom, 20)
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text("話したい人").font(.caption)
+                            // TODO: personSummaryは後で変更予定
+                            PersonCollection(isPresented: self.$modalOpened,
+                                            personSummary: personSummary)
+                        }
                     }
                 }
                 
@@ -80,9 +85,9 @@ struct TopicCreateView: View {
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("新規作成", displayMode: .inline)
             .navigationBarItems(leading:
-                                    XmarkButton(action: {
-                                        self.presentationMode.wrappedValue.dismiss()
-                                    })
+                XmarkButton(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                })
             )
         }
     }
