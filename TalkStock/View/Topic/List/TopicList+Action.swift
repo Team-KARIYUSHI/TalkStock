@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopicListAction: View {
     
-    
+    var height: CGFloat
     var action: ()->Void
     
     var body: some View {
@@ -22,13 +22,13 @@ struct TopicListAction: View {
                         TopicCell(title: memoTitle.title)
                     }
                 }
-            }
+            }.frame(height: height)
         }
     }
 }
 
 struct TopicListAction_Previews: PreviewProvider {
     static var previews: some View {
-        TopicListAction(action: {})
+        TopicListAction(height: UIComponents.screenHeight, action: {})
     }
 }

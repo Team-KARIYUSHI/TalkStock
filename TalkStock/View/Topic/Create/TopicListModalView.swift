@@ -21,11 +21,9 @@ struct TopicListModalView: View {
         NavigationView {
             
             VStack {
-                TopicListAction {
+                TopicListAction(height: TopicListSize.modal.setHeight) {
                     self.presentationMode.wrappedValue.dismiss()
-                }
-                .padding(.top, 100)
-                .padding(.bottom)
+                }.padding(.top)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
