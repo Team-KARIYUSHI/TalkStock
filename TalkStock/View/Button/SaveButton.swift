@@ -19,15 +19,28 @@ struct SaveButton: View {
     // 親Viewで行いたい処理（登録処理）を書く
     var action: ()->Void
     
+    var isDisabled: Bool = false
+    
+    var forgrougndColor: Color {
+        return isDisabled ? Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) : Color.white
+    }
+    
+    var backgroundColor: Color {
+        return isDisabled ? Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
+    }
+    
     var body: some View {
         Button(action: {
             action()
         }) {
             Text(title)
                 .frame(width: UIComponents.screenWidth - 50, height: UIComponents.screenWidth / 9)
-                .foregroundColor(.white)
-                .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-        }.cornerRadius(10)
+                .foregroundColor(forgrougndColor)
+                .background(backgroundColor)
+        }
+        .disabled(isDisabled)
+        .animation(.easeOut)
+        .cornerRadius(10)
     }
 }
 
