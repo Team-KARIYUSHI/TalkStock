@@ -48,7 +48,7 @@ struct PersonCreateView: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(Color.black.opacity(0.5))
                                     
-                                    TextField("例：友達", text: $name)
+                                    TextField("例：友達", text: $relationship)
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
                                         .frame(width: UIComponents.screenWidth / 2)
                                         .padding(.trailing, 50)
@@ -73,8 +73,8 @@ struct PersonCreateView: View {
                     SaveButton(title: "登録",
                                action: {
                                 // ここに登録処理
-                               }).padding(.bottom)
-                }
+                               },isDisabled: name.isEmpty || relationship.isEmpty)
+                }.padding(.bottom)
             }
             .navigationBarTitle("新規登録", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action:{
