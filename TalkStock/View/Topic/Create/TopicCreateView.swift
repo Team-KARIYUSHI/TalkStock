@@ -41,6 +41,7 @@ struct TopicCreateView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIComponents.screenWidth / 1.1,
                                    height: UIComponents.screenWidth / 12)
+                        
                         Text("メモ").font(.caption)
                         MultilineTextField(text: $text)
                             .frame(width: UIComponents.screenWidth / 1.1,
@@ -64,30 +65,29 @@ struct TopicCreateView: View {
                             Text("話したい人").font(.caption)
                             // TODO: personSummaryは後で変更予定
                             PersonCollection(isPresented: self.$modalOpened,
-                                            personSummary: personSummary)
+                                             personSummary: personSummary)
                         }
                     }
                 }
+                .frame(minWidth: 0,
+                       maxWidth: .infinity,
+                       minHeight: 0,
+                       maxHeight: .infinity,
+                       alignment: .center)
                 
                 SaveButton(title: "登録",
                            action: {
                             // ここに登録処理
-                           })
-                    .padding(.bottom, 30)
+                           },isDisabled: title.isEmpty || tag.isEmpty)
             }
             .padding()
-            .frame(minWidth: 0,
-                   maxWidth: .infinity,
-                   minHeight: 0,
-                   maxHeight: .infinity,
-                   alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("新規作成", displayMode: .inline)
             .navigationBarItems(leading:
-                XmarkButton(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                })
+                                    XmarkButton(action: {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    })
             )
         }
     }
