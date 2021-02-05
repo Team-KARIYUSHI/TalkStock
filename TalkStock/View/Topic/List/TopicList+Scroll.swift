@@ -13,8 +13,14 @@ struct TopicListScroll: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            TopicList()
-                .padding(.bottom, 100)
+            LazyVStack {
+                TopicList()
+                    .padding(.bottom, 100)
+            }.frame(minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .center)
         }.frame(height: height)
     }
 }
