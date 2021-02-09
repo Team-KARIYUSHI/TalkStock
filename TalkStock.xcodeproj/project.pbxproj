@@ -19,6 +19,9 @@
 		D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B643A2597562D009A4107 /* MemoTitleModel.swift */; };
 		D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonCreateView.swift */; };
 		D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E05CC25AAF40200711EE0 /* PersonButton.swift */; };
+		D469B98E25D133E3001C989F /* TopicTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469B98D25D133E3001C989F /* TopicTag.swift */; };
+		D469B99125D133FA001C989F /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469B99025D133FA001C989F /* Topic.swift */; };
+		D469B99425D2CF05001C989F /* PersonCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */; };
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
 		D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonList+Move.swift */; };
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
@@ -77,6 +80,9 @@
 		D42B643A2597562D009A4107 /* MemoTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleModel.swift; sourceTree = "<group>"; };
 		D43B50F425A4B093007C00FA /* PersonCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateView.swift; sourceTree = "<group>"; };
 		D44E05CC25AAF40200711EE0 /* PersonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonButton.swift; sourceTree = "<group>"; };
+		D469B98D25D133E3001C989F /* TopicTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTag.swift; sourceTree = "<group>"; };
+		D469B99025D133FA001C989F /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateViewModel.swift; sourceTree = "<group>"; };
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D48A301725A9BA5800D283AE /* PersonList+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Move.swift"; sourceTree = "<group>"; };
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
@@ -272,6 +278,7 @@
 				E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */,
 				E5D4352D25B5D7D5006B3898 /* RelationshipFilterVM.swift */,
 				E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */,
+				D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -338,6 +345,8 @@
 			children = (
 				E5D7539525C826BE009CBDE2 /* TalkPartners.swift */,
 				E5EB8E2F25C85A4100AAD885 /* Relationship.swift */,
+				D469B98D25D133E3001C989F /* TopicTag.swift */,
+				D469B99025D133FA001C989F /* Topic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +461,7 @@
 				D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */,
 				D42B63E82595B3E8009A4107 /* TopicHomeView.swift in Sources */,
 				E5D7539625C826BE009CBDE2 /* TalkPartners.swift in Sources */,
+				D469B99425D2CF05001C989F /* PersonCreateViewModel.swift in Sources */,
 				D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
 				D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */,
@@ -466,6 +476,7 @@
 				D4E7228925B719E200332B73 /* TopicList.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */,
+				D469B99125D133FA001C989F /* Topic.swift in Sources */,
 				D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */,
 				E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */,
 				E53CD50425A1E77D00FD0F83 /* SearchHeader.swift in Sources */,
@@ -474,6 +485,7 @@
 				D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
 				D4CB243825C16B510054B806 /* GetDate.swift in Sources */,
+				D469B98E25D133E3001C989F /* TopicTag.swift in Sources */,
 				E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
