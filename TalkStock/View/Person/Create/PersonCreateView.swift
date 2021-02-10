@@ -15,6 +15,8 @@ struct PersonCreateView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @ObservedObject var personCreateVM = PersonCreateViewModel()
+    
     init() {
         UIComponents.setupNavigationBar()
     }
@@ -54,13 +56,19 @@ struct PersonCreateView: View {
                                         .padding(.trailing, 50)
                                 }.padding(.bottom)
                                 
-                                VStack {
-                                    Text("会話ネタ")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black.opacity(0.5))
-                                    PlusCircleButton(isPresented: self.$modalOpened,
-                                                     view: TopicListModalView())
+                                if personCreateVM.topicTag.count == 0 {
+                                    Text("")
+                                        .padding(.bottom, 20)
+                                } else {
+                                    VStack {
+                                        Text("会話ネタ")
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color.black.opacity(0.5))
+                                        PlusCircleButton(isPresented: self.$modalOpened,
+                                                         view: TopicListModalView())
+                                    }
                                 }
+                                
                             }
                         }
                     }
