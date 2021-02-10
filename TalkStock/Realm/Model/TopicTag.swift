@@ -9,20 +9,20 @@ import Foundation
 import RealmSwift
 
 class TopicTag: Object {
-    @objc dynamic var tagName = ""
+    @objc dynamic var name = ""
     @objc dynamic var createdAt = Date()
     var topic = List<Topic>()
     
     static var realm = try! Realm()
     
-    static func create(topicTagName: String, topicTitle: String, topicMemo: String, topicUrl: String) {
+    static func create(name: String, title: String, memo: String, url: String) {
         do {
             let topicTag = TopicTag()
             let topic = Topic()
-            topicTag.tagName = topicTagName
-            topic.title = topicTitle
-            topic.memo = topicMemo
-            topic.url = topicUrl
+            topicTag.name = name
+            topic.title = title
+            topic.memo = memo
+            topic.url = url
             topicTag.topic.append(topic)
             try realm.write {
                 realm.add(topicTag)
