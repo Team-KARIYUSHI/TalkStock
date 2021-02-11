@@ -31,7 +31,6 @@ struct PersonCollection: View {
                 maxWidth: .infinity,
                 minHeight: 0,
                 maxHeight: 100)
-        .padding()
     }
 }
 
