@@ -63,6 +63,8 @@
 		E5D7539625C826BE009CBDE2 /* TalkPartners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7539525C826BE009CBDE2 /* TalkPartners.swift */; };
 		E5EA539025B434DE008A5A5C /* TagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA538F25B434DE008A5A5C /* TagFilter.swift */; };
 		E5EB8E3025C85A4100AAD885 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB8E2F25C85A4100AAD885 /* Relationship.swift */; };
+		E5F2DF2525D57B8300F09F40 /* SelectImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2DF2425D57B8300F09F40 /* SelectImageButton.swift */; };
+		E5F2DF2B25D57C2A00F09F40 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		E5D7539525C826BE009CBDE2 /* TalkPartners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPartners.swift; sourceTree = "<group>"; };
 		E5EA538F25B434DE008A5A5C /* TagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
 		E5EB8E2F25C85A4100AAD885 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		E5F2DF2425D57B8300F09F40 /* SelectImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageButton.swift; sourceTree = "<group>"; };
+		E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,7 @@
 				D44E05CC25AAF40200711EE0 /* PersonButton.swift */,
 				E5EA538F25B434DE008A5A5C /* TagFilter.swift */,
 				E5D4352A25B5D79A006B3898 /* RelationshipFilter.swift */,
+				E5F2DF2725D57BA400F09F40 /* SelectImage */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -349,6 +354,15 @@
 				D469B99025D133FA001C989F /* Topic.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5F2DF2725D57BA400F09F40 /* SelectImage */ = {
+			isa = PBXGroup;
+			children = (
+				E5F2DF2425D57B8300F09F40 /* SelectImageButton.swift */,
+				E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */,
+			);
+			path = SelectImage;
 			sourceTree = "<group>";
 		};
 		E5F758BF25B5CE17001455F7 /* TabHome */ = {
@@ -473,6 +487,7 @@
 				E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
 				E5D4352B25B5D79A006B3898 /* RelationshipFilter.swift in Sources */,
+				E5F2DF2525D57B8300F09F40 /* SelectImageButton.swift in Sources */,
 				D4E7228925B719E200332B73 /* TopicList.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
 				E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */,
@@ -494,6 +509,7 @@
 				E5D4352E25B5D7D5006B3898 /* RelationshipFilterVM.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* TopicCreateView.swift in Sources */,
 				D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */,
+				E5F2DF2B25D57C2A00F09F40 /* ImagePicker.swift in Sources */,
 				E5EB8E3025C85A4100AAD885 /* Relationship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

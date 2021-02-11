@@ -13,6 +13,10 @@ struct PersonCreateView: View {
     @State var relationship = ""
     @State var modalOpened = false
     
+    @State var showActionSheet = false
+    @State var showCamera = false
+    @State var showPhotoLibrary = false
+    
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var personCreateVM = PersonCreateViewModel()
@@ -28,10 +32,10 @@ struct PersonCreateView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         VStack {
-                            Image(systemName: "person.crop.circle")
-                                .resizable()
-                                .frame(width: UIComponents.screenWidth / 2,
-                                       height: UIComponents.screenWidth / 2)
+
+                            SelectImageButton(showingActionSheet: self.$showActionSheet,
+                                              showingCamera: self.$showCamera,
+                                              showingPhotoLibrary: self.$showPhotoLibrary)
                             
                             HStack(spacing: 20) {
                                 Text("名前")
