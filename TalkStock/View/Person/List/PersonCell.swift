@@ -9,9 +9,7 @@ import SwiftUI
 
 struct PersonCell: View {
     
-    var name = ""
-    var relationship = ""
-    var topicNum = ""
+    var person:PersonSummary
     
     var body: some View {
         
@@ -23,17 +21,17 @@ struct PersonCell: View {
                     .padding()
                 
                 VStack(alignment: .leading ,spacing: 30) {
-                    Text(name)
+                    Text(person.name)
                         .font(.title)
                         .fontWeight(.bold)
                     
                     HStack {
-                        Text(relationship)
+                        Text(person.relationship)
                         
                         Image(systemName: "text.bubble")
                             .padding(.leading)
                         
-                        Text(topicNum)
+                        Text(person.topicNum)
                     }
                 }
             }
@@ -45,9 +43,8 @@ struct PersonCell: View {
     }
 }
 
-
 struct PersonCell_Previews: PreviewProvider {
     static var previews: some View {
-        PersonCell()
+        PersonCell(person: PersonSummary(id: 0, name: "", relationship: "", topicNum: ""))
     }
 }

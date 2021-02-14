@@ -17,20 +17,18 @@ struct PersonListMove: View {
             LazyVStack {
                 ForEach(personSummary) { personSummary in
                     NavigationLink(destination: ProfileView()
-                        .onAppear { self.tabBar.isHidden = true }
-                        .onDisappear { self.tabBar.isHidden = false }
+                                    .onAppear { self.tabBar.isHidden = true }
+                                    .onDisappear { self.tabBar.isHidden = false }
                     ) {
-                        PersonCell(name: personSummary.personName,
-                                   relationship: personSummary.relationship,
-                                   topicNum: personSummary.stockNum)
+                        PersonCell(person: personSummary)
                     }
                 }.padding(.all, 1)
             }
             .frame(width: UIComponents.screenWidth)
             .padding(.bottom, 100)
             .background(TabBarAccessor { tabbar in
-                        self.tabBar = tabbar
-                    })
+                self.tabBar = tabbar
+            })
         }.frame(height: height)
     }
 }
