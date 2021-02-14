@@ -20,7 +20,7 @@ struct PersonCollection: View {
                 // 後で話したい人選択画面に差し替える
                 ForEach(personSummary) { personSummary in
                     NavigationLink(destination: EmptyView()) {
-                        PersonButton(personName: personSummary.personName,
+                        PersonButton(personName: personSummary.name,
                                      action: {
                                         
                                      })

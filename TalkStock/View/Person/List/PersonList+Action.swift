@@ -18,9 +18,7 @@ struct PersonListAction: View {
                     Button(action: {
                         action()
                     }) {
-                        PersonCell(name: personSummary.personName,
-                                   relationship: personSummary.relationship,
-                                   topicNum: personSummary.stockNum)
+                        PersonCell(person: personSummary)
                     }
                 }.padding(.all, 1)
             }
