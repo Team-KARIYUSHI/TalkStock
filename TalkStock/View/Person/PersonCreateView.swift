@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct PersonCreateView: View {
     
+    @State var inputImage: UIImage? = UIImage(named: "person.circle")
+    @State var image = Image(systemName: "person.circle")
     @State var name = ""
     @State var relationship = ""
     @State var modalOpened = false
@@ -35,7 +38,9 @@ struct PersonCreateView: View {
 
                             SelectImageButton(showingActionSheet: self.$showActionSheet,
                                               showingCamera: self.$showCamera,
-                                              showingPhotoLibrary: self.$showPhotoLibrary)
+                                              showingPhotoLibrary: self.$showPhotoLibrary,
+                                              inputImage: self.$inputImage,
+                                              image: self.$image)
                             
                             HStack(spacing: 20) {
                                 Text("名前")
@@ -69,7 +74,7 @@ struct PersonCreateView: View {
                                             .fontWeight(.bold)
                                             .foregroundColor(Color.black.opacity(0.5))
                                         PlusCircleButton(isPresented: self.$modalOpened,
-                                                         view: TopicListModalView())
+                                                         view: TopicModalView())
                                     }
                                 }
                                 
@@ -84,7 +89,9 @@ struct PersonCreateView: View {
                     Spacer()
                     SaveButton(title: "登録",
                                action: {
-                                // ここに登録処理
+                                Relationship.create(relationshipName: self.relationship,
+                                                    talkPartnersName: self.name,
+                                                    image: self.inputImage?.pngData() ?? Data())
                                },isDisabled: name.isEmpty || relationship.isEmpty)
                 }.padding(.bottom)
             }

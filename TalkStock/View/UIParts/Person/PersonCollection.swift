@@ -16,7 +16,7 @@ struct PersonCollection: View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 PlusCircleButton(isPresented: self.$isPresented,
-                                 view: PersonListModalView())
+                                 view: PersonModalView())
                 // 後で話したい人選択画面に差し替える
                 ForEach(personSummary) { personSummary in
                     NavigationLink(destination: EmptyView()) {

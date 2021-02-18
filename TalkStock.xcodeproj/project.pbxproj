@@ -25,7 +25,7 @@
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
 		D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonList+Move.swift */; };
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
-		D4970D2D25B4505200F297B1 /* PersonListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonListModalView.swift */; };
+		D4970D2D25B4505200F297B1 /* PersonModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */; };
 		D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */; };
@@ -88,7 +88,7 @@
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D48A301725A9BA5800D283AE /* PersonList+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Move.swift"; sourceTree = "<group>"; };
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
-		D4970D2C25B4505200F297B1 /* PersonListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListModalView.swift; sourceTree = "<group>"; };
+		D4970D2C25B4505200F297B1 /* PersonModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicList+Action.swift"; sourceTree = "<group>"; };
 		D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
@@ -183,16 +183,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D43B50F325A4B06C007C00FA /* Create */ = {
-			isa = PBXGroup;
-			children = (
-				D43B50F425A4B093007C00FA /* PersonCreateView.swift */,
-				D4970D2C25B4505200F297B1 /* PersonListModalView.swift */,
-			);
-			path = Create;
-			sourceTree = "<group>";
-		};
-		D477CBF025A71C39002F0919 /* List */ = {
+		D477CBF025A71C39002F0919 /* Person */ = {
 			isa = PBXGroup;
 			children = (
 				E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */,
@@ -201,7 +192,7 @@
 				E515FA3A25AF3DA500418282 /* PersonCollection.swift */,
 				E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */,
 			);
-			path = List;
+			path = Person;
 			sourceTree = "<group>";
 		};
 		D48A301E25AAC00D00D283AE /* DummyData */ = {
@@ -216,11 +207,11 @@
 		D4970D4025B45FAB00F297B1 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				D4E7227125B6EEE700332B73 /* ProfileView.swift */,
 				D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */,
-				E5F758BF25B5CE17001455F7 /* TabHome */,
-				D477CBF025A71C39002F0919 /* List */,
-				D43B50F325A4B06C007C00FA /* Create */,
+				D4E7227125B6EEE700332B73 /* ProfileView.swift */,
+				E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */,
+				D43B50F425A4B093007C00FA /* PersonCreateView.swift */,
+				D4970D2C25B4505200F297B1 /* PersonModalView.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -228,9 +219,10 @@
 		D4970D4125B4601400F297B1 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
-				E5F758C025B5CE30001455F7 /* TabHome */,
-				E53CD4FD25A1E6B100FD0F83 /* List */,
-				D4FFC14025A347540095DC7A /* Create */,
+				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
+				D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */,
+				D4E7226925B58A3A00332B73 /* TopicListModalView.swift */,
+				E5A709FA25DE9FD8004ECFFA /* UIParts */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
@@ -238,27 +230,15 @@
 		D4FD7481259D947C00E1CB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
 				D42B63E12594B318009A4107 /* TabBarView.swift */,
+				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
 				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
+				E5A709F625DE9EB2004ECFFA /* UIParts */,
 				E54E129125BB0C7F00EC92BA /* Empty */,
 				D4970D4125B4601400F297B1 /* Topic */,
 				D4970D4025B45FAB00F297B1 /* Person */,
-				E517DFE525A65D3F00584929 /* Button */,
-				E53CD4FF25A1E70700FD0F83 /* Tag */,
-				E53CD50225A1E73B00FD0F83 /* Loading */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D4FFC14025A347540095DC7A /* Create */ = {
-			isa = PBXGroup;
-			children = (
-				D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */,
-				D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */,
-				D4E7226925B58A3A00332B73 /* TopicListModalView.swift */,
-			);
-			path = Create;
 			sourceTree = "<group>";
 		};
 		E517DFE525A65D3F00584929 /* Button */ = {
@@ -288,7 +268,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		E53CD4FD25A1E6B100FD0F83 /* List */ = {
+		E53CD4FD25A1E6B100FD0F83 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
 				D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */,
@@ -296,7 +276,7 @@
 				D4E7228825B719E200332B73 /* TopicList.swift */,
 				E51C1AD125A1E90A00721BE1 /* TopicList+Scroll.swift */,
 			);
-			path = List;
+			path = Topic;
 			sourceTree = "<group>";
 		};
 		E53CD4FF25A1E70700FD0F83 /* Tag */ = {
@@ -337,6 +317,34 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		E5A709F625DE9EB2004ECFFA /* UIParts */ = {
+			isa = PBXGroup;
+			children = (
+				E5B82EF225DEA5DD005BFEBF /* Common */,
+				D477CBF025A71C39002F0919 /* Person */,
+				E53CD4FD25A1E6B100FD0F83 /* Topic */,
+			);
+			path = UIParts;
+			sourceTree = "<group>";
+		};
+		E5A709FA25DE9FD8004ECFFA /* UIParts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIParts;
+			sourceTree = "<group>";
+		};
+		E5B82EF225DEA5DD005BFEBF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4FFC13325A2E8410095DC7A /* MultilineTextField.swift */,
+				E53CD50225A1E73B00FD0F83 /* Loading */,
+				E53CD4FF25A1E70700FD0F83 /* Tag */,
+				E517DFE525A65D3F00584929 /* Button */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E5D7539325C82680009CBDE2 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,22 +371,6 @@
 				E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */,
 			);
 			path = SelectImage;
-			sourceTree = "<group>";
-		};
-		E5F758BF25B5CE17001455F7 /* TabHome */ = {
-			isa = PBXGroup;
-			children = (
-				E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */,
-			);
-			path = TabHome;
-			sourceTree = "<group>";
-		};
-		E5F758C025B5CE30001455F7 /* TabHome */ = {
-			isa = PBXGroup;
-			children = (
-				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
-			);
-			path = TabHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,7 +453,7 @@
 				D42B63CC2594B006009A4107 /* AppDelegate.swift in Sources */,
 				E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */,
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,
-				D4970D2D25B4505200F297B1 /* PersonListModalView.swift in Sources */,
+				D4970D2D25B4505200F297B1 /* PersonModalView.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
 				D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,

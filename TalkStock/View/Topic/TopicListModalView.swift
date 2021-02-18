@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopicListModalView: View {
+struct TopicModalView: View {
     
     @State var modalOpened = false
     
@@ -42,8 +42,8 @@ struct TopicListModalView: View {
 }
 
 
-struct TopicListModalView_Previews: PreviewProvider {
+struct TopicModalView_Previews: PreviewProvider {
     static var previews: some View {
-        TopicListModalView()
+        TopicModalView()
     }
 }

@@ -56,7 +56,7 @@ struct ProfileEditView: View {
                                         .foregroundColor(Color.black.opacity(0.5))
                                     
                                     PlusCircleButton(isPresented: self.$modalOpened,
-                                                     view: TopicListModalView())
+                                                     view: TopicModalView())
                                 }
                                 TopicList()
                                     .padding(.bottom, 70)
