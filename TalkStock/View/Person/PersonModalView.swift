@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PersonListModalView: View {
+struct PersonModalView: View {
     
     @State var modalOpened = false
     
@@ -41,8 +41,8 @@ struct PersonListModalView: View {
     }
 }
 
-struct PersonListModalView_Previews: PreviewProvider {
+struct PersonModalView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonListModalView()
+        PersonModalView()
     }
 }

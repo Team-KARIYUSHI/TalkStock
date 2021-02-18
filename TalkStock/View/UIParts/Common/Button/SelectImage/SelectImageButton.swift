@@ -12,8 +12,8 @@ struct SelectImageButton: View {
     @Binding var showingActionSheet: Bool
     @Binding var showingCamera: Bool
     @Binding var showingPhotoLibrary: Bool
-    @State var inputImage: UIImage? = UIImage(named: "person.circle")
-    @State var image:Image = Image(systemName: "person.circle")
+    @Binding var inputImage: UIImage?
+    @Binding var image: Image
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
@@ -60,6 +60,9 @@ struct SelectImageButton_Previews: PreviewProvider {
     static var previews: some View {
         SelectImageButton(showingActionSheet: .constant(false),
                           showingCamera: .constant(false),
-                          showingPhotoLibrary: .constant(false))
+                          showingPhotoLibrary: .constant(false),
+                          inputImage: .constant(UIImage(named: "person.circle")),
+                          image: .constant(Image(uiImage: UIImage(named: "person.circle")!))
+                         )
     }
 }
