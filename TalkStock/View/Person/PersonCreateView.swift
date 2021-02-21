@@ -89,9 +89,8 @@ struct PersonCreateView: View {
                     Spacer()
                     SaveButton(title: "登録",
                                action: {
-                                Relationship.create(relationshipName: self.relationship,
-                                                    talkPartnersName: self.name,
-                                                    image: self.inputImage?.pngData() ?? Data())
+                                Relationship.add(talkPartners: TalkPertners(value: ["personalName":self.name,"image":self.inputImage?.pngData() ?? Data()]),
+                                                 relationshipName: self.relationship)
                                },isDisabled: name.isEmpty || relationship.isEmpty)
                 }.padding(.bottom)
             }
