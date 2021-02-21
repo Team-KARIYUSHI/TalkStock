@@ -89,7 +89,8 @@ struct PersonCreateView: View {
                     Spacer()
                     SaveButton(title: "登録",
                                action: {
-                                Relationship.add(talkPartners: TalkPertners(value: ["personalName":self.name,"image":self.inputImage?.pngData() ?? Data()]),
+                                Relationship.add(talkPartners: TalkPertners(value: ["personalName":self.name,
+                                                                                    "image":RealmHelper.resizeImage(originalImg: self.inputImage!, width: 200)]),
                                                  relationshipName: self.relationship)
                                },isDisabled: name.isEmpty || relationship.isEmpty)
                 }.padding(.bottom)
