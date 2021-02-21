@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(
             // 新しいスキーマバージョンを設定します。以前のバージョンより大きくなければなりません。
             // （スキーマバージョンを設定したことがなければ、最初は0が設定されています）
-            schemaVersion: 7,
+            schemaVersion: 9,
             
             // マイグレーション処理を記述します。古いスキーマバージョンのRealmを開こうとすると
             // 自動的にマイグレーションが実行されます。
@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // 何もする必要はありません！
                     // Realmは自動的に新しく追加されたプロパティと、削除されたプロパティを認識します。
                     // そしてディスク上のスキーマを自動的にアップデートします。
+                    migration.renameProperty(onType: TalkPertners.className(), from: "name", to: "personalName")
+                    migration.renameProperty(onType: Relationship.className(), from: "name", to: "relationName")
+                    migration.renameProperty(onType: TopicTag.className(), from: "name", to: "tagName")
                 }
             })
         

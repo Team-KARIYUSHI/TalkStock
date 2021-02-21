@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class TopicTag: Object {
-    @objc dynamic var name = ""
+    @objc dynamic var tagName = ""
     @objc dynamic var createdAt = Date()
     var topic = List<Topic>()
     
@@ -19,7 +19,7 @@ class TopicTag: Object {
         do {
             let topicTag = TopicTag()
             let topic = Topic()
-            topicTag.name = name
+            topicTag.tagName = name
             topic.title = title
             topic.memo = memo
             topic.url = url
