@@ -65,6 +65,7 @@
 		E5EB8E3025C85A4100AAD885 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB8E2F25C85A4100AAD885 /* Relationship.swift */; };
 		E5F2DF2525D57B8300F09F40 /* SelectImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2DF2425D57B8300F09F40 /* SelectImageButton.swift */; };
 		E5F2DF2B25D57C2A00F09F40 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */; };
+		E5F7AF6E25E29596001DDA44 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F7AF6D25E29596001DDA44 /* RealmHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		E5EB8E2F25C85A4100AAD885 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
 		E5F2DF2425D57B8300F09F40 /* SelectImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageButton.swift; sourceTree = "<group>"; };
 		E5F2DF2A25D57C2A00F09F40 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E5F7AF6D25E29596001DDA44 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 				D4E7226C25B58B2400332B73 /* StockListSize.swift */,
 				E5A46C702595F14D00C73264 /* UIComponents.swift */,
 				D4CB243725C16B510054B806 /* GetDate.swift */,
+				E5F7AF6D25E29596001DDA44 /* RealmHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				D42B63F82597113B009A4107 /* TopicCell.swift in Sources */,
 				D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */,
 				E5D4352E25B5D7D5006B3898 /* RelationshipFilterVM.swift in Sources */,
+				E5F7AF6E25E29596001DDA44 /* RealmHelper.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* TopicCreateView.swift in Sources */,
 				D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */,
 				E5F2DF2B25D57C2A00F09F40 /* ImagePicker.swift in Sources */,
