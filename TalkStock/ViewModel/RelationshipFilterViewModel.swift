@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-final class RelationshipFilterVM: ObservableObject {
+final class RelationshipFilterViewModel: ObservableObject {
     var personData: [PersonSummary]? = personSummary // TODO:DBから値を取得してくる処理に変更する
 }

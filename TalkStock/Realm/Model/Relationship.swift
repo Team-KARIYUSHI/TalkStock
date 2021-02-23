@@ -16,11 +16,18 @@ class Relationship: Object {
     static var realm = try! Realm()
     
     
+    ///
+    /// - Parameters:
+    ///   - talkPartners:
+    ///   - relationshipName:
+    /// - Return:
+    
     /// 関係タグを追加or新規登録するメソッド（要修正）
     /// - Parameters:
     ///   - talkPartners: 会話したい人モデル
     ///   - relationshipName: 関係タグ名
-    static func add(talkPartners: TalkPertners, relationshipName: String) {
+    /// - Returns: True(登録成功時) / False(登録失敗時)
+    static func add(talkPartners: TalkPertners, relationshipName: String) -> Bool {
         do {
             if let results = self.find(name: relationshipName) {
                 try realm.write {
@@ -28,13 +35,16 @@ class Relationship: Object {
                         relationship.talkPartners.append(talkPartners)
                     }
                 }
+                return true
             } else {
                 try realm.write {
                     realm.add(Relationship(value: ["relationName":relationshipName, "talkPartners":[talkPartners]]))
                 }
+                return true
             }
         } catch {
             print(error)
+            return false
         }
     }
     
