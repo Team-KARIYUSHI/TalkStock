@@ -10,15 +10,25 @@ import RealmSwift
 
 struct PersonCreateView: View {
     
+    // 画像選択時にUIImage型にする
     @State var inputImage: UIImage? = UIImage(named: "person.circle")
+    // 画像選択後に表示する。SwiftUI側で画像表示するためにImageを使う
     @State var image = Image(systemName: "person.circle")
+    
+    // テキストフィールドのプロパティ
     @State var name = ""
     @State var relationship = ""
+    
+    // モーダルフラグ
     @State var modalOpened = false
     
+    // 画像選択アクションシート
     @State var showActionSheet = false
     @State var showCamera = false
     @State var showPhotoLibrary = false
+    
+    // 確認用アラートフラグ
+    @State var showingAlert = false
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -89,11 +99,30 @@ struct PersonCreateView: View {
                     Spacer()
                     SaveButton(title: "登録",
                                action: {
-                                Relationship.add(talkPartners: TalkPertners(value: ["personalName":self.name,
-                                                                                    "image":RealmHelper.resizeImage(originalImg: self.inputImage!, width: 200)]),
-                                                 relationshipName: self.relationship)
-                               },isDisabled: name.isEmpty || relationship.isEmpty)
+                                self.showingAlert = true
+                               },
+                               isDisabled: name.isEmpty || relationship.isEmpty)
+                        
+                        .alert(isPresented: self.$showingAlert) {
+                            Alert(title: Text("登録内容確認"),
+                                  message: Text("登録してもよろしいですか？\n名前：\(name)\n関係タグ：\(relationship)"),
+                                  primaryButton: .destructive(Text("キャンセル")),
+                                  secondaryButton: .default(Text("OK")) {
+                                    personCreateVM.create(relationshipName: self.relationship,
+                                                          talkPartners: TalkPertners(value: ["personalName":self.name,
+                                                                                             "image":RealmHelper.resizeImage(originalImg: self.inputImage ?? UIImage(), width: 200)])) {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    }
+                            })
+                        }
+
+                    Text("")
+                        .alert(item: self.$personCreateVM.alertItem) { item in
+                            item.alert
+                        }
+                    
                 }.padding(.bottom)
+
             }
             .navigationBarTitle("新規登録", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action:{

@@ -11,7 +11,7 @@ struct RelationshipFilter: View {
     @Binding var selected: Int
     var color: Color
     
-    @ObservedObject var relationshipFilterVM = RelationshipFilterVM()
+    @ObservedObject var relationshipFilterVM = RelationshipFilterViewModel()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
