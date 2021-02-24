@@ -29,17 +29,13 @@ class Relationship: Object {
     /// - Returns: True(登録成功時) / False(登録失敗時)
     static func add(talkPartners: TalkPertners, relationshipName: String) -> Bool {
         do {
-            if let results = self.find(name: relationshipName) {
-                try realm.write {
-                    for relationship in results {
-                        relationship.talkPartners.append(talkPartners)
-                    }
-                }
+            if let results = self.find(relationshipName) {
+                // 関係タグがある時は追加
+                try self.append(talkPartners, relationshipName, results)
                 return true
             } else {
-                try realm.write {
-                    realm.add(Relationship(value: ["relationName":relationshipName, "talkPartners":[talkPartners]]))
-                }
+                // 関係タグが登録されてない時は新規登録
+                try self.create(talkPartners, relationshipName)
                 return true
             }
         } catch {
@@ -52,9 +48,9 @@ class Relationship: Object {
     /// - Parameters:
     ///   - talkPartners: 会話したい人モデル
     ///   - relationshipName: 関係タグ名
-    static func append(talkPartners: TalkPertners, relationshipName: String) {
+    ///   - results: 関係タグの検索結果
+    static func append(_ talkPartners: TalkPertners, _ relationshipName: String, _ results: Results<Relationship>?) throws {
         do {
-            let results = self.find(name: relationshipName)
             try realm.write {
                 for relationship in results! { // TODO:バリデーションロジック作ったらアンラップ消す
                     relationship.talkPartners.append(talkPartners)
@@ -69,7 +65,7 @@ class Relationship: Object {
     /// - Parameters:
     ///   - talkPartners: 会話したい人モデル
     ///   - relationshipName: 関係タグ名
-    static func create(talkPartners: TalkPertners, relationshipName: String) {
+    static func create(_ talkPartners: TalkPertners, _ relationshipName: String) throws {
         do {
             try realm.write {
                 realm.add(Relationship(value: ["relationName":relationshipName, "talkPartners":[talkPartners]]))
@@ -89,8 +85,8 @@ class Relationship: Object {
     /// 関係タグ検索メソッド
     /// - Parameter name: 検索する関係タグの名前
     /// - Returns: 検索で見つかった関係タグのコレクション or nil
-    static func find(name: String) -> Results<Relationship>? {
-        if self.count(name: name) != 0 {
+    static func find(_ name: String) -> Results<Relationship>? {
+        if self.count(name) != 0 {
             return realm.objects(Relationship.self).filter("relationName == '\(name)'")
         } else {
             return nil
@@ -101,7 +97,7 @@ class Relationship: Object {
     /// 関係タグの検索数をカウントするメソッド
     /// - Parameter name: 検索する関係タグ名
     /// - Returns: 検索でヒットした数
-    static func count(name: String) -> Int {
+    static func count(_ name: String) -> Int {
         return realm.objects(Relationship.self).filter("relationName == '\(name)'").count
     }
 }
