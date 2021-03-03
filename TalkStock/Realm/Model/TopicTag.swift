@@ -15,10 +15,10 @@ class TopicTag: Object {
     
     static var realm = try! Realm()
     
-    static func create(_ topic: Topic, _ topicTagName: String) throws {
+    static func create(_ topic: Topic, _ topicTagName: String) {
         do {
             try realm.write {
-                realm.add(TopicTag(value:["topicTagName":topicTagName,
+                realm.add(TopicTag(value:["tagName":topicTagName,
                                           "topic":[topic]]))
             }
         } catch {
