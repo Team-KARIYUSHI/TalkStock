@@ -15,6 +15,20 @@ class TopicTag: Object {
     
     static var realm = try! Realm()
     
+    
+    static func append(_ topic: Topic, _ results: Results<TopicTag>?) {
+        do {
+            try realm.write {
+                for topicTag in results! {
+                    topicTag.topic.append(topic)
+                }
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    
     static func create(_ topic: Topic, _ topicTagName: String) {
         do {
             try realm.write {
@@ -26,7 +40,24 @@ class TopicTag: Object {
         }
     }
     
+    
     static func all() -> Results<TopicTag> {
         return realm.objects(TopicTag.self).sorted(byKeyPath: "createdAt", ascending: true)
     }
+    
+    
+    static func find(_ name: String) -> Results<TopicTag>? {
+        if self.count(name) != 0 {
+            return realm.objects(TopicTag.self).filter("tagName == '\(name)'")
+        } else {
+            return nil
+        }
+    }
+    
+    
+    static func count(_ name: String) -> Int {
+        return realm.objects(TopicTag.self).filter("tagName == '\(name)'").count
+    }
 }
+
+
