@@ -16,7 +16,23 @@ class TopicTag: Object {
     static var realm = try! Realm()
     
     
-    static func append(_ topic: Topic, _ results: Results<TopicTag>?) {
+    static func add(topic: Topic, topicTagName: String) -> Bool {
+        do {
+            if let results = self.find(topicTagName) {
+                try self.append(topic, results)
+                return true
+            } else {
+                try self.create(topic, topicTagName)
+                return true
+            }
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
+    
+    static func append(_ topic: Topic, _ results: Results<TopicTag>?) throws {
         do {
             try realm.write {
                 for topicTag in results! {
@@ -29,7 +45,7 @@ class TopicTag: Object {
     }
     
     
-    static func create(_ topic: Topic, _ topicTagName: String) {
+    static func create(_ topic: Topic, _ topicTagName: String) throws {
         do {
             try realm.write {
                 realm.add(TopicTag(value:["tagName":topicTagName,
