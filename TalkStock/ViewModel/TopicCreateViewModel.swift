@@ -20,4 +20,14 @@ final class TopicCreateViewModel: ObservableObject {
             self.objectWillChange.send()
         })
     }
+    
+    func create(topic: Topic, topicTagName: String) {
+        if TopicTag.add(topic: topic,
+                        topicTagName: topicTagName) {
+            print("登録成功")
+        } else {
+            print("登録失敗")
+        }
+    }
+    
 }
