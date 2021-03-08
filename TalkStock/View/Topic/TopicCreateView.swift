@@ -14,6 +14,7 @@ struct TopicCreateView: View {
     @State var text = ""
     @State var url = ""
     @State var modalOpened = false
+    @State var showingAlert = false
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -77,8 +78,27 @@ struct TopicCreateView: View {
                 
                 SaveButton(title: "登録",
                            action: {
-                            // ここに登録処理
+                            self.showingAlert = true
                            },isDisabled: title.isEmpty || tag.isEmpty)
+                    .alert(isPresented: self.$showingAlert) {
+                        Alert(title: Text("登録内容確認"),
+                              message: Text("登録してもよろしいですか？\nタイトル：\(title)\n会話タグ：\(tag)"),
+                              primaryButton: .destructive(Text("キャンセル")),
+                              secondaryButton: .default(Text("OK")) {
+                                topicCreateVM.create(topic: Topic(value:
+                                                                    ["title":self.title,
+                                                                     "memo":self.text,
+                                                                     "url":self.url]),
+                                                     topicTagName: self.tag) {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
+                              })
+                    }
+                
+                Text("")
+                    .alert(item: self.$topicCreateVM.alertItem) { item in
+                        item.alert
+                    }
             }
             .padding()
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
