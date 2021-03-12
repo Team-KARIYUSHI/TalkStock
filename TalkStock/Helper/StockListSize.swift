@@ -16,7 +16,7 @@ enum TopicListSize {
         
         switch self {
         case .modal:
-            return UIComponents.screenWidth * 2.5
+            return UIComponents.screenHeight - 50
             
         case .tabBar:
             return UIComponents.screenHeight - 170

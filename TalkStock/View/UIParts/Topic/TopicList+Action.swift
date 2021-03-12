@@ -13,8 +13,8 @@ struct TopicListAction: View {
     var action: ()->Void
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            LazyVStack {
+        LazyVStack {
+            List {
                 ForEach(memoTitles) { memoTitle in
                     Button(action: {
                         action()
@@ -22,7 +22,8 @@ struct TopicListAction: View {
                         TopicCell(title: memoTitle.title)
                     }
                 }
-            }.frame(height: height)
+            }
+            .frame(height: height)
         }
     }
 }
