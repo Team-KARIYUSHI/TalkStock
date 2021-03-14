@@ -12,9 +12,11 @@ struct TopicListAction: View {
     var height: CGFloat
     var action: ()->Void
     
+    @State private var selectionItems: Set<Int> = []
+    
     var body: some View {
         LazyVStack {
-            List {
+            List(selection: $selectionItems) {
                 ForEach(memoTitles) { memoTitle in
                     Button(action: {
                         action()
@@ -22,7 +24,7 @@ struct TopicListAction: View {
                         TopicCell(title: memoTitle.title)
                     }
                 }
-            }
+            }.environment(\.editMode, .constant(.active))
             .frame(height: height)
         }
     }
