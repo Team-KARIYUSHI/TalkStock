@@ -14,12 +14,9 @@ class TalkpartnerTopic: Object {
     let ownerTopic = LinkingObjects(fromType: Topic.self, property: "talkpartnerTopic")
     let ownerTalkpartnerTopic = LinkingObjects(fromType: Talkpartners.self, property: "talkpartnerTopic")
     
-    
     /// 会話したい人→会話ネタ（1:多の時）登録メソッド
     /// - Parameters:
-    ///   - talkpartner: 会話したい人
-    ///   - topicArray: 会話ネタの配列
-    ///   - talkpartnerTopic: 中間テーブルの配列
+    ///   - talkpartnerRequest: 会話したい人登録専用のリクエストクラス
     static func createTalkpartnerAndManyTopics(_ talkpartnerRequest: TalkpartnerRequest) throws {
         let realm = try! Realm()
         do {
