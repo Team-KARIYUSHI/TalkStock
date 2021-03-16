@@ -75,7 +75,7 @@ struct PersonCreateView: View {
                                         .padding(.trailing, 50)
                                 }.padding(.bottom)
                                 
-                                if personCreateVM.topicTag.count == 0 {
+                                if personCreateVM.topic.count == 0 {
                                     Text("")
                                         .padding(.bottom, 20)
                                 } else {
@@ -108,9 +108,12 @@ struct PersonCreateView: View {
                                   message: Text("登録してもよろしいですか？\n名前：\(name)\n関係タグ：\(relationship)"),
                                   primaryButton: .destructive(Text("キャンセル")),
                                   secondaryButton: .default(Text("OK")) {
-                                    personCreateVM.create(relationshipName: self.relationship,
-                                                          talkPartners: TalkPertners(value: ["personalName":self.name,
-                                                                                             "image":RealmHelper.resizeImage(originalImg: self.inputImage ?? UIImage(), width: 200)])) {
+                                    // Realmに保存するパラメータをRequestクラスに一旦集める
+                                    let request = TalkpartnerRequest(relationName: self.relationship,
+                                                                     talkpartner: Talkpartners(value: ["personalName":self.name,
+                                                                                                       "image":RealmHelper.resizeImage(originalImg: self.inputImage ?? UIImage(), width: 200)]),
+                                                                     topics: personCreateVM.topic)
+                                    personCreateVM.create(request) {
                                         self.presentationMode.wrappedValue.dismiss()
                                     }
                             })

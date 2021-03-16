@@ -8,19 +8,28 @@
 import Foundation
 import RealmSwift
 
-class TalkPertners: Object {
+class Talkpartners: Object {
+    // 中間テーブルで識別するためidを追加
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var personalName = ""
     @objc dynamic var image = Data()
     @objc dynamic var createdAt = Date()
     let relationship = LinkingObjects(fromType: Relationship.self, property: "talkPartners")
     
-    static var realm = try! Realm()
+    // 中間テーブルにあたるモデルをListで定義
+    var talkpartnerTopic = List<TalkpartnerTopic>()
     
+    // プライマリーキーとして一意にする
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+
+    static var realm = try! Realm()
     
     /// 会話したい人を全て取得するメソッド
     /// - Returns: 会話したい人のコレクション
-    static func all() -> Results<TalkPertners> {
-        return realm.objects(TalkPertners.self).sorted(byKeyPath: "createdAt", ascending: true)
+    static func all() -> Results<Talkpartners> {
+        return realm.objects(Talkpartners.self).sorted(byKeyPath: "createdAt", ascending: true)
     }
     
     
