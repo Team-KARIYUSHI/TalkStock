@@ -11,49 +11,20 @@ import RealmSwift
 class Relationship: Object {
     @objc dynamic var relationName = ""
     @objc dynamic var createdAt = Date()
-    var talkPartners = List<TalkPertners>()
+    var talkPartners = List<Talkpartners>()
     
     static var realm = try! Realm()
-    
-    
-    ///
-    /// - Parameters:
-    ///   - talkPartners:
-    ///   - relationshipName:
-    /// - Return:
-    
-    /// 関係タグを追加or新規登録するメソッド（要修正）
-    /// - Parameters:
-    ///   - talkPartners: 会話したい人モデル
-    ///   - relationshipName: 関係タグ名
-    /// - Returns: True(登録成功時) / False(登録失敗時)
-    static func add(talkPartners: TalkPertners, relationshipName: String) -> Bool {
-        do {
-            if let results = self.find(relationshipName) {
-                // 関係タグがある時は追加
-                try self.append(talkPartners, relationshipName, results)
-                return true
-            } else {
-                // 関係タグが登録されてない時は新規登録
-                try self.create(talkPartners, relationshipName)
-                return true
-            }
-        } catch {
-            print(error)
-            return false
-        }
-    }
     
     /// 関係タグを追加するメソッド
     /// - Parameters:
     ///   - talkPartners: 会話したい人モデル
     ///   - relationshipName: 関係タグ名
     ///   - results: 関係タグの検索結果
-    static func append(_ talkPartners: TalkPertners, _ relationshipName: String, _ results: Results<Relationship>?) throws {
+    static func append(_ talkpartnerRequest: TalkpartnerRequest, _ results: Results<Relationship>?) throws {
         do {
             try realm.write {
                 for relationship in results! { // TODO:バリデーションロジック作ったらアンラップ消す
-                    relationship.talkPartners.append(talkPartners)
+                    relationship.talkPartners.append(talkpartnerRequest.talkpartner)
                 }
             }
         } catch {
@@ -65,10 +36,10 @@ class Relationship: Object {
     /// - Parameters:
     ///   - talkPartners: 会話したい人モデル
     ///   - relationshipName: 関係タグ名
-    static func create(_ talkPartners: TalkPertners, _ relationshipName: String) throws {
+    static func create(_ talkpartnerRequest: TalkpartnerRequest) throws {
         do {
             try realm.write {
-                realm.add(Relationship(value: ["relationName":relationshipName, "talkPartners":[talkPartners]]))
+                realm.add(talkpartnerRequest.relationship)
             }
         } catch {
             print(error)

@@ -55,6 +55,9 @@
 		E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */; };
 		E55A28BF25C9A94A001BA733 /* TopicCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
+		E5C65B672600F5F600032EC8 /* PersonCreateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B662600F5F600032EC8 /* PersonCreateService.swift */; };
+		E5C65B6C2600F68400032EC8 /* TalkpartnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B6B2600F68400032EC8 /* TalkpartnerRequest.swift */; };
+		E5C65B6F2600F6EA00032EC8 /* TalkpartnerTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */; };
 		E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */; };
 		E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */; };
 		E5D4352B25B5D79A006B3898 /* RelationshipFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352A25B5D79A006B3898 /* RelationshipFilter.swift */; };
@@ -120,6 +123,9 @@
 		E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Action.swift"; sourceTree = "<group>"; };
 		E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCreateViewModel.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		E5C65B662600F5F600032EC8 /* PersonCreateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateService.swift; sourceTree = "<group>"; };
+		E5C65B6B2600F68400032EC8 /* TalkpartnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkpartnerRequest.swift; sourceTree = "<group>"; };
+		E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkpartnerTopic.swift; sourceTree = "<group>"; };
 		E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
 		E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
 		E5D4352A25B5D79A006B3898 /* RelationshipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipFilter.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 			children = (
 				D42B63CB2594B006009A4107 /* AppDelegate.swift */,
 				D42B63CD2594B006009A4107 /* SceneDelegate.swift */,
+				E5C65B6A2600F64900032EC8 /* Request */,
+				E5C65B652600F5D200032EC8 /* Service */,
 				E5049DB825E55BE4001FED1E /* Alert */,
 				E5D7539325C82680009CBDE2 /* Realm */,
 				E5A46C6F2595F13000C73264 /* Helper */,
@@ -227,7 +235,6 @@
 				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
 				D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */,
 				D4E7226925B58A3A00332B73 /* TopicListModalView.swift */,
-				E5A709FA25DE9FD8004ECFFA /* UIParts */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
@@ -341,13 +348,6 @@
 			path = UIParts;
 			sourceTree = "<group>";
 		};
-		E5A709FA25DE9FD8004ECFFA /* UIParts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIParts;
-			sourceTree = "<group>";
-		};
 		E5B82EF225DEA5DD005BFEBF /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +357,22 @@
 				E517DFE525A65D3F00584929 /* Button */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E5C65B652600F5D200032EC8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E5C65B662600F5F600032EC8 /* PersonCreateService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E5C65B6A2600F64900032EC8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E5C65B6B2600F68400032EC8 /* TalkpartnerRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		E5D7539325C82680009CBDE2 /* Realm */ = {
@@ -374,6 +390,7 @@
 				E5EB8E2F25C85A4100AAD885 /* Relationship.swift */,
 				D469B98D25D133E3001C989F /* TopicTag.swift */,
 				D469B99025D133FA001C989F /* Topic.swift */,
+				E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -484,13 +501,16 @@
 				D469B99425D2CF05001C989F /* PersonCreateViewModel.swift in Sources */,
 				D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
+				E5C65B6F2600F6EA00032EC8 /* TalkpartnerTopic.swift in Sources */,
 				D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */,
 				D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */,
 				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
 				E54E128A25BB06D600EC92BA /* EmptyStateView.swift in Sources */,
+				E5C65B672600F5F600032EC8 /* PersonCreateService.swift in Sources */,
 				D4E7226A25B58A3A00332B73 /* TopicListModalView.swift in Sources */,
 				E51C1AD225A1E90A00721BE1 /* TopicList+Scroll.swift in Sources */,
 				E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */,
+				E5C65B6C2600F68400032EC8 /* TalkpartnerRequest.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
 				E5D4352B25B5D79A006B3898 /* RelationshipFilter.swift in Sources */,
 				E5F2DF2525D57B8300F09F40 /* SelectImageButton.swift in Sources */,

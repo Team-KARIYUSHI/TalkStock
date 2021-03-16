@@ -19,7 +19,12 @@ class RealmHelper {
     /// - Returns: pngDataに変換してData型で返却
     static func resizeImage(originalImg: UIImage, width: Double) -> Data {
         var imageData = originalImg.pngData()
-        if (imageData!.count) > 1000000 {
+        var idealWidth = width
+        
+        // 1MBを超えるときはループして高さと幅を20pxずつ小さくする
+        while (imageData!.count) > 1000000 {
+            // 1MB未満なら処理を抜ける
+            if imageData!.count < 1000000 { break }
             
             let aspectScale = originalImg.size.height / originalImg.size.width
             let resizedSize = CGSize(width: width, height: width * Double(aspectScale))
@@ -29,6 +34,7 @@ class RealmHelper {
             UIGraphicsEndImageContext()
             
             imageData = resizedImg?.pngData()
+            idealWidth -= 20.0
         }
         
         return (imageData as Data?) ?? Data()

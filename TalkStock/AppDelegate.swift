@@ -28,12 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // 何もする必要はありません！
                     // Realmは自動的に新しく追加されたプロパティと、削除されたプロパティを認識します。
                     // そしてディスク上のスキーマを自動的にアップデートします。
-                    migration.renameProperty(onType: TalkPertners.className(), from: "name", to: "personalName")
                     migration.renameProperty(onType: Relationship.className(), from: "name", to: "relationName")
                     migration.renameProperty(onType: TopicTag.className(), from: "name", to: "tagName")
                 }
             })
-        
         // デフォルトRealmに新しい設定を適用します
         Realm.Configuration.defaultConfiguration = config
         return true
