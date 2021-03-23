@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -35,6 +36,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        // 関係タグ管理テーブルにデータがなかったらデフォルトデータを作る
+        if RelationshipManagement.count(object: RelationshipManagement.all) == 0 {
+            Relationship.makeSelf(relationships)
+        } // 関係タグテーブルがなかったらデフォルトデータを作る
+        else if Relationship.count(Relationship.all) == 0 {
+            Relationship.addOriginal(RelationshipManagement.all)
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

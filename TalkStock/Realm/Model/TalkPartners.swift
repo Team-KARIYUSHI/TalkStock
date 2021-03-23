@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Talkpartners: Object {
+final class Talkpartners: Object {
     // 中間テーブルで識別するためidを追加
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var personalName = ""
