@@ -37,7 +37,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
         // 関係タグ管理テーブルにデータがなかったらデフォルトデータを作る
         if RelationshipManagement.count(object: RelationshipManagement.all) == 0 {
             Relationship.makeSelf(relationships)
