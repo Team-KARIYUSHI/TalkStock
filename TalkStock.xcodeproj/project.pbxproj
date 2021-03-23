@@ -46,6 +46,8 @@
 		E517DFEE25A6633000584929 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFED25A6633000584929 /* PlusButton.swift */; };
 		E517DFF125A6663600584929 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517DFF025A6663600584929 /* SaveButton.swift */; };
 		E51C1AD225A1E90A00721BE1 /* TopicList+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51C1AD125A1E90A00721BE1 /* TopicList+Scroll.swift */; };
+		E524D795260A354D002F02D6 /* RelationshipManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524D794260A354D002F02D6 /* RelationshipManagement.swift */; };
+		E524D799260A362D002F02D6 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524D798260A362D002F02D6 /* Relationships.swift */; };
 		E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */; };
 		E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */; };
 		E53CD4F025A1D16200FD0F83 /* PersonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */; };
@@ -114,6 +116,8 @@
 		E517DFED25A6633000584929 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		E517DFF025A6663600584929 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		E51C1AD125A1E90A00721BE1 /* TopicList+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicList+Scroll.swift"; sourceTree = "<group>"; };
+		E524D794260A354D002F02D6 /* RelationshipManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipManagement.swift; sourceTree = "<group>"; };
+		E524D798260A362D002F02D6 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		E53CD4E825A1CBA900FD0F83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E53CD4EB25A1CCA900FD0F83 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHomeView.swift; sourceTree = "<group>"; };
@@ -277,6 +281,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		E524D797260A3612002F02D6 /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				E524D798260A362D002F02D6 /* Relationships.swift */,
+			);
+			path = DummyData;
+			sourceTree = "<group>";
+		};
 		E53CD4F325A1E44200FD0F83 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +390,7 @@
 		E5D7539325C82680009CBDE2 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E524D797260A3612002F02D6 /* DummyData */,
 				E5D7539425C82695009CBDE2 /* Model */,
 			);
 			path = Realm;
@@ -391,6 +404,7 @@
 				D469B98D25D133E3001C989F /* TopicTag.swift */,
 				D469B99025D133FA001C989F /* Topic.swift */,
 				E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */,
+				E524D794260A354D002F02D6 /* RelationshipManagement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +507,7 @@
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
 				D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */,
+				E524D795260A354D002F02D6 /* RelationshipManagement.swift in Sources */,
 				E517DFE725A65D7300584929 /* PlusCircleButton.swift in Sources */,
 				E55A28BF25C9A94A001BA733 /* TopicCreateViewModel.swift in Sources */,
 				D4CB242825BC6E5A0054B806 /* ProfileEditView.swift in Sources */,
@@ -527,6 +542,7 @@
 				D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
 				D4CB243825C16B510054B806 /* GetDate.swift in Sources */,
+				E524D799260A362D002F02D6 /* Relationships.swift in Sources */,
 				D469B98E25D133E3001C989F /* TopicTag.swift in Sources */,
 				E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,

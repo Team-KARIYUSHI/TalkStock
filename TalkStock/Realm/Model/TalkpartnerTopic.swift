@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class TalkpartnerTopic: Object {
+final class TalkpartnerTopic: Object {
     @objc dynamic var topic: Topic?
     @objc dynamic var talkpartner: Talkpartners?
     let ownerTopic = LinkingObjects(fromType: Topic.self, property: "talkpartnerTopic")

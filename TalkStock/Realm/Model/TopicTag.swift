@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class TopicTag: Object {
+final class TopicTag: Object {
     @objc dynamic var tagName = ""
     @objc dynamic var createdAt = Date()
     var topic = List<Topic>()
