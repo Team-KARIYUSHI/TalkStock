@@ -39,7 +39,8 @@ struct TopicHomeView: View {
             .navigationBarTitle("会話ネタ", displayMode: .inline)
             .navigationBarItems(trailing:
                                     PlusButton(isPresented: self.$modalOpened,
-                                               view: TopicCreateView()))
+                                               view: TopicEditView(barTitle: "新規作成",
+                                                                     buttonTitle: "登録")))
         }
     }
 }
