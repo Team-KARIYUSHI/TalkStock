@@ -12,7 +12,8 @@ struct TopicList: View {
     var body: some View {
         VStack {
             ForEach(memoTitles) { memoTitle in
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: TopicEditView(barTitle: "編集",
+                                                            buttonTitle: "更新")) {
                     TopicCell(title: memoTitle.title)
                 }
             }

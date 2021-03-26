@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopicCreateView: View {
+struct TopicEditView: View {
     
     @State var title = ""
     @State var tag = ""
@@ -20,7 +20,12 @@ struct TopicCreateView: View {
     
     @ObservedObject var topicCreateVM = TopicCreateViewModel()
     
-    init() {
+    var barTitle: String
+    var buttonTitle: String
+    
+    init(barTitle: String, buttonTitle: String) {
+        self.barTitle = barTitle
+        self.buttonTitle = buttonTitle
         UIComponents.setupNavigationBar()
     }
     
@@ -76,7 +81,7 @@ struct TopicCreateView: View {
                        maxHeight: .infinity,
                        alignment: .center)
                 
-                SaveButton(title: "登録",
+                SaveButton(title: buttonTitle,
                            action: {
                             self.showingAlert = true
                            },isDisabled: title.isEmpty || tag.isEmpty)
@@ -103,7 +108,7 @@ struct TopicCreateView: View {
             .padding()
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle("新規作成", displayMode: .inline)
+            .navigationBarTitle(barTitle, displayMode: .inline)
             .navigationBarItems(leading:
                                     XmarkButton(action: {
                                         self.presentationMode.wrappedValue.dismiss()
@@ -114,8 +119,8 @@ struct TopicCreateView: View {
 }
 
 
-struct TopicCreateView_Previews: PreviewProvider {
+struct TopicEditView_Previews: PreviewProvider {
     static var previews: some View {
-        TopicCreateView()
+        TopicEditView(barTitle: "新規作成", buttonTitle: "登録")
     }
 }
