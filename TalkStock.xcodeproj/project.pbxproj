@@ -14,7 +14,7 @@
 		D42B63D82594B009009A4107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42B63D62594B009009A4107 /* LaunchScreen.storyboard */; };
 		D42B63E22594B318009A4107 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E12594B318009A4107 /* TabBarView.swift */; };
 		D42B63E82595B3E8009A4107 /* TopicHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63E72595B3E8009A4107 /* TopicHomeView.swift */; };
-		D42B63ED2595C9AC009A4107 /* TopicEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63EC2595C9AC009A4107 /* TopicEditView.swift */; };
+		D42B63ED2595C9AC009A4107 /* TopicCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */; };
 		D42B63F82597113B009A4107 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B63F72597113B009A4107 /* TopicCell.swift */; };
 		D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42B643A2597562D009A4107 /* MemoTitleModel.swift */; };
 		D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B50F425A4B093007C00FA /* PersonCreateView.swift */; };
@@ -25,6 +25,7 @@
 		D477CBF225A71C71002F0919 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477CBF125A71C71002F0919 /* PersonCell.swift */; };
 		D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A301725A9BA5800D283AE /* PersonList+Move.swift */; };
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
+		D4910353260E172E009E9B1E /* TopicEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4910352260E172E009E9B1E /* TopicEditView.swift */; };
 		D4970D2D25B4505200F297B1 /* PersonModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */; };
@@ -84,7 +85,7 @@
 		D42B63D92594B009009A4107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D42B63E12594B318009A4107 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D42B63E72595B3E8009A4107 /* TopicHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicHomeView.swift; sourceTree = "<group>"; };
-		D42B63EC2595C9AC009A4107 /* TopicEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicEditView.swift; sourceTree = "<group>"; };
+		D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCreateView.swift; sourceTree = "<group>"; };
 		D42B63F72597113B009A4107 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		D42B643A2597562D009A4107 /* MemoTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleModel.swift; sourceTree = "<group>"; };
 		D43B50F425A4B093007C00FA /* PersonCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateView.swift; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		D477CBF125A71C71002F0919 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D48A301725A9BA5800D283AE /* PersonList+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Move.swift"; sourceTree = "<group>"; };
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
+		D4910352260E172E009E9B1E /* TopicEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicEditView.swift; sourceTree = "<group>"; };
 		D4970D2C25B4505200F297B1 /* PersonModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicList+Action.swift"; sourceTree = "<group>"; };
@@ -237,7 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
-				D42B63EC2595C9AC009A4107 /* TopicEditView.swift */,
+				D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */,
+				D4910352260E172E009E9B1E /* TopicEditView.swift */,
 				D4E7226925B58A3A00332B73 /* TopicListModalView.swift */,
 			);
 			path = Topic;
@@ -528,6 +531,7 @@
 				E5C65B6C2600F68400032EC8 /* TalkpartnerRequest.swift in Sources */,
 				D4FD7483259D94D800E1CB4C /* SplashView.swift in Sources */,
 				E5D4352B25B5D79A006B3898 /* RelationshipFilter.swift in Sources */,
+				D4910353260E172E009E9B1E /* TopicEditView.swift in Sources */,
 				E5F2DF2525D57B8300F09F40 /* SelectImageButton.swift in Sources */,
 				D4E7228925B719E200332B73 /* TopicList.swift in Sources */,
 				D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */,
@@ -551,7 +555,7 @@
 				D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */,
 				E5D4352E25B5D7D5006B3898 /* RelationshipFilterViewModel.swift in Sources */,
 				E5F7AF6E25E29596001DDA44 /* RealmHelper.swift in Sources */,
-				D42B63ED2595C9AC009A4107 /* TopicEditView.swift in Sources */,
+				D42B63ED2595C9AC009A4107 /* TopicCreateView.swift in Sources */,
 				D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */,
 				E5F2DF2B25D57C2A00F09F40 /* ImagePicker.swift in Sources */,
 				E5EB8E3025C85A4100AAD885 /* Relationship.swift in Sources */,

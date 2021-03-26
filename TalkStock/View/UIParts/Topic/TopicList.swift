@@ -14,8 +14,7 @@ struct TopicList: View {
     var body: some View {
         VStack {
             ForEach(memoTitles) { memoTitle in
-                NavigationLink(destination: TopicEditView(barTitle: "編集",
-                                                          buttonTitle: "更新")
+                NavigationLink(destination: TopicEditView()
                                 .onAppear { self.tabBar.isHidden = true }
                                 .onDisappear { self.tabBar.isHidden = false }
                 ) {
