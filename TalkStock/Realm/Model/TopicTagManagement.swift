@@ -19,10 +19,14 @@ final class TopicTagManagement: Object {
     
     static let realm = try! Realm()
     
+    /// 取得したモデル件数をカウントするメソッド
+    /// - Parameter object: 自分自身のモデル
+    /// - Returns: モデル件数
     static func count(object: Results<TopicTagManagement>) -> Int {
         return object.count
     }
     
+    // DBから全件取得してモデルを返すコンピューテッドプロパティ
     static var all: Results<TopicTagManagement> {
         return realm.objects(TopicTagManagement.self)
     }
