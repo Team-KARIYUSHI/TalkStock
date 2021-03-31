@@ -45,6 +45,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             Relationship.addOriginal(RelationshipManagement.all)
         }
         
+        // 会話ネタタグ管理テーブルにデータがなかったらデフォルトデータを作る
+        if TopicTagManagement.count(object: TopicTagManagement.all) == 0 {
+            TopicTag.makeSelf(topicTags)
+        } // 会話ネタタグテーブルがなかったらデフォルトデータを作る
+        else if TopicTag.count(TopicTag.all) == 0 {
+            TopicTag.addOriginal(TopicTagManagement.all)
+        }
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

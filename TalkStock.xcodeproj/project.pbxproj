@@ -27,6 +27,7 @@
 		D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A302625AAC32E00D283AE /* PersonSummary.swift */; };
 		D4910353260E172E009E9B1E /* TopicEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4910352260E172E009E9B1E /* TopicEditView.swift */; };
 		D491035826109CFD009E9B1E /* TopicTagManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491035726109CFD009E9B1E /* TopicTagManagement.swift */; };
+		D491035D2613645A009E9B1E /* TopicTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = D491035C2613645A009E9B1E /* TopicTags.swift */; };
 		D4970D2D25B4505200F297B1 /* PersonModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D2C25B4505200F297B1 /* PersonModalView.swift */; };
 		D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4970D3725B45C5400F297B1 /* PersonListSize.swift */; };
 		D4AFEF1625C9940F00FA4CD6 /* TopicList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */; };
@@ -99,6 +100,7 @@
 		D48A302625AAC32E00D283AE /* PersonSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSummary.swift; sourceTree = "<group>"; };
 		D4910352260E172E009E9B1E /* TopicEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicEditView.swift; sourceTree = "<group>"; };
 		D491035726109CFD009E9B1E /* TopicTagManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTagManagement.swift; sourceTree = "<group>"; };
+		D491035C2613645A009E9B1E /* TopicTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTags.swift; sourceTree = "<group>"; };
 		D4970D2C25B4505200F297B1 /* PersonModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModalView.swift; sourceTree = "<group>"; };
 		D4970D3725B45C5400F297B1 /* PersonListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListSize.swift; sourceTree = "<group>"; };
 		D4AFEF1525C9940F00FA4CD6 /* TopicList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicList+Action.swift"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				E524D798260A362D002F02D6 /* Relationships.swift */,
+				D491035C2613645A009E9B1E /* TopicTags.swift */,
 			);
 			path = DummyData;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */,
+				D491035D2613645A009E9B1E /* TopicTags.swift in Sources */,
 				E515FA3B25AF3DA500418282 /* PersonCollection.swift in Sources */,
 				E53CD4E925A1CBA900FD0F83 /* LoadingView.swift in Sources */,
 				D42B643B2597562D009A4107 /* MemoTitleModel.swift in Sources */,
