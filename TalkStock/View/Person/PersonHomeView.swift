@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct PersonHomeView: View {
     
@@ -15,6 +16,11 @@ struct PersonHomeView: View {
     
     @State var searchItem: String = ""
     @State var selected: Int = 0
+    
+    // タグボタン用にボタン名を取得してくる
+    var tagNames = try! Realm().objects(Relationship.self)
+    
+    @ObservedObject var personHomeVM = PersonHomeViewModel()
     
     /// LoadingViewをPersonalViewの前に出した時に発動するメソッド
     func loading() {
@@ -44,8 +50,14 @@ struct PersonHomeView: View {
                 VStack {
                     SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
                         .padding(.top, UIComponents.screenHeight / 5.5)
-                    RelationshipFilter(selected: self.$selected,color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
-                    PersonListMove(height: PersonListSize.tabBar.setHeight)
+                    RelationshipFilter(selected: self.$selected,
+                                       color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
+                                       tagNames: tagNames) {
+                        personHomeVM.filter(tagNames[selected].relationName)
+                    }
+                    PersonListMove(height: PersonListSize.tabBar.setHeight,
+                                   relationshipData: personHomeVM.myRelationships[0])
+                    
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,

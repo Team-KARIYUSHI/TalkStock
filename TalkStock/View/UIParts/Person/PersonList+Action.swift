@@ -9,16 +9,19 @@ import SwiftUI
 
 struct PersonListAction: View {
     var height: CGFloat
+    var relationshipData: RelationshipData?
+    var talkpartner: Talkpartners?
     var action: ()->Void
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack {
-                ForEach(personSummary) { personSummary in
+                ForEach(relationshipData!.talkPartners, id:\.id) { talkpartner in
                     Button(action: {
                         action()
                     }) {
-                        PersonCell(person: personSummary)
+                        PersonCell(relationshipData: relationshipData,
+                                   talkpartner: talkpartner)
                     }
                 }.padding(.all, 1)
             }

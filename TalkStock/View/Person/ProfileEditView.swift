@@ -10,8 +10,11 @@ import SwiftUI
 struct ProfileEditView: View {
     
     @State var name = ""
-    @State var relationship = ""
+    @State var relationName = ""
     @State var modalOpened = false
+    
+    var relationship: RelationshipData?
+    var talkpartner: Talkpartners?
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -43,7 +46,7 @@ struct ProfileEditView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.black.opacity(0.5))
                                 
-                                TextField("例：友達", text: $name)
+                                TextField("例：友達", text: $relationName)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                     .frame(width: UIComponents.screenWidth / 2)
                                     .padding(.trailing, 50)
@@ -90,6 +93,10 @@ struct ProfileEditView: View {
                     alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
+            .onAppear(){
+                self.name = talkpartner?.personalName ?? ""
+                self.relationName = relationship?.relationName ?? ""
+            }
         }
     }
 }

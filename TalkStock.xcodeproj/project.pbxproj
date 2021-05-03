@@ -60,6 +60,7 @@
 		E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */; };
 		E55A28BF25C9A94A001BA733 /* TopicCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
+		E5BA7D69263E880F008517FC /* PersonHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */; };
 		E5C65B672600F5F600032EC8 /* PersonCreateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B662600F5F600032EC8 /* PersonCreateService.swift */; };
 		E5C65B6C2600F68400032EC8 /* TalkpartnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B6B2600F68400032EC8 /* TalkpartnerRequest.swift */; };
 		E5C65B6F2600F6EA00032EC8 /* TalkpartnerTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */; };
@@ -133,6 +134,7 @@
 		E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Action.swift"; sourceTree = "<group>"; };
 		E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCreateViewModel.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHomeViewModel.swift; sourceTree = "<group>"; };
 		E5C65B662600F5F600032EC8 /* PersonCreateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateService.swift; sourceTree = "<group>"; };
 		E5C65B6B2600F68400032EC8 /* TalkpartnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkpartnerRequest.swift; sourceTree = "<group>"; };
 		E5C65B6E2600F6EA00032EC8 /* TalkpartnerTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkpartnerTopic.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				E5D4352D25B5D7D5006B3898 /* RelationshipFilterViewModel.swift */,
 				E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */,
 				D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */,
+				E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BA7D69263E880F008517FC /* PersonHomeViewModel.swift in Sources */,
 				D42B63CC2594B006009A4107 /* AppDelegate.swift in Sources */,
 				E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */,
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,

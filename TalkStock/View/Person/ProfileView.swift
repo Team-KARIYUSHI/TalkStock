@@ -10,9 +10,13 @@ import SwiftUI
 struct ProfileView: View {
     
     @State var modalOpened = false
+    var relationship: RelationshipData?
+    var talkpartner: Talkpartners?
     
-    init() {
+    init(relationship: RelationshipData?, talkpartner: Talkpartners?) {
         UIComponents.setupNavigationBar()
+        self.relationship = relationship
+        self.talkpartner = talkpartner
     }
     
     var body: some View {
@@ -29,7 +33,7 @@ struct ProfileView: View {
                         HStack {
                             Text("関係")
                             
-                            Text("友達")
+                            Text(relationship?.relationName ?? "")
                                 .font(.title2)
                                 .frame(width: UIComponents.screenWidth / 1.4,
                                        alignment: .leading)
@@ -51,7 +55,7 @@ struct ProfileView: View {
                            action: {
                             self.modalOpened.toggle()
                            }).sheet(isPresented: $modalOpened) {
-                        ProfileEditView()
+                            ProfileEditView(relationship: relationship, talkpartner: talkpartner)
                     }
                     .padding(.bottom)
             }
@@ -64,12 +68,12 @@ struct ProfileView: View {
         .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
         .edgesIgnoringSafeArea(.all)
         
-        .navigationBarTitle("愛知太郎", displayMode: .inline)
+        .navigationBarTitle(talkpartner?.personalName ?? "", displayMode: .inline)
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(relationship: nil, talkpartner: nil)
     }
 }

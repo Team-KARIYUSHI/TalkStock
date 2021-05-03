@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct PersonCell: View {
     
-    var person:PersonSummary
+    var relationshipData: RelationshipData?
+    var talkpartner: Talkpartners?
     
     var body: some View {
         
@@ -21,17 +23,17 @@ struct PersonCell: View {
                     .padding()
                 
                 VStack(alignment: .leading ,spacing: 30) {
-                    Text(person.name)
+                    Text(talkpartner?.personalName ?? "")
                         .font(.title)
                         .fontWeight(.bold)
                     
                     HStack {
-                        Text(person.relationship)
+                        Text(relationshipData?.relationName ?? "")
                         
                         Image(systemName: "text.bubble")
                             .padding(.leading)
                         
-                        Text(person.topicNum)
+//                        Text(person.topicNum)
                     }
                 }
             }
@@ -45,6 +47,6 @@ struct PersonCell: View {
 
 struct PersonCell_Previews: PreviewProvider {
     static var previews: some View {
-        PersonCell(person: PersonSummary(id: 0, name: "", relationship: "", topicNum: ""))
+        PersonCell()
     }
 }

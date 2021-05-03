@@ -8,7 +8,15 @@
 import Foundation
 import RealmSwift
 
+struct RelationshipData {
+    var id: String
+    var relationName: String
+    var createdAt: Date
+    var talkPartners: RealmSwift.List<Talkpartners>
+}
+
 final class Relationship: Object {
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var relationName = ""
     @objc dynamic var createdAt = Date()
     @objc dynamic var relationshipManagement: RelationshipManagement?
@@ -63,6 +71,7 @@ final class Relationship: Object {
             return nil
         }
     }
+    
     
     
     /// 関係タグの検索数をカウントするメソッド

@@ -50,7 +50,7 @@ struct TabBarView: View {
                     }
             }
         } else {
-            EmptyStateView(imageName: EmptyState.splash.setImageName)
+            EmptyStateView(imageName: EmptyState.splash.setImageName, color: Color(#colorLiteral(red: 0.3315601647, green: 0.7528054118, blue: 0.9943392873, alpha: 1)))
             .onAppear() {
                 self.authenticate()
             }
