@@ -23,8 +23,8 @@ class RealmHelper {
         
         // 1MBを超えるときはループして高さと幅を20pxずつ小さくする
         while (imageData!.count) > 1000000 {
-            // 1MB未満なら処理を抜ける
-            if imageData!.count < 1000000 { break }
+            // リサイズ幅が100px未満なら処理を抜ける
+            if idealWidth < 100 { break }
             
             let aspectScale = originalImg.size.height / originalImg.size.width
             let resizedSize = CGSize(width: width, height: width * Double(aspectScale))
