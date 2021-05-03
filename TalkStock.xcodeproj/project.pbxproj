@@ -67,7 +67,6 @@
 		E5C660FE25B86DB700B3860A /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */; };
 		E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */; };
 		E5D4352B25B5D79A006B3898 /* RelationshipFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352A25B5D79A006B3898 /* RelationshipFilter.swift */; };
-		E5D4352E25B5D7D5006B3898 /* RelationshipFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4352D25B5D7D5006B3898 /* RelationshipFilterViewModel.swift */; };
 		E5D7538F25C82555009CBDE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E5D7538E25C82555009CBDE2 /* Realm */; };
 		E5D7539125C82555009CBDE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5D7539025C82555009CBDE2 /* RealmSwift */; };
 		E5D7539625C826BE009CBDE2 /* TalkPartners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D7539525C826BE009CBDE2 /* TalkPartners.swift */; };
@@ -141,7 +140,6 @@
 		E5C660FD25B86DB700B3860A /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
 		E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterViewModel.swift; sourceTree = "<group>"; };
 		E5D4352A25B5D79A006B3898 /* RelationshipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipFilter.swift; sourceTree = "<group>"; };
-		E5D4352D25B5D7D5006B3898 /* RelationshipFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipFilterViewModel.swift; sourceTree = "<group>"; };
 		E5D7539525C826BE009CBDE2 /* TalkPartners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPartners.swift; sourceTree = "<group>"; };
 		E5EA538F25B434DE008A5A5C /* TagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
 		E5EB8E2F25C85A4100AAD885 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				E5D4352725B5D5A0006B3898 /* TagFilterViewModel.swift */,
-				E5D4352D25B5D7D5006B3898 /* RelationshipFilterViewModel.swift */,
 				E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */,
 				D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */,
 				E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */,
@@ -565,7 +562,6 @@
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* TopicCell.swift in Sources */,
 				D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */,
-				E5D4352E25B5D7D5006B3898 /* RelationshipFilterViewModel.swift in Sources */,
 				E5F7AF6E25E29596001DDA44 /* RealmHelper.swift in Sources */,
 				D42B63ED2595C9AC009A4107 /* TopicCreateView.swift in Sources */,
 				D48A302725AAC32E00D283AE /* PersonSummary.swift in Sources */,
