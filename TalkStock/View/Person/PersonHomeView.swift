@@ -39,6 +39,8 @@ struct PersonHomeView: View {
         }
     }
     
+    
+    /// タグボタンのフィルタリング or 検索でローディングを終了するメソッド
     func stopLoading() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.nowLoading = false
@@ -63,7 +65,6 @@ struct PersonHomeView: View {
                         nowLoading = true
                         stopLoading()
                         personHomeVM.filter(tagNames[selected].relationName)
-                        
                     }
                     if nowLoading {
                         ActivityIndicator(animating: $nowLoading)

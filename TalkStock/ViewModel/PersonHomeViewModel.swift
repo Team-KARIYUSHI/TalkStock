@@ -10,6 +10,9 @@ import SwiftUI
 import RealmSwift
 
 class PersonHomeViewModel: ObservableObject {
+    
+    /// デフォルト：Relationshipモデルを取得してきたときの開始インデックスになるモデル
+    /// フィルタリングメソッドを使ったら、絞り込み検索で取得したモデルに差し替える
     @Published var myRelationships: [RelationshipData] = try! Realm()
                                                                 .objects(Relationship.self)
                                                                 .map { RelationshipData(id: $0.id,
@@ -18,6 +21,10 @@ class PersonHomeViewModel: ObservableObject {
                                                                                         talkPartners: $0.talkPartners)
                                                                     
                                                                 }
+    
+    
+    /// タグボタンでフィルタリングするメソッド
+    /// - Parameter relationName: ボタンを押した時のタグ名
     func filter(_ relationName: String) {
         self.myRelationships = try! Realm()
                                     .objects(Relationship.self)
@@ -28,6 +35,5 @@ class PersonHomeViewModel: ObservableObject {
                                                             talkPartners: $0.talkPartners)
                                         
                                     }
-        print("myRelationshipsの結果->", myRelationships)
     }
 }
