@@ -53,6 +53,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             TopicTag.addOriginal(TopicTagManagement.all)
         }
         
+//        let talkpartnerResults = try! Realm().objects(Talkpartners.self)
+//
+//        if talkpartnerResults.count == 0 {
+//            let realm = try! Realm()
+//            do {
+//                try realm.write {
+//                    for talkpartnerTopic in talkpartnerTopics {
+//                        realm.add(TalkpartnerTopic(value: talkpartnerTopic))
+//                    }
+//                }
+//            } catch {
+//                print(error)
+//            }
+//        } else {
+//
+//        }
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
     }
 

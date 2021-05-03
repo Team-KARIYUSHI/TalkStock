@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct PersonHomeView: View {
     
     @State var title: String = ""
     @State var isLoading: Bool = true
     @State var modalOpened: Bool = false
+    @State var nowLoading = false
     
     @State var searchItem: String = ""
     @State var selected: Int = 0
+    
+    // タグボタン用にボタン名を取得してくる
+    var tagNames = try! Realm().objects(Relationship.self)
+    
+    @ObservedObject var personHomeVM = PersonHomeViewModel()
     
     /// LoadingViewをPersonalViewの前に出した時に発動するメソッド
     func loading() {
@@ -32,26 +39,46 @@ struct PersonHomeView: View {
         }
     }
     
+    
+    /// タグボタンのフィルタリング or 検索でローディングを終了するメソッド
+    func stopLoading() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.nowLoading = false
+        }
+    }
+    
     init() {
         // UIComponents構造体（ヘルパークラス）から利用する
         UIComponents.setupNavigationBar()
     }
     
     var body: some View {
-        NavigationView {
-            LoadingView(title: $title,
-                        isShowing: $isLoading) {
+        LoadingView(title: $title,
+                    isShowing: $isLoading) {
+            NavigationView {
                 VStack {
                     SearchHeader(searchItem: self.$searchItem, placeholder: "関係検索")
-                        .padding(.top, UIComponents.screenHeight / 5.5)
-                    RelationshipFilter(selected: self.$selected,color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
-                    PersonListMove(height: PersonListSize.tabBar.setHeight)
+                        .padding(.top, UIComponents.screenHeight / 8)
+                    RelationshipFilter(selected: self.$selected,
+                                       color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
+                                       tagNames: tagNames) {
+                        nowLoading = true
+                        stopLoading()
+                        personHomeVM.filter(tagNames[selected].relationName)
+                    }
+                    if nowLoading {
+                        ActivityIndicator(animating: $nowLoading)
+                        Spacer()
+                    } else {
+                        PersonListMove(height: PersonListSize.tabBar.setHeight,
+                                       relationshipData: personHomeVM.myRelationships[0])
+                            .frame(minWidth: 0,
+                                   maxWidth: .infinity,
+                                   minHeight: 0,
+                                   maxHeight: .infinity,
+                                   alignment: .center)
+                    }
                 }
-                .frame(minWidth: 0,
-                       maxWidth: .infinity,
-                       minHeight: 0,
-                       maxHeight: .infinity,
-                       alignment: .center)
                 .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
                 .edgesIgnoringSafeArea(.all)
                 .navigationBarTitle("話したい人", displayMode: .inline)

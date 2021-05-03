@@ -10,7 +10,7 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
             
-        EmptyStateView(imageName: EmptyState.splash.setImageName)
+        EmptyStateView(imageName: EmptyState.splash.setImageName, color: Color(#colorLiteral(red: 0.3315601647, green: 0.7528054118, blue: 0.9943392873, alpha: 1)))
         .onAppear() { // SplashViewを読み込んだ時にTabBarViewをRootViewに入替える
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 NotificationCenter.default.post(name:NSNotification.Name("home"),

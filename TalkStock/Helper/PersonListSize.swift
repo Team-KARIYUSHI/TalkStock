@@ -19,7 +19,7 @@ enum PersonListSize {
             return UIComponents.screenWidth * 1.75
             
         case .tabBar:
-            return UIComponents.screenHeight - 170
+            return UIComponents.screenHeight - 200
         }
     }
 }
