@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let login = NSNotification.Name("login")
     let home = NSNotification.Name("home")
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -31,7 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             // NotificationのObserver側
             // SplashViewから通知がきたらRootViewを入れ替える
-            replaceRootView(TabBarView(), home)
+            // 共有するインスタンス紐付け
+            replaceRootView(TabBarView().environmentObject(LoginState()), home)
             
             self.window = window
             window.makeKeyAndVisible()

@@ -10,7 +10,8 @@ import LocalAuthentication
 
 struct TabBarView: View {
     
-    @State var isUnlocked = false
+    // LoginStateクラスのインスタンスを共有
+    @EnvironmentObject var loginState: LoginState
     
     /// TouchID/FaceID認証をするメソッド
     func authenticate() {
@@ -23,7 +24,7 @@ struct TabBarView: View {
                 DispatchQueue.main.async {
                     if success {
                          // 認証成功時
-                        self.isUnlocked = true
+                        self.loginState.isUnlocked = true
                     } else {
                         // 認証失敗時、パスコードロック解除に移行
                     }
@@ -36,7 +37,7 @@ struct TabBarView: View {
     
     var body: some View {
         
-        if isUnlocked {
+        if loginState.isUnlocked {
             TabView {
                 PersonHomeView()
                     .tabItem {

@@ -22,7 +22,7 @@ struct ProfileEditView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @Environment(\.presentationMode) var presentationModeForNavigationLink
+    @EnvironmentObject var loginState: LoginState
     
     var body: some View {
         
@@ -90,33 +90,39 @@ struct ProfileEditView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }),trailing: DeleteButton(action: {
                 self.showAlert = true
-                self.alertItem = AlertItem(alert: Alert(title: Text("削除確認"),
-                                                        message: Text("削除してもよろしいですか？"),
-                                                        primaryButton: .default(Text("OK")){
-                                                            
-                                                            // 削除処理
-                                    //                        let realm = try! Realm()
-                                    //                        guard let object = talkpartner else {return}
-                                    //                        do {
-                                    //                            try realm.write {
-                                    //                                realm.delete(object)
-                                    //                            }
-                                    //
-                                    //                        } catch {
-                                    //                            print(error)
-                                    //                        }
-                                                            
-                                                            
-                                                            self.alertItem = AlertItem(
-                                                                alert: Alert(title: Text("削除完了"),
-                                                                             message: Text("削除しました"),
-                                                                             dismissButton: .default(Text("OK")){
-                                                                                print("削除実行")
-                                                                                // 削除完了したら前画面に戻る
-                                                                                self.presentationModeForNavigationLink.wrappedValue.dismiss()
-                                                                             }))
-                                                          },
-                                                        secondaryButton: .cancel()))
+                self.alertItem = AlertItem(
+                    alert: Alert(title: Text("削除確認"),
+                                 message: Text("削除してもよろしいですか？"),
+                                 primaryButton: .default(Text("OK")){
+                                    
+                                    // 削除処理
+                                    let realm = try! Realm()
+                                    guard let object = talkpartner else {return}
+                                    do {
+                                        try realm.write {
+                                            realm.delete(object)
+                                        }
+                                        self.alertItem = AlertItem(
+                                            alert: Alert(title: Text("削除完了"),
+                                                         message: Text("削除しました"),
+                                                         dismissButton: .default(Text("OK")){
+                                                            print("削除実行")
+                                                            // 削除完了したらホームに戻る
+                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                                NotificationCenter.default.post(name:NSNotification.Name("home"),
+                                                                                                object: nil)
+                                                            }
+                                                            // ホームに戻ったときにロック解除する
+                                                            self.loginState.isUnlocked = true
+                                                            NotificationCenter.default.removeObserver(self)
+                                                         }))
+                                    } catch {
+                                        print(error)
+                                    }
+                                    
+                                 },
+                                 secondaryButton: .cancel())
+                )
                 print("編集中のtalkpartner->", talkpartner)
                 
             }).padding(.bottom, 1)
@@ -136,6 +142,11 @@ struct ProfileEditView: View {
             }
         }
     }
+}
+
+class LoginState: ObservableObject {
+    // アプリ起動時のロック解除フラグ
+    @Published var isUnlocked: Bool = false
 }
 
 struct ProfileEditView_Previews: PreviewProvider {
