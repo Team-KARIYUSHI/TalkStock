@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProfileEditView: View {
     
@@ -16,7 +17,12 @@ struct ProfileEditView: View {
     var relationship: RelationshipData?
     var talkpartner: Talkpartners?
     
+    @State var showAlert = false
+    @State var alertItem: AlertItem? = nil
+    
     @Environment(\.presentationMode) var presentationMode
+    
+    @Environment(\.presentationMode) var presentationModeForNavigationLink
     
     var body: some View {
         
@@ -83,9 +89,40 @@ struct ProfileEditView: View {
             .navigationBarItems(leading: XmarkButton(action:{
                 self.presentationMode.wrappedValue.dismiss()
             }),trailing: DeleteButton(action: {
-                //ここに削除処理
+                self.showAlert = true
+                self.alertItem = AlertItem(alert: Alert(title: Text("削除確認"),
+                                                        message: Text("削除してもよろしいですか？"),
+                                                        primaryButton: .default(Text("OK")){
+                                                            
+                                                            // 削除処理
+                                    //                        let realm = try! Realm()
+                                    //                        guard let object = talkpartner else {return}
+                                    //                        do {
+                                    //                            try realm.write {
+                                    //                                realm.delete(object)
+                                    //                            }
+                                    //
+                                    //                        } catch {
+                                    //                            print(error)
+                                    //                        }
+                                                            
+                                                            
+                                                            self.alertItem = AlertItem(
+                                                                alert: Alert(title: Text("削除完了"),
+                                                                             message: Text("削除しました"),
+                                                                             dismissButton: .default(Text("OK")){
+                                                                                print("削除実行")
+                                                                                // 削除完了したら前画面に戻る
+                                                                                self.presentationModeForNavigationLink.wrappedValue.dismiss()
+                                                                             }))
+                                                          },
+                                                        secondaryButton: .cancel()))
+                print("編集中のtalkpartner->", talkpartner)
                 
             }).padding(.bottom, 1)
+            .alert(item: self.$alertItem) { item in
+                item.alert
+            }
             ).frame(minWidth: 0,
                     maxWidth: .infinity,
                     minHeight: 0,

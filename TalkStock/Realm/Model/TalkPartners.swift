@@ -32,6 +32,12 @@ final class Talkpartners: Object {
         return realm.objects(Talkpartners.self).sorted(byKeyPath: "createdAt", ascending: true)
     }
     
+    static func append(relationName: String, talkpartners: [Talkpartners]) {
+        let results = Relationship.find(relationName)?.first
+        try? realm.write {
+            results?.talkPartners.append(objectsIn: talkpartners)
+        }
+    }
     
 }
 
