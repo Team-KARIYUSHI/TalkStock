@@ -24,6 +24,8 @@ struct ProfileEditView: View {
     
     @EnvironmentObject var loginState: LoginState
     
+    @ObservedObject var personEditVM = PersonEditViewModel(service: PersonEditService())
+    
     var body: some View {
         
         NavigationView {
@@ -89,41 +91,20 @@ struct ProfileEditView: View {
             .navigationBarItems(leading: XmarkButton(action:{
                 self.presentationMode.wrappedValue.dismiss()
             }),trailing: DeleteButton(action: {
-                self.showAlert = true
-                self.alertItem = AlertItem(
-                    alert: Alert(title: Text("削除確認"),
-                                 message: Text("削除してもよろしいですか？"),
-                                 primaryButton: .default(Text("OK")){
-                                    
-                                    // 削除処理
-                                    let realm = try! Realm()
-                                    guard let object = talkpartner else {return}
-                                    do {
-                                        try realm.write {
-                                            realm.delete(object)
-                                        }
-                                        self.alertItem = AlertItem(
-                                            alert: Alert(title: Text("削除完了"),
-                                                         message: Text("削除しました"),
-                                                         dismissButton: .default(Text("OK")){
-                                                            print("削除実行")
-                                                            // 削除完了したらホームに戻る
-                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                                                NotificationCenter.default.post(name:NSNotification.Name("home"),
-                                                                                                object: nil)
-                                                            }
-                                                            // ホームに戻ったときにロック解除する
-                                                            self.loginState.isUnlocked = true
-                                                            NotificationCenter.default.removeObserver(self)
-                                                         }))
-                                    } catch {
-                                        print(error)
-                                    }
-                                    
-                                 },
-                                 secondaryButton: .cancel())
-                )
-                print("編集中のtalkpartner->", talkpartner)
+                // 削除確認アラートオブジェクトを用意する
+                self.alertItem = AlertItemType.confirmDelete.switchDeleteAlert {
+                    // 削除実行したときに削除完了or削除失敗オブジェクトを用意する
+                    self.alertItem = self.personEditVM.delete(object: talkpartner) {
+                        // 削除完了したらホームに戻る
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            NotificationCenter.default.post(name:NSNotification.Name("home"),
+                                                            object: nil)
+                        }
+                        // ホームに戻ったときにロック解除する
+                        self.loginState.isUnlocked = true
+                        NotificationCenter.default.removeObserver(self)
+                    }
+                }
                 
             }).padding(.bottom, 1)
             .alert(item: self.$alertItem) { item in
@@ -143,6 +124,67 @@ struct ProfileEditView: View {
         }
     }
 }
+
+enum AlertItemType {
+    case confirmDelete
+    case completeDelete
+    case failedDelete
+    
+    func switchDeleteAlert(completion: @escaping()->Void) -> AlertItem {
+        switch self {
+        case .confirmDelete:
+            return AlertItem(alert: Alert(title: Text("削除確認"),
+                                          message: Text("削除してもよろしいですか？"),
+                                          primaryButton: .default(Text("OK")){completion()},
+                                          secondaryButton: .cancel()))
+        case .completeDelete:
+            return AlertItem(alert: Alert(title: Text("削除完了"),
+                                          message: Text("削除しました"),
+                                          dismissButton: .default(Text("OK")){completion()}))
+        case .failedDelete:
+            return AlertItem(alert: Alert(title: Text("削除失敗"),
+                                          message: Text("削除に失敗しました"),
+                                          dismissButton: .default(Text("OK"))))
+        }
+    }
+}
+
+class PersonEditViewModel: ObservableObject {
+    
+    var service: PersonEditProtocol
+    
+    init(service: PersonEditProtocol) {
+        self.service = service
+    }
+    
+    func delete(object: Talkpartners?, handler: @escaping()->Void) -> AlertItem {
+        if service.delete(object: object) {
+            return AlertItemType.completeDelete.switchDeleteAlert(completion: handler)
+        } else {
+            return AlertItemType.failedDelete.switchDeleteAlert(completion: {})
+        }
+    }
+    
+}
+
+protocol PersonEditProtocol {
+    func delete(object: Talkpartners?) -> Bool
+}
+
+class PersonEditService: PersonEditProtocol {
+    func delete(object: Talkpartners?) -> Bool {
+       guard let result = object else {return false}
+        let realm = try! Realm()
+        do {
+            try realm.write { realm.delete(result) }
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+    }
+}
+
 
 class LoginState: ObservableObject {
     // アプリ起動時のロック解除フラグ

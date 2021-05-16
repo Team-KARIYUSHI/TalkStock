@@ -39,5 +39,14 @@ final class Talkpartners: Object {
         }
     }
     
+//    func delete(realm: Realm, object: Talkpartners) -> Bool {
+//        do {
+//            try realm.write { realm.delete(object) }
+//            return true
+//        } catch {
+//            print(error)
+//            return false
+//        }
+//    }
 }
 
