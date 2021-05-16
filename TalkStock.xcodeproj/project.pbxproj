@@ -59,6 +59,9 @@
 		E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128D25BB0A0C00EC92BA /* EmptyState.swift */; };
 		E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */; };
 		E55A28BF25C9A94A001BA733 /* TopicCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */; };
+		E56E96E126516E0200026D5C /* PersonEditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E026516E0200026D5C /* PersonEditService.swift */; };
+		E56E96E326516E5300026D5C /* PersonEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E226516E5300026D5C /* PersonEditViewModel.swift */; };
+		E56E96E526516ECB00026D5C /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E426516ECB00026D5C /* LoginState.swift */; };
 		E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A46C702595F14D00C73264 /* UIComponents.swift */; };
 		E5BA7D69263E880F008517FC /* PersonHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */; };
 		E5C65B672600F5F600032EC8 /* PersonCreateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C65B662600F5F600032EC8 /* PersonCreateService.swift */; };
@@ -132,6 +135,9 @@
 		E54E128D25BB0A0C00EC92BA /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Action.swift"; sourceTree = "<group>"; };
 		E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCreateViewModel.swift; sourceTree = "<group>"; };
+		E56E96E026516E0200026D5C /* PersonEditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditService.swift; sourceTree = "<group>"; };
+		E56E96E226516E5300026D5C /* PersonEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditViewModel.swift; sourceTree = "<group>"; };
+		E56E96E426516ECB00026D5C /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		E5A46C702595F14D00C73264 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHomeViewModel.swift; sourceTree = "<group>"; };
 		E5C65B662600F5F600032EC8 /* PersonCreateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCreateService.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 				E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */,
 				D469B99325D2CF05001C989F /* PersonCreateViewModel.swift */,
 				E5BA7D68263E880F008517FC /* PersonHomeViewModel.swift */,
+				E56E96E226516E5300026D5C /* PersonEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -354,6 +361,7 @@
 				E5A46C702595F14D00C73264 /* UIComponents.swift */,
 				D4CB243725C16B510054B806 /* GetDate.swift */,
 				E5F7AF6D25E29596001DDA44 /* RealmHelper.swift */,
+				E56E96E426516ECB00026D5C /* LoginState.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -383,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				E5C65B662600F5F600032EC8 /* PersonCreateService.swift */,
+				E56E96E026516E0200026D5C /* PersonEditService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -504,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56E96E126516E0200026D5C /* PersonEditService.swift in Sources */,
 				E5BA7D69263E880F008517FC /* PersonHomeViewModel.swift in Sources */,
 				D42B63CC2594B006009A4107 /* AppDelegate.swift in Sources */,
 				E53CD4EC25A1CCA900FD0F83 /* ActivityIndicator.swift in Sources */,
@@ -528,6 +538,7 @@
 				D44E05CD25AAF40200711EE0 /* PersonButton.swift in Sources */,
 				D4FFC13425A2E8410095DC7A /* MultilineTextField.swift in Sources */,
 				E5C65B6F2600F6EA00032EC8 /* TalkpartnerTopic.swift in Sources */,
+				E56E96E526516ECB00026D5C /* LoginState.swift in Sources */,
 				D48A301825A9BA5800D283AE /* PersonList+Move.swift in Sources */,
 				D43B50F525A4B093007C00FA /* PersonCreateView.swift in Sources */,
 				E517DFEE25A6633000584929 /* PlusButton.swift in Sources */,
@@ -559,6 +570,7 @@
 				D469B98E25D133E3001C989F /* TopicTag.swift in Sources */,
 				E5D4352825B5D5A0006B3898 /* TagFilterViewModel.swift in Sources */,
 				E517DFF125A6663600584929 /* SaveButton.swift in Sources */,
+				E56E96E326516E5300026D5C /* PersonEditViewModel.swift in Sources */,
 				E5A46C712595F14D00C73264 /* UIComponents.swift in Sources */,
 				D42B63F82597113B009A4107 /* TopicCell.swift in Sources */,
 				D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */,
