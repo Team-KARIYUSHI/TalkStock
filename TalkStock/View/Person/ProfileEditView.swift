@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProfileEditView: View {
     
@@ -16,7 +17,14 @@ struct ProfileEditView: View {
     var relationship: RelationshipData?
     var talkpartner: Talkpartners?
     
+    @State var showAlert = false
+    @State var alertItem: AlertItem? = nil
+    
     @Environment(\.presentationMode) var presentationMode
+    
+    @EnvironmentObject var loginState: LoginState
+    
+    @ObservedObject var personEditVM = PersonEditViewModel(service: PersonEditService())
     
     var body: some View {
         
@@ -83,9 +91,25 @@ struct ProfileEditView: View {
             .navigationBarItems(leading: XmarkButton(action:{
                 self.presentationMode.wrappedValue.dismiss()
             }),trailing: DeleteButton(action: {
-                //ここに削除処理
+                // 削除確認アラートオブジェクトを用意する
+                self.alertItem = AlertItemType.confirmDelete.switchDeleteAlert {
+                    // 削除実行したときに削除完了or削除失敗オブジェクトを用意する
+                    self.alertItem = self.personEditVM.delete(object: talkpartner) {
+                        // 削除完了したらホームに戻る
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            NotificationCenter.default.post(name:NSNotification.Name("home"),
+                                                            object: nil)
+                        }
+                        // ホームに戻ったときにロック解除する
+                        self.loginState.isUnlocked = true
+                        NotificationCenter.default.removeObserver(self)
+                    }
+                }
                 
             }).padding(.bottom, 1)
+            .alert(item: self.$alertItem) { item in
+                item.alert
+            }
             ).frame(minWidth: 0,
                     maxWidth: .infinity,
                     minHeight: 0,
@@ -100,6 +124,7 @@ struct ProfileEditView: View {
         }
     }
 }
+
 
 struct ProfileEditView_Previews: PreviewProvider {
     static var previews: some View {
