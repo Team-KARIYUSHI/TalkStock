@@ -8,6 +8,14 @@
 import Foundation
 import RealmSwift
 
+struct TopicData {
+    var id: String
+    var title: String
+    var memo: String
+    var url: String
+    var talkpartnerTopic: RealmSwift.List<TalkpartnerTopic>
+}
+
 final class Topic: Object {
     // 中間テーブルで識別するためidを追加
     @objc dynamic var id = UUID().uuidString

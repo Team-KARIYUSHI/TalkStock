@@ -21,6 +21,8 @@ struct PersonCreateView: View {
     
     // モーダルフラグ
     @State var modalOpened = false
+    // モーダルリストから選択して配列を格納するためのプロパティ
+    @State var selectionItems: Set<Int> = []
     
     // 画像選択アクションシート
     @State var showActionSheet = false
@@ -33,6 +35,7 @@ struct PersonCreateView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var personCreateVM = PersonCreateViewModel()
+    
     
     init() {
         UIComponents.setupNavigationBar()
@@ -83,8 +86,12 @@ struct PersonCreateView: View {
                                         Text("会話ネタ")
                                             .fontWeight(.bold)
                                             .foregroundColor(Color.black.opacity(0.5))
-                                        PlusCircleButton(isPresented: self.$modalOpened,
-                                                         view: TopicModalView())
+                                        PlusCircleButtonNoSheet(action: {
+                                            self.modalOpened = true
+                                        }).sheet(isPresented: self.$modalOpened) {
+                                            TopicListModalView(modalOpened: self.$modalOpened,
+                                                               selectionItems: self.$selectionItems)
+                                        }
                                     }
                                 }
                                 

@@ -7,23 +7,32 @@
 
 import SwiftUI
 
-struct TopicModalView: View {
+struct TopicListModalView: View {
     
-    @State var modalOpened = false
+    @Binding var modalOpened: Bool
+    @Binding var selectionItems: Set<Int>
     
     @Environment(\.presentationMode) var presentationMode
     
-    init() {
+    init(modalOpened: Binding<Bool>, selectionItems: Binding<Set<Int>>) {
         UIComponents.setupNavigationBar()
+        self._modalOpened = modalOpened
+        self._selectionItems = selectionItems
     }
     
     var body: some View {
         NavigationView {
             
             VStack {
-                TopicListAction(height: TopicListSize.modal.setHeight) {
-                    self.presentationMode.wrappedValue.dismiss()
-                }.padding(.top)
+                LazyVStack {
+                    List(selection: $selectionItems) {
+                        ForEach(memoTitles) { memoTitle in
+                            TopicCell(title: memoTitle.title)
+                        }
+                    }.environment(\.editMode, .constant(.active))
+                    .frame(height: TopicListSize.modal.setHeight)
+                }
+                .padding(.top)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
@@ -32,7 +41,9 @@ struct TopicModalView: View {
                    alignment: .center)
             .background(Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
             .edgesIgnoringSafeArea(.all)
-            
+            .onDisappear() {
+                print("selectedItems->", selectionItems)
+            }
             .navigationBarTitle("会話ネタ選択", displayMode: .inline)
             .navigationBarItems(leading: XmarkButton(action: {
                 self.presentationMode.wrappedValue.dismiss()
@@ -42,8 +53,10 @@ struct TopicModalView: View {
 }
 
 
+
+
 struct TopicModalView_Previews: PreviewProvider {
     static var previews: some View {
-        TopicModalView()
+        TopicListModalView(modalOpened: .constant(false), selectionItems: .constant([]))
     }
 }
