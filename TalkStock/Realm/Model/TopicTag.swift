@@ -87,8 +87,7 @@ final class TopicTag: Object {
     static func makeSelf(_ topicTags:[TopicTag]) {
         do {
             try realm.write {
-                for topicTag in
-                    topicTags {
+                for topicTag in topicTags {
                     realm.add(topicTag)
                 }
             }

@@ -22,3 +22,13 @@ let topicTags = [
     TopicTag(value: ["tagName":"その他", "topicTagManagement": TopicTagManagement(value: ["name":"その他"])]),
     
 ]
+
+let dummyTopics = [
+    Topic(value: ["title":"健康", "memo":"", "url":"http://hogehoge.com"]),
+    Topic(value: ["title":"おもしろ", "memo":"", "url":"http://hogehoge.com"]),
+    Topic(value: ["title":"ニュース", "memo":"", "url":"http://hogehoge.com"]),
+    Topic(value: ["title":"スタバに新作登場「抹茶クリームフラペチーノ」若い世代に大人気", "memo":"", "url":"http://hogehoge.com"]),
+    Topic(value: ["title":"お酒", "memo":"", "url":"http://hogehoge.com"]),
+    Topic(value: ["title":"お茶", "memo":"", "url":"http://hogehoge.com"]),
+
+]

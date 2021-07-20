@@ -72,8 +72,7 @@ struct ProfileEditView: View {
                                     PlusCircleButtonNoSheet(action: {
                                         self.modalOpened = true
                                     }).sheet(isPresented: self.$modalOpened) {
-                                        TopicListModalView(modalOpened: self.$modalOpened,
-                                                           selectionItems: self.$selectionItems)
+                                        TopicListModalView()
                                     }
                                 }
                                 TopicList()

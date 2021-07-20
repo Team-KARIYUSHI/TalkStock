@@ -8,12 +8,14 @@
 import Foundation
 import RealmSwift
 
-struct TopicData {
-    var id: String
+struct TopicData: Identifiable {
+    var id = UUID()
     var title: String
     var memo: String
     var url: String
+    var topicTag: RealmSwift.LinkingObjects<TopicTag>
     var talkpartnerTopic: RealmSwift.List<TalkpartnerTopic>
+    var isChecked: Bool = false
 }
 
 final class Topic: Object {
