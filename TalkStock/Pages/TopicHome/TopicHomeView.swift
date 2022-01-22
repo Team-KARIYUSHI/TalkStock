@@ -27,7 +27,16 @@ struct TopicHomeView: View {
                     .padding(.top, UIComponents.screenHeight / 5.5)
                 TagFilter(selected: self.$selected,
                           color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
-                TopicListScroll(height: TopicListSize.tabBar.setHeight)
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVStack {
+                        TopicList()
+                            .padding(.bottom, 100)
+                    }.frame(minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .center)
+                }.frame(height: TopicListSize.tabBar.setHeight)
             }
             .frame(minWidth: 0,
                    maxWidth: .infinity,
