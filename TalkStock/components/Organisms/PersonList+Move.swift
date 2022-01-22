@@ -19,7 +19,7 @@ struct PersonListMove: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack {
                     ForEach(relationship.talkPartners, id:\.id) { talkPartner in
-                        NavigationLink(destination: ProfileView(relationship: relationship, talkpartner: talkPartner)
+                        NavigationLink(destination: ProfileDetailView(relationship: relationship, talkpartner: talkPartner)
                                         .onAppear { self.tabBar.isHidden = true }
                                         .onDisappear { self.tabBar.isHidden = false }
                         ) {

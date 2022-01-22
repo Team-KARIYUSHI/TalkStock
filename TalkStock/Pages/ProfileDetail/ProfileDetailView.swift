@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ProfileDetailView: View {
     
     @State var modalOpened = false
     var relationship: RelationshipData?
@@ -72,8 +72,8 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct ProfileDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(relationship: nil, talkpartner: nil)
+        ProfileDetailView(relationship: nil, talkpartner: nil)
     }
 }

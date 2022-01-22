@@ -36,7 +36,7 @@
 		D4CB243825C16B510054B806 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB243725C16B510054B806 /* GetDate.swift */; };
 		D4E7226A25B58A3A00332B73 /* TopicListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226925B58A3A00332B73 /* TopicListModalView.swift */; };
 		D4E7226D25B58B2400332B73 /* StockListSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7226C25B58B2400332B73 /* StockListSize.swift */; };
-		D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7227125B6EEE700332B73 /* ProfileView.swift */; };
+		D4E7227225B6EEE700332B73 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */; };
 		D4E7228925B719E200332B73 /* TopicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7228825B719E200332B73 /* TopicList.swift */; };
 		D4FD74672598E3D900E1CB4C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD74662598E3D900E1CB4C /* TagButton.swift */; };
 		D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD746A2598E67300E1CB4C /* TagText.swift */; };
@@ -112,7 +112,7 @@
 		D4CB243725C16B510054B806 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
 		D4E7226925B58A3A00332B73 /* TopicListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListModalView.swift; sourceTree = "<group>"; };
 		D4E7226C25B58B2400332B73 /* StockListSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListSize.swift; sourceTree = "<group>"; };
-		D4E7227125B6EEE700332B73 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		D4E7228825B719E200332B73 /* TopicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicList.swift; sourceTree = "<group>"; };
 		D4FD74662598E3D900E1CB4C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		D4FD746A2598E67300E1CB4C /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
@@ -222,12 +222,12 @@
 			path = DummyData;
 			sourceTree = "<group>";
 		};
-		D4970D4025B45FAB00F297B1 /* Profile */ = {
+		D4970D4025B45FAB00F297B1 /* ProfileDetail */ = {
 			isa = PBXGroup;
 			children = (
-				D4E7227125B6EEE700332B73 /* ProfileView.swift */,
+				D4E7227125B6EEE700332B73 /* ProfileDetailView.swift */,
 			);
-			path = Profile;
+			path = ProfileDetail;
 			sourceTree = "<group>";
 		};
 		D4970D4125B4601400F297B1 /* TopicCreate */ = {
@@ -251,7 +251,7 @@
 				E54E4EEA279BDF0000669859 /* Top */,
 				E54E129125BB0C7F00EC92BA /* TopicHome */,
 				D4970D4125B4601400F297B1 /* TopicCreate */,
-				D4970D4025B45FAB00F297B1 /* Profile */,
+				D4970D4025B45FAB00F297B1 /* ProfileDetail */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 				D4FD746B2598E67300E1CB4C /* TagText.swift in Sources */,
 				D4970D2D25B4505200F297B1 /* PersonModalView.swift in Sources */,
 				D42B63CE2594B006009A4107 /* SceneDelegate.swift in Sources */,
-				D4E7227225B6EEE700332B73 /* ProfileView.swift in Sources */,
+				D4E7227225B6EEE700332B73 /* ProfileDetailView.swift in Sources */,
 				D42B63E22594B318009A4107 /* TabBarView.swift in Sources */,
 				E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */,
 				D491035D2613645A009E9B1E /* TopicTags.swift in Sources */,
