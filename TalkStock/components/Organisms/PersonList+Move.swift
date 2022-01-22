@@ -16,10 +16,11 @@ struct PersonListMove: View {
     
     var body: some View {
         if let relationship = relationshipData {
+            // 検索結果があればリストを表示する
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack {
                     ForEach(relationship.talkPartners, id:\.id) { talkPartner in
-                        NavigationLink(destination: ProfileView(relationship: relationship, talkpartner: talkPartner)
+                        NavigationLink(destination: ProfileDetailView(relationship: relationship, talkpartner: talkPartner)
                                         .onAppear { self.tabBar.isHidden = true }
                                         .onDisappear { self.tabBar.isHidden = false }
                         ) {
@@ -35,6 +36,7 @@ struct PersonListMove: View {
                 })
             }.frame(height: height)
         } else {
+            // 検索結果がなければNoDataを出す
             EmptyStateView(imageName: EmptyState.noPerson.setImageName,
                            color: Color(#colorLiteral(red: 0.7083092332, green: 0.8691392541, blue: 0.9798682332, alpha: 1)))
         }

@@ -23,6 +23,8 @@ struct PersonHomeView: View {
     
     @ObservedObject var personHomeVM = PersonHomeViewModel()
     
+    @State private var tabBar: UITabBar! = nil
+    
     /// LoadingViewをPersonalViewの前に出した時に発動するメソッド
     func loading() {
         self.title = "読込中..."

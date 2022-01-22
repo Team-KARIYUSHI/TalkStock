@@ -33,6 +33,10 @@ struct TagFilter: View {
     }
 }
 
+final class TagFilterViewModel: ObservableObject {
+    var topicData: [MemoTitle]? = memoTitles // TODO:DBから値を取得してくる処理に変更する
+}
+
 struct TagFilter_Previews: PreviewProvider {
     static var previews: some View {
         TagFilter(selected: .constant(0), color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
