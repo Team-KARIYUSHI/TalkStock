@@ -31,7 +31,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // NotificationのObserver側
             // SplashViewから通知がきたらRootViewを入れ替える
             // 共有するインスタンス紐付け
-            replaceRootView(TabBarView().environmentObject(LoginState()), home)
+            replaceRootView(TabBarView()
+                                .environmentObject(LoginState())
+                                .environmentObject(SelectState()),
+                            home)
             
             self.window = window
             window.makeKeyAndVisible()
@@ -51,6 +54,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } // 会話ネタタグテーブルがなかったらデフォルトデータを作る
         else if TopicTag.count(TopicTag.all) == 0 {
             TopicTag.addOriginal(TopicTagManagement.all)
+        }
+        
+        if Topic.all().count == 0 {
+            let realm = try! Realm()
+            do {
+                try realm.write {
+                    for topic in dummyTopics {
+                        realm.add(topic)
+                    }
+                }
+                
+            } catch {
+                print("error")
+            }
         }
         
 //        let talkpartnerResults = try! Realm().objects(Talkpartners.self)

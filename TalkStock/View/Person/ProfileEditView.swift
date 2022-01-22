@@ -26,6 +26,9 @@ struct ProfileEditView: View {
     
     @ObservedObject var personEditVM = PersonEditViewModel(service: PersonEditService())
     
+    // モーダルリストから選択して配列を格納するためのプロパティ
+    @State var selectionItems: Set<Int> = []
+    
     var body: some View {
         
         NavigationView {
@@ -66,8 +69,11 @@ struct ProfileEditView: View {
                                         .fontWeight(.bold)
                                         .foregroundColor(Color.black.opacity(0.5))
                                     
-                                    PlusCircleButton(isPresented: self.$modalOpened,
-                                                     view: TopicModalView())
+                                    PlusCircleButtonNoSheet(action: {
+                                        self.modalOpened = true
+                                    }).sheet(isPresented: self.$modalOpened) {
+                                        TopicListModalView()
+                                    }
                                 }
                                 TopicList()
                                     .padding(.bottom, 70)

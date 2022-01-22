@@ -59,6 +59,7 @@
 		E54E128E25BB0A0C00EC92BA /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E128D25BB0A0C00EC92BA /* EmptyState.swift */; };
 		E54E1CD025C43B720068BBFF /* PersonList+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */; };
 		E55A28BF25C9A94A001BA733 /* TopicCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */; };
+		E561D54E26651F1D00823BA7 /* PlusCircleButtonNoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E561D54D26651F1D00823BA7 /* PlusCircleButtonNoSheet.swift */; };
 		E56E96E126516E0200026D5C /* PersonEditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E026516E0200026D5C /* PersonEditService.swift */; };
 		E56E96E326516E5300026D5C /* PersonEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E226516E5300026D5C /* PersonEditViewModel.swift */; };
 		E56E96E526516ECB00026D5C /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E96E426516ECB00026D5C /* LoginState.swift */; };
@@ -135,6 +136,7 @@
 		E54E128D25BB0A0C00EC92BA /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		E54E1CCF25C43B720068BBFF /* PersonList+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonList+Action.swift"; sourceTree = "<group>"; };
 		E55A28BE25C9A94A001BA733 /* TopicCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCreateViewModel.swift; sourceTree = "<group>"; };
+		E561D54D26651F1D00823BA7 /* PlusCircleButtonNoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCircleButtonNoSheet.swift; sourceTree = "<group>"; };
 		E56E96E026516E0200026D5C /* PersonEditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditService.swift; sourceTree = "<group>"; };
 		E56E96E226516E5300026D5C /* PersonEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditViewModel.swift; sourceTree = "<group>"; };
 		E56E96E426516ECB00026D5C /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				E517DFE625A65D7300584929 /* PlusCircleButton.swift */,
+				E561D54D26651F1D00823BA7 /* PlusCircleButtonNoSheet.swift */,
 				D4CB242B25C01CBE0054B806 /* DeleteButton.swift */,
 				E515FA3725AF3AA300418282 /* XmarkButton.swift */,
 				E517DFED25A6633000584929 /* PlusButton.swift */,
@@ -565,6 +568,7 @@
 				E5EA539025B434DE008A5A5C /* TagFilter.swift in Sources */,
 				D4CB242C25C01CBE0054B806 /* DeleteButton.swift in Sources */,
 				D4970D3825B45C5400F297B1 /* PersonListSize.swift in Sources */,
+				E561D54E26651F1D00823BA7 /* PlusCircleButtonNoSheet.swift in Sources */,
 				D4CB243825C16B510054B806 /* GetDate.swift in Sources */,
 				E524D799260A362D002F02D6 /* Relationships.swift in Sources */,
 				D469B98E25D133E3001C989F /* TopicTag.swift in Sources */,

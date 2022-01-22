@@ -21,6 +21,8 @@ struct PersonCreateView: View {
     
     // モーダルフラグ
     @State var modalOpened = false
+    // モーダルリストから選択して配列を格納するためのプロパティ
+    @State var selectionItems: Set<Int> = []
     
     // 画像選択アクションシート
     @State var showActionSheet = false
@@ -33,6 +35,9 @@ struct PersonCreateView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var personCreateVM = PersonCreateViewModel()
+    
+    @EnvironmentObject var objects: SelectState
+    
     
     init() {
         UIComponents.setupNavigationBar()
@@ -52,18 +57,16 @@ struct PersonCreateView: View {
                                               inputImage: self.$inputImage,
                                               image: self.$image)
                             
-                            HStack(spacing: 20) {
-                                Text("名前")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(Color.black.opacity(0.5))
-                                
-                                TextField("例：山田太郎", text: $name)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .frame(width: UIComponents.screenWidth / 2)
-                                    .padding(.trailing, 50)
-                            }
-                            
                             VStack(alignment: .leading) {
+                                HStack(spacing: 20) {
+                                    Text("名前")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.black.opacity(0.5))
+                                    
+                                    TextField("例：山田太郎", text: $name)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        .padding(.trailing, 30)
+                                }.frame(width: UIComponents.screenWidth - 50)
                                 HStack(spacing: 20) {
                                     Text("関係")
                                         .fontWeight(.bold)
@@ -71,20 +74,45 @@ struct PersonCreateView: View {
                                     
                                     TextField("例：友達", text: $relationship)
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .frame(width: UIComponents.screenWidth / 2)
-                                        .padding(.trailing, 50)
-                                }.padding(.bottom)
+                                        .padding(.trailing, 30)
+                                }
+                                .frame(width: UIComponents.screenWidth - 50)
+                                .padding(.bottom)
+                                HStack {
+                                    Text("会話ネタ")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.black.opacity(0.5))
+                                    PlusCircleButtonNoSheet(action: {
+                                        self.modalOpened = true
+                                    }).sheet(isPresented: self.$modalOpened) {
+                                        TopicListModalView()
+                                    }
+                                    Spacer()
+                                }.frame(width: UIScreen.main.bounds.width - 50)
                                 
                                 if personCreateVM.topic.count == 0 {
                                     Text("")
                                         .padding(.bottom, 20)
                                 } else {
                                     VStack {
-                                        Text("会話ネタ")
-                                            .fontWeight(.bold)
-                                            .foregroundColor(Color.black.opacity(0.5))
-                                        PlusCircleButton(isPresented: self.$modalOpened,
-                                                         view: TopicModalView())
+                                        
+                                        if self.objects.selectedTopics.isEmpty {
+                                            Text("")
+                                        } else {
+                                            ForEach(self.objects.selectedTopics) { topic in
+                                                HStack {
+                                                    TagText(tagName: topic.topicTag.first?.tagName ?? "")
+                                                        .padding(.leading, 5)
+                                                    Text(topic.title).lineLimit(1)
+                                                    Spacer()
+                                                }
+                                                .frame(width: UIComponents.screenWidth / 1.1,
+                                                       height: 40)
+                                                .background(Color(UIColor.systemBackground))
+                                                .cornerRadius(10)
+                                                .padding(.all, 1)
+                                            }
+                                        }
                                     }
                                 }
                                 
