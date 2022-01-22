@@ -190,6 +190,7 @@
 			children = (
 				D42B63CB2594B006009A4107 /* AppDelegate.swift */,
 				D42B63CD2594B006009A4107 /* SceneDelegate.swift */,
+				E54E4EEE279BE1C200669859 /* Util */,
 				E5C65B6A2600F64900032EC8 /* Request */,
 				E5C65B652600F5D200032EC8 /* Service */,
 				E5049DB825E55BE4001FED1E /* Alert */,
@@ -197,7 +198,8 @@
 				E5A46C6F2595F13000C73264 /* Helper */,
 				D48A301E25AAC00D00D283AE /* DummyData */,
 				E53CD4F325A1E44200FD0F83 /* ViewModel */,
-				D4FD7481259D947C00E1CB4C /* View */,
+				E54E4EEB279BE01A00669859 /* components */,
+				D4FD7481259D947C00E1CB4C /* Pages */,
 				D42B63D12594B009009A4107 /* Assets.xcassets */,
 				D42B63D62594B009009A4107 /* LaunchScreen.storyboard */,
 				D42B63D92594B009009A4107 /* Info.plist */,
@@ -235,41 +237,39 @@
 			path = DummyData;
 			sourceTree = "<group>";
 		};
-		D4970D4025B45FAB00F297B1 /* Person */ = {
+		D4970D4025B45FAB00F297B1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */,
 				D4E7227125B6EEE700332B73 /* ProfileView.swift */,
-				E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */,
-				D43B50F425A4B093007C00FA /* PersonCreateView.swift */,
 				D4970D2C25B4505200F297B1 /* PersonModalView.swift */,
 			);
-			path = Person;
+			path = Profile;
 			sourceTree = "<group>";
 		};
-		D4970D4125B4601400F297B1 /* Topic */ = {
+		D4970D4125B4601400F297B1 /* TopicCreate */ = {
 			isa = PBXGroup;
 			children = (
-				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
 				D42B63EC2595C9AC009A4107 /* TopicCreateView.swift */,
-				D4910352260E172E009E9B1E /* TopicEditView.swift */,
 				D4E7226925B58A3A00332B73 /* TopicListModalView.swift */,
 			);
-			path = Topic;
+			path = TopicCreate;
 			sourceTree = "<group>";
 		};
-		D4FD7481259D947C00E1CB4C /* View */ = {
+		D4FD7481259D947C00E1CB4C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				D42B63E12594B318009A4107 /* TabBarView.swift */,
-				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
-				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
-				E5A709F625DE9EB2004ECFFA /* UIParts */,
-				E54E129125BB0C7F00EC92BA /* Empty */,
-				D4970D4125B4601400F297B1 /* Topic */,
-				D4970D4025B45FAB00F297B1 /* Person */,
+				E54E4EF2279BE3C500669859 /* PersonCreate */,
+				E54E4EF1279BE39100669859 /* PersonHome */,
+				E54E4EF0279BE32700669859 /* ProfileEdit */,
+				E54E4EEF279BE29200669859 /* TopicEdit */,
+				E54E4EED279BE07500669859 /* NoData */,
+				E54E4EEC279BE03900669859 /* Splash */,
+				E54E4EEA279BDF0000669859 /* Top */,
+				E54E129125BB0C7F00EC92BA /* TopicHome */,
+				D4970D4125B4601400F297B1 /* TopicCreate */,
+				D4970D4025B45FAB00F297B1 /* Profile */,
 			);
-			path = View;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		E5049DB825E55BE4001FED1E /* Alert */ = {
@@ -347,13 +347,93 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		E54E129125BB0C7F00EC92BA /* Empty */ = {
+		E54E129125BB0C7F00EC92BA /* TopicHome */ = {
+			isa = PBXGroup;
+			children = (
+				D42B63E72595B3E8009A4107 /* TopicHomeView.swift */,
+			);
+			path = TopicHome;
+			sourceTree = "<group>";
+		};
+		E54E4EE9279BDEE600669859 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		E54E4EEA279BDF0000669859 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				D42B63E12594B318009A4107 /* TabBarView.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		E54E4EEB279BE01A00669859 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E53CD50325A1E77D00FD0F83 /* SearchHeader.swift */,
+				E5A709F625DE9EB2004ECFFA /* UIParts */,
+				E54E4EE9279BDEE600669859 /* Atoms */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		E54E4EEC279BE03900669859 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD7482259D94D800E1CB4C /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		E54E4EED279BE07500669859 /* NoData */ = {
+			isa = PBXGroup;
+			children = (
+				E54E128925BB06D600EC92BA /* EmptyStateView.swift */,
+			);
+			path = NoData;
+			sourceTree = "<group>";
+		};
+		E54E4EEE279BE1C200669859 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				E54E128D25BB0A0C00EC92BA /* EmptyState.swift */,
-				E54E128925BB06D600EC92BA /* EmptyStateView.swift */,
 			);
-			path = Empty;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		E54E4EEF279BE29200669859 /* TopicEdit */ = {
+			isa = PBXGroup;
+			children = (
+				D4910352260E172E009E9B1E /* TopicEditView.swift */,
+			);
+			path = TopicEdit;
+			sourceTree = "<group>";
+		};
+		E54E4EF0279BE32700669859 /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+				D4CB242725BC6E5A0054B806 /* ProfileEditView.swift */,
+			);
+			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
+		E54E4EF1279BE39100669859 /* PersonHome */ = {
+			isa = PBXGroup;
+			children = (
+				E53CD4EF25A1D16200FD0F83 /* PersonHomeView.swift */,
+			);
+			path = PersonHome;
+			sourceTree = "<group>";
+		};
+		E54E4EF2279BE3C500669859 /* PersonCreate */ = {
+			isa = PBXGroup;
+			children = (
+				D43B50F425A4B093007C00FA /* PersonCreateView.swift */,
+			);
+			path = PersonCreate;
 			sourceTree = "<group>";
 		};
 		E5A46C6F2595F13000C73264 /* Helper */ = {
